@@ -1,0 +1,132 @@
+<template name="rpgList">
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="">{{translate 'rpg-list'}}</h1>
+			
+			<form class="form form-new-rpg page-header row">
+				<p>{{translate 'create-new-rpg'}}</p>
+				<div class="form-group col-sm-6">
+					<label>{{translate 'name'}}</label>
+					<input autocomplete="off" required class="form-control" name="rpgName">
+				</div>
+				
+				<div class="form-group col-sm-6">
+					<label>{{translate 'language'}}</label>
+					<input autocomplete="off" required class="form-control" name="rpgLanguage">
+				</div>
+				<div class="form-group col-sm-6">
+					<label>{{translate 'model-sheet'}}</label>
+					<select required class="form-control" type="text" name="rpgSheet">
+						<option disabled selected value="">{{translate 'select-model-sheet'}}</option>>
+						{{#each modelSheets}}
+							<option value="{{_id}}">{{name}}</option>
+						{{/each}}
+					</select>
+				</div>
+				<div class="form-group col-sm-6">
+					<label>{{translate 'password'}}</label>
+					<input autocomplete="off" class="form-control" value="" type="password" name="rpgPassword">
+				</div>
+				
+				<div class="form-group col-sm-6">
+					<button type="submit" class="btn btn-sm btn-primary">{{translate 'create'}}</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="text-info">{{translate 'open-games-info'}}</p>
+				<form class="form form-inline form-filters">
+					<div class="form-group">
+						<label class="checkbox-inline"><input type="checkbox" name="onlyMine" value="" class="filter-only-me">{{translate 'only-my-games'}}</label>
+						<label class="checkbox-inline"><input type="checkbox" name="archived" value="" class="filter-archived">{{translate 'archived-only'}}</label>
+					</div>
+				</form>
+				
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th><i class="fa fa-lock"></i></th>
+							<th>{{translate 'name'}}</th>
+							<th>{{translate 'language'}}</th>
+							<th>{{translate 'my-role'}}</th>
+							<th>{{translate 'role-master-online'}}</th>
+							<th>{{translate 'game-open'}}</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each rpgs}}
+							<tr>
+								<td>
+									{{#if password}}
+										<i class="fa fa-lock"></i>
+									{{else}}
+										<i class="fa fa-unlock"></i>
+									{{/if}}
+								</td>
+								<td>
+									{{name}}
+								</td>
+								<td>
+									{{language}}
+								</td>
+								<td>
+									{{#if isRm}}
+										{{translate 'role-master'}}
+									{{else}}
+										{{#if isPlayer}}
+											{{translate 'player'}}
+										{{else}}
+											--
+										{{/if}}
+									{{/if}}
+								</td>
+								<td>
+									{{#if roleMasterOnline}}
+										<span class="glyphicon glyphicon-ok-sign text-success"></span>
+										<span class="text-success">{{translate 'online'}}</span>
+									{{else}}
+										<span class="glyphicon glyphicon-remove-sign text-danger"></span>
+										<span class="text-danger">{{translate 'offline'}}</span>
+									{{/if}}
+								</td>
+								<td>
+									{{#if open}}
+										<span class="glyphicon glyphicon-ok-sign text-success"></span>
+										<span class="text-success">{{translate 'yes'}}</span>
+									{{else}}
+										<span class="glyphicon glyphicon-remove-sign text-danger"></span>
+										<span class="text-danger">{{translate 'no'}}</span>
+									{{/if}}
+								</td>
+								<td>
+									{{#if canEnter}}
+										<a class="btn btn-xs btn-success enter-game">
+											<span class="glyphicon glyphicon-open"></span>
+											{{translate 'enter'}}
+										</a>
+									{{else}}
+										<a class="btn btn-xs btn-success log-to-enter">
+											<span class="glyphicon glyphicon-open"></span>
+											{{translate 'enter'}}
+										</a>
+									{{/if}}
+									{{#if isRm}}
+										{{#if isNotArchived}}
+											<a class="btn btn-xs btn-warning set-archived">
+												<span class="glyphicon glyphicon-hdd"></span>
+												{{translate 'archive'}}
+											</a>
+										{{/if}}
+									{{/if}}
+								</td>
+							</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</template>

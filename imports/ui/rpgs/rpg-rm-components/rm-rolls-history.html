@@ -1,0 +1,44 @@
+<template name="rmRollsHistory">
+	<div class="panel panel-default rmRollsHistoryContainer panelRpgContainer" style="width: {{calcWidth rpg.players.length 150 100}}px;">
+		<div class="panel-heading">
+			<h4 class="panel-title">{{translate 'rolls-history'}}</h4>
+		</div>
+		<div class="panel-body">
+			<div class="pre-scrollable">
+				<table class="tableHistory">
+				
+					<tr>
+						{{#each rpg.players}}
+							<th>{{substr username 0 15}}</th>
+						{{/each}}
+						<th>{{translate 'me'}}</th>
+					</tr>
+					{{#each rpg.players}}
+						<td>
+							{{#each rolls owner}}
+								{{#each results}}
+									<tr>
+										<td>
+											<span class="text-info">d{{type}}</span>:&nbsp;<span class="text-danger">{{result}}</span>
+										</td>
+									</tr>
+								{{/each}}
+							{{/each}}
+						</td>
+					{{/each}}
+					<td>
+						{{#each rolls rpg.roleMaster}}
+							{{#each results}}
+								<tr>
+									<td>
+										<span class="text-info">d{{type}}</span>:&nbsp;<span class="text-danger">{{result}}</span>
+									</td>
+								</tr>
+							{{/each}}
+						{{/each}}
+					</td>
+				</table>
+			</div>
+		</div>
+	</div>
+</template>

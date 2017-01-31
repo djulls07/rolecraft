@@ -1,0 +1,236 @@
+<template name="rpgDrawing">
+
+	<div class="">
+		
+		<div class="">
+			<ul class="nav nav-tabs">
+				<li class="{{isActive 'new-drawing'}} set-tab-new">
+					<a href>{{translate 'new-drawing'}}</a>
+				</li>
+				<li class="{{isActive 'my-drawings'}} set-tab-mine">
+					<a href>{{translate 'my-drawings'}}</a>
+				</li>
+				<li class="{{isActive 'shared-drawings'}} set-tab-shared">
+					<a href>{{translate 'shared-drawings'}}</a>
+				</li>
+				<li class="{{isActive 'opened-drawing'}} set-tab-opened">
+					<a href>{{translate 'opened-drawing'}}</a>
+				</li>
+			</ul>
+			<div class="sep-xs"></div>
+			<div id="" class="{{#if notTab 'new-drawing'}}hide{{/if}}">
+				<form class="form-inline save-drawing" style="display: inline-block;">
+					
+					<div id="canvasContainer" class="previewImg" style="height: 400px;width: 600px; border: 1px solid #aaa; display:inline-block;">
+						<canvas id="canvas"></canvas>
+					</div>
+
+					<div style="float:right; width: 150px; margin-left: 15px;" class="canvasActionsBar">
+						{{ > tooltips }}
+						{{#if canvasState 'drawing' }}
+							<i data-tooltip="{{translate 'set-edit-mode'}}" class="fa fa-2x fa-pencil text-success set-is-drawing"></i>
+							&nbsp;
+							<i data-tooltip="{{translate 'set-selection-mode'}}" class="fa fa-hand-rock-o text-danger unset-is-drawing"></i>
+						{{else}}
+							<i data-tooltip="{{translate 'set-edit-mode'}}" class="fa fa-pencil text-danger set-is-drawing"></i>
+							&nbsp;
+							<i data-tooltip="{{translate 'set-selection-mode'}}" class="fa fa-2x fa-hand-rock-o text-success unset-is-drawing"></i>
+						{{/if}}
+						<hr>
+						{{translate 'add-element'}}
+						<br />
+						{{#each d in publicDrawings}}
+							<img style="display:inline-flex;" height="25" src="/images/dessins/{{d}}" class="canvas-add-img">
+						{{/each}}
+						<hr >
+						<div class="input-group">
+							<input class="form-control input-sm canvas-add-text" placeholder="add a text">
+							<span class="pointer input-group-addon">Add</span>
+						</div>
+					</div>
+					<div class="sep-xs row"></div>
+					<div class="panelRpgActions">
+
+						<div class="form-group">
+
+							<input class="form-control input-sm" required name="title" id="title" placeholder="{{translate 'title'}}">
+						</div>
+						<button class="btn btn-sm btn-success" type="submit">
+							<i class="fa fa-save"></i>
+							{{translate 'save'}}
+						</button>
+						<span class="btn btn-sm btn-warning undo-drawing">
+							<i class="fa fa-backward"></i>
+							{{translate 'undo'}}
+						</span>
+						<span class="btn btn-sm btn-danger reset-drawing">
+							<i class="fa fa-trash"></i>
+							{{translate 'reset'}}
+						</span>
+						<div class="sep-xs"></div>
+						<div class="form-group">
+							<label>{{translate 'share'}}</label>
+							{{#each rpg.players}}
+								{{#if notCurrentUser owner}}
+									<label class="checkbox-inline"><input type="checkbox" class="sharedToCheckbox" name="test" value="{{owner}}">{{username}}</label>
+								{{/if}}
+							{{/each}}
+							{{#if notCurrentUser rpg.roleMaster}}
+								<label class="checkbox-inline"><input type="checkbox" class="sharedToCheckbox" name="test" value="{{rpg.roleMaster}}">{{rpg.roleMasterUsername}}</label>
+							{{/if}}
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="{{#if notTab 'my-drawings'}}hide{{/if}}">
+				<div class="">
+					{{#if myDrawings.count}}
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>{{translate 'owner'}}</th>
+									<th>{{translate 'title'}}</th>
+									<th>{{translate 'shared'}}</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								{{#each drawing in myDrawings}}
+									<tr>
+										<td>{{drawing.username}}</td>
+										<td>{{drawing.title}}</td>
+										<td>
+											<form>
+												{{#each player in rpg.players}}
+													{{#if notCurrentUser player.owner}}
+														<label class="checkbox-inline"><input {{isSharedToChecked drawing player.owner}} type="checkbox" class="shared-to" name="test" value="{{drawing._id}}::{{player.owner}}">{{player.username}}</label>
+													{{/if}}
+												{{/each}}
+												{{#if notCurrentUser rpg.roleMaster}}
+													<label class="checkbox-inline"><input type="checkbox" {{isSharedToChecked drawing rpg.roleMaster}} class="shared-to" name="test" value="{{drawing._id}}::{{rpg.roleMaster}}">{{rpg.roleMasterUsername}}</label>
+												{{/if}}
+											</form>
+										</td>
+										<td>
+											
+											<a href class="open-drawing" drawingId="{{drawing._id}}">
+												<i class="glyphicon glyphicon-eye-open" drawingId="{{drawing._id}}">
+												</i>
+											</a>
+											&nbsp;
+											<a href class="remove-drawing" drawingId="{{drawing._id}}">
+												<i class="glyphicon glyphicon-trash" drawingId="{{drawing._id}}">
+												</i>
+											</a>
+										</td>
+									</tr>
+								{{/each}}
+							</tbody>
+						</table>
+					{{else}}
+						<p>{{translate 'no-drawing'}}</p>
+					{{/if}}
+				</div>
+			</div>
+
+			<div class="{{#if notTab 'shared-drawings'}}hide{{/if}}">
+				<div class="">
+					{{#if sharedDrawings.count}}
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>{{translate 'owner'}}</th>
+									<th>{{translate 'title'}}</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								{{#each sharedDrawings}}
+									<tr>
+										<td>{{username}}</td>
+										<td>{{title}}</td>
+										<td>
+											<a href class="open-drawing" drawingId="{{_id}}">
+												<i class="glyphicon glyphicon-eye-open" drawingId="{{_id}}">
+												</i>
+											</a>
+										</td>
+									</tr>
+								{{/each}}
+							</tbody>
+						</table>
+					{{else}}
+						<p>{{translate 'no-drawing'}}</p>
+					{{/if}}
+				</div>
+				
+			</div>
+
+			<div class="{{#if notTab 'opened-drawing'}}hide{{/if}}">
+				
+				<form class="form-inline save-open-drawing {{#if openedDrawing}} {{else}} hide {{/if}}">
+					<div id="canvasOpenedContainer" class="previewImg" style="height: 400px;width: 600px; border: 1px solid #aaa; display:inline-block;">
+						<canvas id="canvasOpened"></canvas>
+					</div>
+					<div style="float:right; width: 150px; margin-left: 15px;" class="canvasActionsBar">
+						{{ > tooltips }}
+						{{#if canvasState 'drawing' }}
+							<i data-tooltip="{{translate 'set-edit-mode'}}" class="fa fa-2x fa-pencil text-success set-is-drawing"></i>
+							&nbsp;
+							<i data-tooltip="{{translate 'set-selection-mode'}}" class="fa fa-hand-rock-o text-danger unset-is-drawing"></i>
+						{{else}}
+							<i data-tooltip="{{translate 'set-edit-mode'}}" class="fa fa-pencil text-danger set-is-drawing"></i>
+							&nbsp;
+							<i data-tooltip="{{translate 'set-selection-mode'}}" class="fa fa-2x fa-hand-rock-o text-success unset-is-drawing"></i>
+						{{/if}}
+						<hr>
+						{{translate 'add-element'}}
+						<br />
+						{{#each d in publicDrawings}}
+							<img style="display:inline-flex;" height="25" src="/images/dessins/{{d}}" class="canvas-add-img">
+						{{/each}}
+						<hr >
+						<div class="input-group">
+							<input class="form-control input-sm canvas-add-text" placeholder="add a text">
+							<span class="pointer input-group-addon">Add</span>
+						</div>
+					</div>
+					<div class="sep-xs"></div>
+					<div class="panelRpgActions">
+
+						<div class="form-group">
+
+							<input class="form-control input-sm" value="{{openedDrawing.title}}" required name="title" id="title" placeholder="{{translate 'title'}}">
+						</div>
+						<button class="btn btn-sm btn-success" type="submit">
+							<i class="fa fa-save"></i>
+							{{translate 'save'}}
+						</button>
+						<span class="btn btn-sm btn-warning undo-opened-drawing">
+							<i class="fa fa-backward"></i>
+							{{translate 'undo'}}
+						</span>
+						<span class="btn btn-sm btn-danger reset-opened-drawing">
+							<i class="fa fa-trash"></i>
+							{{translate 'reset'}}
+						</span>
+						<div class="sep-xs"></div>
+						<div class="form-group">
+							<label>{{translate 'shared'}}</label>
+							{{#each rpg.players}}
+								{{#if notCurrentUser owner}}
+									<label class="checkbox-inline"><input {{isSharedToChecked openedDrawing owner }} type="checkbox" class="sharedToCheckbox" name="test" value="{{owner}}">{{username}}</label>
+								{{/if}}
+							{{/each}}
+							{{#if notCurrentUser rpg.roleMaster}}
+								<label class="checkbox-inline"><input {{isSharedToChecked openedDrawing rpg.roleMaster }} type="checkbox" class="sharedToCheckbox" name="test" value="{{rpg.roleMaster}}">{{rpg.roleMasterUsername}}</label>
+							{{/if}}
+						</div>
+					</div>
+				</form>
+				{{#if openedDrawing}} {{else}} <p>Pas de dessin</p> {{/if}}
+			</div>
+		</div>
+	</div>
+</template>

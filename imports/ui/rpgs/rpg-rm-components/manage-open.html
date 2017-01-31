@@ -1,0 +1,15 @@
+<template name="manageOpen">
+	<form class="form">
+		<div class="form-group" >
+			{{# if rpg.open}}
+				<a data-tooltip="{{translate 'set-game-closed'}}" data-tooltip-direction="e">
+					<div class="open-game rpgIcon rpgIconOpenChest"></div>
+				</a>
+			{{else}}
+				<a data-tooltip="{{translate 'set-game-open'}}" data-tooltip-direction="e">
+					<div class="open-game rpgIcon rpgIconLockedChest"></div>
+				</a>
+			{{/if}}
+		</div>
+	</form>
+</template>

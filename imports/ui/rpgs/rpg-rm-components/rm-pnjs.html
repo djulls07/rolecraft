@@ -1,0 +1,57 @@
+<template name="rmPnjs">
+	<div class="panel panel-default panelRpgContainer" style="width: 380px;">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				{{translate 'pnjs'}}
+				<i class="fa fa-minus click-deploy pull-right"></i>
+			</h4>
+		</div>
+		{{#if showBody}}
+			<div class="panel-body">
+				<p>{{translate 'add-pnj'}}</p>
+				<form class="form new-pnj">
+					<div class="form-group">
+						<label>{{translate 'name'}}</label>
+						<input class="form-control input-sm" required name="name">
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<input placeholder="{{translate 'search-model-sheet'}}" class="form-control input-sm model-search" name="searchModel">
+						</div>
+						<div class="form-group col-sm-6">
+							<select class="form-control input-sm" name="model">
+								<option>{{translate 'default-model-sheet'}}</option>
+								{{#each modelsheets}}
+									<option value="{{_id}}">{{name}}</option>
+								{{/each}}
+							</select>
+						</div>
+					</div>
+					<button class="btn btn-sm btn-primary" type="submit">Save</button>
+				</form>
+				<br />
+				<div class="pre-scrollable" style="height: 120px !important;">
+					<table class="tableHistory">
+						<thead>
+							<tr>
+								<th>{{translate 'name'}}</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each pnjs}}
+								<tr>
+									<td>{{name}}</td>
+									<td >
+										<div class="rpgIcon open-sheet rpgIconSheet pull-left" data-tooltip="{{translate 'open-sheet'}}"></div>
+										&nbsp;<a href class="pnj-remove">Remove</a>
+									</td>
+								</tr>
+							{{/each}}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</template>

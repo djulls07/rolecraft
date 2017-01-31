@@ -1,0 +1,130 @@
+<template name="modelSheetList">
+  <div class="container">
+    <header class="jumbotron">
+      <h1>{{translate 'model-sheets'}}</h1>
+      {{#if currentUser}}
+        <form class="new-model-sheet page-header">
+          <div class="row">
+            <div class="form-group col-sm-4">
+              <label for="model_sheet_name">{{translate 'add-model-sheet'}}</label>
+              <input maxlength="40" required placeholder="{{translate 'add-model-sheet'}}" name="name" id="model_sheet_name" type="text" class="form-control">
+            </div>
+            <div class="form-group col-sm-4">
+              <label>{{translate 'language'}}</label>
+              <input autocomplete="off" required class="form-control" name="language">
+            </div>
+            <div class="form-group col-sm-4">
+              <label>{{translate 'import'}} ( {{translate 'optional'}} )</label>
+              <input type="file" class="form-control" name="import">
+            </div>
+          </div>
+          <div class="">
+            <button type="submit" class="btn btn-primary">{{translate 'create'}}</button>
+          </div>
+        </form>
+      {{else}}
+        <p>
+          {{translate 'please-login'}} {{translate 'to-add-model' false}}
+        </p>
+      {{/if}}
+    </header>
+    <ul class="nav nav-pills">
+      <li class="{{isActiveTab 'mine'}} set-state-mine"><a href="">{{translate 'my-modelsheets'}}</a></li>
+      <li class="{{isActiveTab 'public'}} set-state-public"><a href="">{{translate 'public-modelsheets'}}</a></li>
+    </ul>
+    <br />
+    {{#if sheets.count}}
+      <p>
+        {{#if myModelSheetsLimit}}
+          <span class="text-danger">{{translate 'model-sheet-limit'}}</span>
+        {{else}}
+          <span class="text-info">{{translate 'model-sheet-limit-info'}}</span>
+        {{/if}}
+      </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>{{translate 'name'}}</th>
+            <th>{{translate 'language'}}</th>
+            <th>Public ?</th>
+            <th>{{translate 'owner'}}</th>
+            <th>{{translate 'created'}}</th>
+            <th>{{translate 'actions'}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each sheets}}
+            <tr class="sheet-entry">
+              <td>
+                {{#if isOwner}}
+                  {{#if editingModel}}
+                    <form class="form form-inline form-model-sheet">
+                      <div class="form-group">
+                        <input class="form-control input-sm" name="name" value="{{name}}">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control input-sm" name="language" value="{{language}}">
+                      </div>
+                      <div class="form-group">
+                        <label class="radio-inline"><input {{checkedIfPrivate}} type="radio" name="private" value="true">Private</label>
+                        <label class="radio-inline"><input {{checkedIfPublic}} type="radio" name="private" value="false">Public</label>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-xs btn-primary">Save</button>
+                      </div>
+                    </form>
+                  {{else}}
+                    <span class="set-edit-model">
+                      <small><span class="glyphicon glyphicon-pencil"></span></small>
+                      {{name}}
+                    </span>
+                  {{/if}}
+                {{else}}
+                  {{name}}
+                {{/if}}
+              </td>
+              <td>
+                {{language}}
+              </td>
+              <td>
+                <span class="set-edit-model">{{yesNoIfPrivate}}</span>
+              </td>
+              <td>
+                {{username}}
+              </td>
+              <td>{{formatDate createdAt}}</td>
+              <td>
+                <a class="btn btn-xs btn-info" href="/modelsheets/{{_id}}/preview">
+                  <span class="glyphicon glyphicon-eye-open"></span>
+                  {{translate 'preview'}}
+                </a>
+                {{#if currentUser}}
+                  <a class="btn btn-xs btn-default model-export">
+                    <span class="glyphicon glyphicon-export"></span>
+                    {{translate 'export'}}
+                  </a>
+                  <a class="btn btn-xs btn-default model-clone">
+                    <i class="fa fa-clone"></i>
+                    {{translate 'clone'}}
+                  </a>
+                  {{#if isOwner}}
+                    <a class="btn btn-xs btn-warning" href="/modelsheets/{{_id}}/form">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                      {{translate 'edit'}}
+                    </a>
+                    <a href class="remove-sheet btn btn-xs btn-danger">
+                      <span class="glyphicon glyphicon-trash"></span>
+                      {{translate 'remove'}}
+                    </a>
+                  {{/if}}
+                {{/if}}
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    {{else}}
+      <p>{{translate 'no-model-sheet'}}</p>
+    {{/if}}
+  </div>
+</template>

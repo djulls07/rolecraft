@@ -1,0 +1,64 @@
+<template name="rmSheetsHistories">
+	<div class="panel panel-default panelRpgContainer" style="min-width: 500px !important;">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				{{translate 'sheets-histories'}}
+				<i class="pull-right fa fa-minus click-deploy"></i>
+			</h4>
+		</div>
+		{{#if showBody}}
+		<div class="panel-body">
+			{{#if rpg.players}}
+				<ul class="nav nav-tabs">
+					{{#each rpg.players}}
+						{{#if selectedPlayer}}
+				  		<li class="active set-tab-player"><a href="#">{{substr username 0 15}}</a></li>
+				  	{{else}}
+				  		<li class="set-tab-player"><a href="#">{{substr username 0 15}}</a></li>
+				  	{{/if}}
+					{{/each}}
+				</ul>
+				<br />
+				<div class="pre-scrollable">
+					{{#if hasSelectedPlayerAndHasHistory}}
+						<table class="table-hover tableHistory">
+							<thead>
+								<tr>
+									<th>{{translate 'when'}}</th>
+									<th>{{translate 'what'}}</th>
+									<th>{{translate 'value'}}</th>
+									<th>{{translate 'previous-val'}}</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								{{#each selectedPlayerSheet.history}}
+									<tr>
+										<td>{{formatDate date}}</td>
+										{{#each e in transformRaw raw}}
+											<td>{{e}}</td>
+										{{/each}}
+										<td>
+											{{previousVal}}
+										</td>
+										<td>
+											<a href class="cancel-history" data-tooltip="{{translate 'cancel-change'}}">
+												<i class="fa fa-undo" aria-hidden="true"></i>
+											</a>
+										</td>
+									</tr>
+								{{/each}}
+							</tbody>
+						</table>
+					{{else}}
+						<p>{{translate 'no-history'}}</p>
+					{{/if}}
+				</div>
+			{{else}}
+				<p>{{translate 'no-player'}}</p>
+			{{/if}}
+			<div class="panelRpgActions"></div>
+		</div>
+		{{/if}}
+	</div>
+</template>

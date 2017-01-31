@@ -1,0 +1,2829 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"inline-",
+				"inline-block"
+			],
+			[
+				"inline",
+				"inline-flex"
+			],
+			[
+				"pub",
+				"publicDrawings"
+			],
+			[
+				"start",
+				"startPos"
+			],
+			[
+				"new",
+				"newModel"
+			],
+			[
+				"sh",
+				"showBody"
+			],
+			[
+				"su",
+				"substring"
+			],
+			[
+				"models",
+				"modelsheets"
+			],
+			[
+				"drag",
+				"draggables"
+			],
+			[
+				"init",
+				"initInterfaceLock"
+			],
+			[
+				"dragg",
+				"draggable"
+			],
+			[
+				"ca",
+				"canvasOpenedHisto"
+			],
+			[
+				"cav",
+				"canvasOpened"
+			],
+			[
+				"canvasOP",
+				"canvasOpened"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"org",
+				"organize"
+			],
+			[
+				"ins",
+				"instance"
+			],
+			[
+				"sort",
+				"sortable"
+			],
+			[
+				"role",
+				"roleMasterInterfaceLock"
+			],
+			[
+				"pr",
+				"private"
+			],
+			[
+				"modelsh",
+				"modelsheets"
+			],
+			[
+				"list-typ",
+				"list-style-type"
+			],
+			[
+				"model",
+				"modelSheets"
+			],
+			[
+				"Model",
+				"modelSheet"
+			],
+			[
+				"mod",
+				"modelSheetId"
+			],
+			[
+				"bloc",
+				"blockquote\tTag"
+			],
+			[
+				"Po",
+				"PostVote"
+			],
+			[
+				"fie",
+				"fieldVal"
+			],
+			[
+				"fiel",
+				"fieldName"
+			],
+			[
+				"elem",
+				"elementId"
+			],
+			[
+				"réini",
+				"réinitialiser"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"mode",
+				"modelSheet"
+			],
+			[
+				"shar",
+				"sharedTo"
+			],
+			[
+				"adding",
+				"padding-right"
+			],
+			[
+				"sha",
+				"sharedTo"
+			],
+			[
+				"over",
+				"overflow-wrap"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"roleM",
+				"roleMasterUsername"
+			],
+			[
+				"rollsH",
+				"rmRollsHistory"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"ine",
+				"inline-flex"
+			],
+			[
+				"dra",
+				"draggables"
+			],
+			[
+				"rpg",
+				"rpgId"
+			],
+			[
+				"rpg-rm",
+				"rpg-rm-components"
+			],
+			[
+				"in",
+				"inline-grid"
+			],
+			[
+				"pla",
+				"playerPlayerList"
+			],
+			[
+				"canvas",
+				"canvasOpened"
+			],
+			[
+				"shared",
+				"sharedIds"
+			],
+			[
+				"open",
+				"openedDrawing"
+			],
+			[
+				"canv",
+				"canvasHisto"
+			],
+			[
+				"load",
+				"loadOpenedCanvas"
+			],
+			[
+				"draw",
+				"drawings"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"paren",
+				"parentWidth"
+			],
+			[
+				"can",
+				"canvasHisto"
+			],
+			[
+				"drawi",
+				"drawingsCount"
+			],
+			[
+				"parent",
+				"parentHeight"
+			],
+			[
+				"ev",
+				"events\tMeteor: Template.myTemplate.events(eventMap)"
+			],
+			[
+				"currentC",
+				"currentChatId"
+			],
+			[
+				"Chat",
+				"ChatMessage"
+			],
+			[
+				"hsi",
+				"historyId"
+			],
+			[
+				"his",
+				"historyEntry"
+			],
+			[
+				"hist",
+				"historyEntry"
+			],
+			[
+				"prev",
+				"previousVal"
+			],
+			[
+				"gene",
+				"generateForPlayer"
+			],
+			[
+				"backgroudn",
+				"background-color"
+			],
+			[
+				"El",
+				"elementSchema"
+			],
+			[
+				"play",
+				"playerMenuBot"
+			],
+			[
+				"list-",
+				"list-style-type"
+			],
+			[
+				"file",
+				"fileObj"
+			],
+			[
+				"Ex",
+				"existsSync"
+			],
+			[
+				"ModelS",
+				"ModelSheets"
+			],
+			[
+				"gly",
+				"glyphicon"
+			],
+			[
+				"get",
+				"getRpgQuery"
+			],
+			[
+				"rp",
+				"rpgList"
+			],
+			[
+				"backgr",
+				"background-image"
+			],
+			[
+				"ro",
+				"roleMasterUsername"
+			],
+			[
+				"modelS",
+				"modelSheetList"
+			],
+			[
+				"Si",
+				"SimpleSchema"
+			],
+			[
+				"box-s",
+				"box-shadow"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"ModelSh",
+				"modelsheet"
+			],
+			[
+				"mo",
+				"modelSheetPreview"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"to",
+				"toggle-checked"
+			],
+			[
+				"hide",
+				"hideCompleted"
+			],
+			[
+				"template",
+				"templateUrl\tproperty"
+			],
+			[
+				"files",
+				"filesIds\tparameter"
+			],
+			[
+				"sous",
+				"souscriptionsByControle"
+			],
+			[
+				"labora",
+				"laboratoireId"
+			],
+			[
+				"inpu",
+				"inputTotal"
+			],
+			[
+				"facture",
+				"factureLignes"
+			],
+			[
+				"sousc",
+				"souscriptionsNoFact"
+			],
+			[
+				"resp",
+				"Response"
+			],
+			[
+				"total",
+				"totalSouscriptions"
+			],
+			[
+				"tar",
+				"tarifReponseSupplementaire"
+			],
+			[
+				"la",
+				"laboratoireId"
+			],
+			[
+				"createForm",
+				"createFormBuilder"
+			],
+			[
+				"auto",
+				"automatesIds"
+			],
+			[
+				"au",
+				"automatesIds"
+			],
+			[
+				"inssc",
+				"inscriptionsIds"
+			],
+			[
+				"insc",
+				"inscriptions"
+			],
+			[
+				"inscr",
+				"inscriptionsIds"
+			],
+			[
+				"modal",
+				"modalAutomate"
+			],
+			[
+				"form",
+				"formAutomate"
+			],
+			[
+				"curren",
+				"currenForm"
+			],
+			[
+				"che",
+				"checked"
+			],
+			[
+				"cl",
+				"clickToAdd"
+			],
+			[
+				"hi",
+				"hideSelectedControles"
+			],
+			[
+				"th",
+				"thead\tTag"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"lab",
+				"laboratoire"
+			],
+			[
+				"ab",
+				"abonnement"
+			],
+			[
+				"abon",
+				"abonnement"
+			],
+			[
+				"btn",
+				"btnNewAbonnement"
+			],
+			[
+				"labr",
+				"laboratoireId"
+			],
+			[
+				"creat",
+				"createQueryBuilder"
+			],
+			[
+				"La",
+				"Laboratoire"
+			],
+			[
+				"labo",
+				"laboratoireId"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"abo",
+				"abonnementsIds"
+			],
+			[
+				"al",
+				"alreadyJoin"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "imports/ui/model-sheets/model-sheet-form.html",
+			"settings":
+			{
+				"buffer_size": 10469,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/router.js",
+			"settings":
+			{
+				"buffer_size": 1904,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/css/sheets.css",
+			"settings":
+			{
+				"buffer_size": 1108,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/model-sheets/model-sheet-preview.html",
+			"settings":
+			{
+				"buffer_size": 2195,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/common/drawing.js",
+			"settings":
+			{
+				"buffer_size": 9106,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/common/drawing.html",
+			"settings":
+			{
+				"buffer_size": 8806,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/main.js",
+			"settings":
+			{
+				"buffer_size": 624,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/main.js",
+			"settings":
+			{
+				"buffer_size": 1975,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-player-components/player-menu.js",
+			"settings":
+			{
+				"buffer_size": 1594,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/css/main.css",
+			"settings":
+			{
+				"buffer_size": 1650,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".meteor/packages",
+			"settings":
+			{
+				"buffer_size": 1425,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/common/chats.html",
+			"settings":
+			{
+				"buffer_size": 1965,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-rm-components/rm-sheets-histories.html",
+			"settings":
+			{
+				"buffer_size": 1792,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-rm-components/rm-pnjs.html",
+			"settings":
+			{
+				"buffer_size": 1720,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/api/drawings.js",
+			"settings":
+			{
+				"buffer_size": 4089,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-rm-components/rm-pnjs.js",
+			"settings":
+			{
+				"buffer_size": 1611,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/css/rpgs.css",
+			"settings":
+			{
+				"buffer_size": 3923,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-rm-components/rm-sheets-histories.js",
+			"settings":
+			{
+				"buffer_size": 2744,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-rm.js",
+			"settings":
+			{
+				"buffer_size": 3133,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/common/notes.js",
+			"settings":
+			{
+				"buffer_size": 895,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/common/notes.html",
+			"settings":
+			{
+				"buffer_size": 748,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-rm-components/rm-rolls-history.html",
+			"settings":
+			{
+				"buffer_size": 1148,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-rm-components/rm-player-list.html",
+			"settings":
+			{
+				"buffer_size": 3351,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-player-components/player-player-list.html",
+			"settings":
+			{
+				"buffer_size": 2600,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/model-sheets/model-sheet-list.js",
+			"settings":
+			{
+				"buffer_size": 3571,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/api/rpgs.js",
+			"settings":
+			{
+				"buffer_size": 6790,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-list.html",
+			"settings":
+			{
+				"buffer_size": 4204,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "imports/ui/rpgs/rpg-list.js",
+			"settings":
+			{
+				"buffer_size": 3509,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 92.0,
+		"last_filter": "remove",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"removep",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 150.0,
+		"history":
+		[
+			"glue path",
+			"$ glue",
+			"glue",
+			"ls",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/djulls07/Projects/rolecraft",
+		"/home/djulls07/Projects/rolecraft/client",
+		"/home/djulls07/Projects/rolecraft/client/css",
+		"/home/djulls07/Projects/rolecraft/imports",
+		"/home/djulls07/Projects/rolecraft/imports/api",
+		"/home/djulls07/Projects/rolecraft/imports/api/db-init",
+		"/home/djulls07/Projects/rolecraft/imports/startup",
+		"/home/djulls07/Projects/rolecraft/imports/ui",
+		"/home/djulls07/Projects/rolecraft/imports/ui/footer",
+		"/home/djulls07/Projects/rolecraft/imports/ui/header",
+		"/home/djulls07/Projects/rolecraft/imports/ui/home",
+		"/home/djulls07/Projects/rolecraft/imports/ui/model-sheets",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components",
+		"/home/djulls07/Projects/rolecraft/server"
+	],
+	"file_history":
+	[
+		"/home/djulls07/Projects/rolecraft/imports/ui/home/home.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/player-sheet.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/model-sheets/model-sheet-form.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/model-sheets.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/model-sheets/model-sheet-list.html",
+		"/home/djulls07/Projects/rolecraft/server/main.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/rc-files.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components/player-player-list.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/drawings.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/db-init/translations.js",
+		"/home/djulls07/Projects/rolecraft/notes.txt",
+		"/home/djulls07/Projects/rolecraft/client/routes.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/notes.html",
+		"/home/djulls07/Projects/rolecraft/imports/api/notes.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/notes.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/dices-launcher.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/dices-launcher.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/rolls.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-list.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/model-sheets/model-sheet-list.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-list.html",
+		"/home/djulls07/Projects/rolecraft/client/css/sheets.css",
+		"/home/djulls07/Projects/rolecraft/imports/ui/model-sheets/model-sheet-preview.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/model-sheets/model-sheet-form.html",
+		"/home/djulls07/Projects/rolecraft/client/css/main.css",
+		"/home/djulls07/Projects/rolecraft/client/css/rpgs.css",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/drawing.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/home/home.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-rolls-history.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/chats.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/chats.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/drawing.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components/player-menu.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components/player-player-list.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components/player-menu.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-player-list.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/rpgs.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/upload-form/upload-form.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/upload-form/upload-form.html",
+		"/home/djulls07/Projects/rolecraft/.meteor/local/dev_bundle/lib/node_modules/node-inspector/lib/RuntimeAgent.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/model-sheets/model-sheet-preview.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/pnjs.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-pnjs.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-pnjs.js",
+		"/home/djulls07/Projects/rolecraft/.meteor/packages",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/pnj-sheet.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/my-sheets.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/posts.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/header/header.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/pnj-sheet.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/player-sheet.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/dataroom.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/manage-open.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/common/dataroom.html",
+		"/home/djulls07/Projects/rolecraft/client/css/rpg-icons.css",
+		"/home/djulls07/Projects/rolecraft/imports/api/chats.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-sheets-histories.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-menu.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-menu.js",
+		"/home/djulls07/Projects/rolecraft/client/main.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-player-list.html",
+		"/home/djulls07/Projects/rolecraft/imports/api/positions.js",
+		"/media/djulls07/DATA/Projects/hero2/client/imports/app/heroes/hero-details.component.ts",
+		"/media/djulls07/DATA/Projects/hero2/client/imports/app/heroes/heroes-list.component.ts",
+		"/home/djulls07/Projects/projectManager/projects-manager/client/imports/project-form/project-form.ts",
+		"/home/djulls07/Projects/projectManager/projects-manager/client/imports/projects-list/projects-list.ts",
+		"/home/djulls07/Projects/projectManager/projects-manager/server/projects.ts",
+		"/home/djulls07/Projects/rolecraft/client/css/vendor/custom.bootstrap.import.less",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-sheets-histories.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/rm-rolls-history.js",
+		"/home/djulls07/Projects/rolecraft/client/ui.js",
+		"/home/djulls07/Projects/rolecraft/client/extjs/collision.js",
+		"/home/djulls07/Projects/rolecraft/client/collision.js",
+		"/home/djulls07/Projects/rolecraft/client/jquery-ui-draggable-collision.min.js",
+		"/home/djulls07/Projects/rolecraft/client/css/vendor/bootswatch.less",
+		"/home/djulls07/Projects/rolecraft/client/vendor/custom.bootstrap.import.less",
+		"/home/djulls07/.config/sublime-text-3/Packages/User/Glue.sublime-settings",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-rm-components/manage-open.html",
+		"/home/djulls07/Projects/rolecraft/client/main.html",
+		"/home/djulls07/Projects/rolecraft/client/stylesheets/vendor/custom.bootstrap.import.less",
+		"/home/djulls07/Projects/rolecraft/imports/api/drawings.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components/player-sheet.html",
+		"/home/djulls07/Projects/rolecraft/client/stylesheets/vendor/custom.bootstrap.less",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components/player-menu-bot.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components/player-sheet.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components/player-menu-bot.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/footer/footer.js",
+		"/home/djulls07/Projects/rolecraft/imports/startup/init-db.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/header/header.js",
+		"/home/djulls07/Projects/rolecraft/client/main.css",
+		"/home/djulls07/Projects/rolecraft/client/rpg-icons.css",
+		"/home/djulls07/Projects/rolecraft/client/rpgs.css",
+		"/home/djulls07/Projects/rolecraft/.meteor/local/dev_bundle/.node-gyp/4.6.2/include/node/zconf.h",
+		"/home/djulls07/Projects/rolecraft/imports/ui/sheets/sheet.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/sheets/sheet.js",
+		"/home/djulls07/Projects/rolecraft/client/stylesheets/vendor/custom.bootstrap.json",
+		"/home/djulls07/Projects/rolecraft/imports/ui/footer/footer.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/rpgs/rpg-player-components/player-list.html",
+		"/home/djulls07/Projects/rolecraft/imports/api/sheets.js",
+		"/home/djulls07/Projects/rolecraft/client/circular.css",
+		"/home/djulls07/Projects/rolecraft/client/assets/css/component2.css",
+		"/home/djulls07/Projects/rolecraft/client/assets/css/circular.css",
+		"/home/djulls07/Projects/rolecraft/public/assets/circular/circular.js",
+		"/home/djulls07/Projects/rolecraft/client/assets/circular/circular.js",
+		"/home/djulls07/Projects/rolecraft/.meteor/local/build/programs/server/npm/node_modules/meteor/logging/node_modules/cli-color/node_modules/memoizee/lib/regular.js",
+		"/home/djulls07/Téléchargements/CircularNavigation/index2.html",
+		"/home/djulls07/Projects/rolecraft/imports/api/images.js",
+		"/home/djulls07/Projects/rolecraft/imports/api/files.js",
+		"/home/djulls07/Projects/rolecraft/.meteor/local/build/programs/server/npm/node_modules/meteor/webapp/node_modules/connect/lib/middleware/bodyParser.js",
+		"/home/djulls07/Projects/rolecraft/server/init-db.js",
+		"/home/djulls07/Projects/rolecraft/imports/startup/accounts-config.js",
+		"/etc/default/speech-dispatcher",
+		"/home/djulls07/Projects/rolecraft/imports/ui/simple-news/simple-news-list.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/simple-news/simple-news.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/simple-news/simple-news-list.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/simple-news/simple-news.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/simple-news-list.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/simple-news.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/simple-news-list.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/simple-news.js",
+		"/home/djulls07/Projects/rolecraft/imports/ui/body.html",
+		"/home/djulls07/Projects/rolecraft/imports/ui/body.js",
+		"/home/djulls07/.config/sublime-text-3/Local/Session.sublime_session",
+		"/home/djulls07/Projects/projectManager/projects-manager/server/my-files.ts"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 117.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"console",
+			"/>\n",
+			"instance.state.",
+			"instance",
+			"this.state",
+			"mode",
+			"back",
+			"back to",
+			"form-control",
+			"modèle",
+			"modèle*",
+			"sub",
+			"10",
+			"height:",
+			"username",
+			"10",
+			"roll",
+			"rmRoll",
+			"loadFromJSON",
+			">\n",
+			"canvasState",
+			"upload",
+			"inputFileAvatar",
+			"sub",
+			"ui",
+			"checked",
+			"date",
+			"sheetId",
+			"drawin",
+			"lancer de",
+			"Rpgs.schema.validate(rpg)",
+			"cover",
+			"laze",
+			"rmRollsHistoryContainer",
+			"conta",
+			"shared",
+			"inputF",
+			"mine",
+			"menu-",
+			"padding: 0",
+			"getFile",
+			"{{<<\n",
+			"rpgMenu",
+			";\n",
+			"hover",
+			"color:#fefefe",
+			"color: #fefefe",
+			"@text-color",
+			"color:",
+			"result",
+			"control",
+			"sep",
+			"ver",
+			"\n\t\t\t\t\t\t\t\t\t",
+			"rpgMe",
+			"table",
+			"tr",
+			"table",
+			"player",
+			"chat",
+			"openedDrawing",
+			"background",
+			"section",
+			"color:",
+			"tableSheet",
+			"color",
+			"open-ga",
+			"rpgChat",
+			"rpgMenu",
+			"600px",
+			"pre-sc",
+			"cons",
+			" );",
+			"Bla",
+			"=\"{{",
+			"log",
+			"trans",
+			"blaze",
+			"rpgChat",
+			"\t\t\n",
+			"= ",
+			"')});\n",
+			"online",
+			"black",
+			"@gray-dark",
+			"blac",
+			">\n",
+			"font-size",
+			"black",
+			"online",
+			"this.userId",
+			"_id",
+			"table",
+			"tables.",
+			"table.",
+			"section.name",
+			"''",
+			"/images/backgrounds/plateau-player.png",
+			"fa fa-(.*) fa-2x",
+			"font-fa",
+			"classie",
+			"class",
+			"open",
+			"./pu",
+			"\n}",
+			"select-mo",
+			"navbar",
+			"make",
+			"make-",
+			"player",
+			"cho",
+			"choo",
+			"                  <",
+			"      \n",
+			"false",
+			"form-control",
+			"input-sm",
+			"{\n",
+			"input-field",
+			"Mat",
+			"material_select",
+			"validate",
+			"select",
+			"btn-floating waves-effect waves-light",
+			"m12",
+			"m5",
+			"m6",
+			"col s([1-9]+)"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Session.",
+			"Session",
+			"input-sm form-control",
+			"pnjId",
+			"color: #C8C8C8",
+			"glyphicon glyphicon-plus",
+			"true",
+			"form-control input-sm",
+			"form-group",
+			"form-control",
+			"select class=\"form-control\"",
+			"btn btn-sm btn-default",
+			"col-sm-$1",
+			"bo_abonnement_list",
+			"$1",
+			"1000",
+			"password",
+			"h3",
+			"h2",
+			"$1: 'https://bootswatch.com/$1/bootstrap.min.css'",
+			"ion-arrow-right-c",
+			";",
+			"",
+			".content()",
+			"self.content",
+			"getFile",
+			"dossier",
+			"form[dossier]",
+			"dossier",
+			"",
+			"client",
+			"form[client]",
+			"client.",
+			"date('d/m/Y')",
+			"DateTime::createFromFormat('d/m/Y',$1);",
+			"new \\\\DateTime::createFromFormat('d/m/Y',$1);",
+			"new \\\\DateTime::createFromFormat('d/M/Y,$1);",
+			"'",
+			"btn-xs",
+			"btn-sm",
+			"btn-primary",
+			"btn-success",
+			"btn-secondary",
+			"col-md-8",
+			"col-md-4",
+			"<h4>$1</h4>",
+			"réception",
+			"glyphicon-remove-sign",
+			"glyphicon-ok-sign",
+			"",
+			"$1 0$2",
+			"$1 0 $2",
+			"($1)0$2",
+			"$10$2",
+			"$1 0$2",
+			"",
+			"client->getExpert()",
+			"sendEmail",
+			" ",
+			"",
+			"col-sm-4",
+			"",
+			"col-md-4",
+			"$1 €",
+			"$1 %",
+			"$1 €",
+			"(($1/100)$2",
+			"($1/100)$2",
+			"<input type=\"text\" $1>",
+			"nullable=true",
+			"impositionReCalculee",
+			"$this->round($1)",
+			"TauxAnnuel",
+			"tauxAnnuels",
+			"ActualisationLocauxType",
+			"locaux",
+			"DbBundle:ActualisationLocaux",
+			"actualisationLocaux",
+			"actualisation",
+			"coeff_actualisation",
+			"<br />",
+			"<h3$1h3>",
+			"null",
+			"\\nNULL$1",
+			",",
+			".",
+			"\\nNULL$1",
+			",",
+			",NULL$1",
+			",NULL",
+			",NULL,",
+			"getActualisation()",
+			"getRevision59()",
+			"TauxAnnuel",
+			"tauxAnnuel",
+			"base",
+			"default/formModal.html.twig",
+			"typeImmo",
+			"TypeImmo",
+			"typeImmo",
+			"id",
+			"typePiece",
+			"TypePiece",
+			"typePiece",
+			"id",
+			"nomenclature",
+			"classe",
+			"nomenclature",
+			"Classe",
+			"classe",
+			"categorie",
+			"entretien",
+			"Categorie",
+			"categorie",
+			"entretien",
+			"Entretien",
+			"entretien",
+			"sousgroupe",
+			"Sousgroupe",
+			"sousgroupe",
+			"ascenseur",
+			"nature",
+			"$this->getExistingDates();",
+			"$manager",
+			"label",
+			"getManager()",
+			"sortable",
+			"tablesorter_bis"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "imports/ui/model-sheets/model-sheet-form.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3104,
+								3104
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 30.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "imports/router.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/css/sheets.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "imports/ui/model-sheets/model-sheet-preview.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								473,
+								473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "imports/ui/rpgs/common/drawing.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9106,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5679,
+								5679
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2538.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "imports/ui/rpgs/common/drawing.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1747,
+								1747
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "server/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 624,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								624,
+								624
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								993,
+								993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "imports/ui/rpgs/rpg-player-components/player-menu.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1241,
+								975
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "client/css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1650,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1391,
+								1123
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 558.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": ".meteor/packages",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1230,
+								1210
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "imports/ui/rpgs/common/chats.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1965,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								709,
+								709
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "imports/ui/rpgs/rpg-rm-components/rm-sheets-histories.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1769,
+								1769
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "imports/ui/rpgs/rpg-rm-components/rm-pnjs.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								911,
+								911
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "imports/api/drawings.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4089,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4089,
+								4089
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2349.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "imports/ui/rpgs/rpg-rm-components/rm-pnjs.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1059,
+								1059
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "client/css/rpgs.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1936,
+								1936
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1278.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "imports/ui/rpgs/rpg-rm-components/rm-sheets-histories.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								390,
+								390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "imports/ui/rpgs/rpg-rm.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3133,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3129,
+								3129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 91.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "imports/ui/rpgs/common/notes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "imports/ui/rpgs/common/notes.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 748,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								736,
+								736
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "imports/ui/rpgs/rpg-rm-components/rm-rolls-history.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								440,
+								440
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "imports/ui/rpgs/rpg-rm-components/rm-player-list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1805,
+								1805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "imports/ui/rpgs/rpg-player-components/player-player-list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1437,
+								1437
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "imports/ui/model-sheets/model-sheet-list.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								287,
+								287
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "imports/api/rpgs.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6790,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3288,
+								3288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1731.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "imports/ui/rpgs/rpg-list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3889,
+								3889
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1126.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "imports/ui/rpgs/rpg-list.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1366,
+								1366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 130.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "rc.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main.css",
+				"client/css/main.css"
+			],
+			[
+				"packa",
+				".meteor/packages"
+			],
+			[
+				"main",
+				"client/main.js"
+			],
+			[
+				"drawing",
+				"imports/ui/rpgs/common/drawing.js"
+			],
+			[
+				"draw",
+				"imports/api/drawings.js"
+			],
+			[
+				"playerlis",
+				"imports/ui/rpgs/rpg-player-components/player-player-list.js"
+			],
+			[
+				"rcf",
+				"imports/api/rc-files.js"
+			],
+			[
+				"note",
+				"notes.txt"
+			],
+			[
+				"modelshf",
+				"imports/ui/model-sheets/model-sheet-form.js"
+			],
+			[
+				"chat",
+				"imports/ui/rpgs/common/chats.html"
+			],
+			[
+				"timea",
+				".meteor/local/dev_bundle/lib/node_modules/node-inspector/lib/RuntimeAgent.js"
+			],
+			[
+				"rcfile",
+				"imports/api/rc-files.js"
+			],
+			[
+				"rpgslis",
+				"imports/ui/rpgs/rpg-list.html"
+			],
+			[
+				"pack",
+				".meteor/packages"
+			],
+			[
+				"notes",
+				"notes.txt"
+			],
+			[
+				"header",
+				"imports/ui/header/header.html"
+			],
+			[
+				"tran",
+				"imports/api/db-init/translations.js"
+			],
+			[
+				"positio",
+				"imports/api/positions.js"
+			],
+			[
+				"rmplayer",
+				"imports/ui/rpgs/rpg-rm-components/rm-player-list.js"
+			],
+			[
+				"cust",
+				"client/css/vendor/custom.bootstrap.import.less"
+			],
+			[
+				"cstless",
+				"client/stylesheets/vendor/custom.bootstrap.import.less"
+			],
+			[
+				"trans",
+				"imports/api/db-init/translations.js"
+			],
+			[
+				"bootless",
+				"client/stylesheets/vendor/custom.bootstrap.import.less"
+			],
+			[
+				"curstomboo",
+				"client/stylesheets/vendor/custom.bootstrap.import.less"
+			],
+			[
+				"cutsboo",
+				"client/stylesheets/vendor/custom.bootstrap.less"
+			],
+			[
+				"circular.js",
+				".meteor/local/build/programs/server/npm/node_modules/meteor/logging/node_modules/cli-color/node_modules/memoizee/lib/regular.js"
+			],
+			[
+				"custombooless",
+				"client/stylesheets/vendor/custom.bootstrap.import.less"
+			],
+			[
+				"custo",
+				"client/stylesheets/vendor/custom.bootstrap.import.less"
+			],
+			[
+				"pac",
+				"projects-manager/.meteor/packages"
+			],
+			[
+				"myfile",
+				"projects-manager/server/my-files.ts"
+			],
+			[
+				"filli",
+				"projects-manager\\client\\imports\\files-list\\files-list.html"
+			],
+			[
+				"taskform",
+				"projects-manager\\client\\imports\\task-form\\task-form.html"
+			],
+			[
+				"task.",
+				"projects-manager\\server\\tasks.ts"
+			],
+			[
+				"project",
+				"projects-manager\\server\\projects.ts"
+			],
+			[
+				"proj",
+				"projects-manager\\collections\\projects.ts"
+			],
+			[
+				"colleciont/",
+				"projects-manager\\collections\\projects.ts"
+			],
+			[
+				"app.ts",
+				"projects-manager\\client\\app.ts"
+			],
+			[
+				"projectnav",
+				"projects-manager\\client\\imports\\project-nav\\project-nav.html"
+			],
+			[
+				"task",
+				"projects-manager\\server\\tasks.ts"
+			],
+			[
+				"task.d.",
+				"projects-manager\\typings\\task.d.ts"
+			],
+			[
+				"collectask",
+				"projects-manager\\collections\\tasks.ts"
+			],
+			[
+				"fillis",
+				"projects-manager\\client\\imports\\files-list\\files-list.html"
+			],
+			[
+				"fileli",
+				"projects-manager\\client\\imports\\files-list\\files-list.html"
+			],
+			[
+				"taskli",
+				"projects-manager\\client\\imports\\tasks-list\\tasks-list.ts"
+			],
+			[
+				"task-details",
+				"projects-manager\\client\\imports\\task-details\\task-details.html"
+			],
+			[
+				"servfile",
+				"projects-manager\\server\\my-files.ts"
+			],
+			[
+				"taskdetails",
+				"projects-manager\\client\\imports\\task-details\\task-details.ts"
+			],
+			[
+				"tasklist",
+				"projects-manager\\client\\imports\\tasks-list\\tasks-list.html"
+			],
+			[
+				"facturecontr",
+				"src\\BOBundle\\Controller\\FactureController.php"
+			],
+			[
+				"pdfserv",
+				"src\\BOBundle\\Service\\PdfService.php"
+			],
+			[
+				"souscrico",
+				"src\\BOBundle\\Controller\\SouscriptionController.php"
+			],
+			[
+				"laboratoirecon",
+				"src\\BOBundle\\Controller\\LaboratoireController.php"
+			],
+			[
+				"souscricontr",
+				"src\\BOBundle\\Controller\\SouscriptionController.php"
+			],
+			[
+				"abonne/",
+				"src\\BOBundle\\Resources\\views\\Abonnement\\list.html.twig"
+			],
+			[
+				"base",
+				"app\\Resources\\views\\base.html.twig"
+			],
+			[
+				"app.css",
+				"web\\assets\\css\\app.css"
+			],
+			[
+				"controle.ph",
+				"src\\BOBundle\\Entity\\Controle.php"
+			],
+			[
+				"laboratoirecontr",
+				"src\\BOBundle\\Controller\\LaboratoireController.php"
+			],
+			[
+				"facturelist",
+				"src\\BOBundle\\Resources\\views\\Laboratoire\\facturesList.html.twig"
+			],
+			[
+				"routing",
+				"src\\BOBundle\\Resources\\config\\routing.yml"
+			],
+			[
+				"factcontr",
+				"src\\BOBundle\\Controller\\FactureController.php"
+			],
+			[
+				"facturecon",
+				"src\\BOBundle\\Controller\\FactureController.php"
+			],
+			[
+				"variab",
+				"web\\assets\\vendor\\bootstrap\\less\\variables.less"
+			],
+			[
+				"config",
+				"app\\config\\config.yml"
+			],
+			[
+				"param",
+				"app\\config\\parameters.yml"
+			],
+			[
+				"facturerespo",
+				"src\\BOBundle\\Repository\\FactureRepository.php"
+			],
+			[
+				"factulis",
+				"src\\BOBundle\\Resources\\views\\Laboratoire\\facturesList.html.twig"
+			],
+			[
+				"laboratoirecont",
+				"src\\BOBundle\\Controller\\LaboratoireController.php"
+			],
+			[
+				"labora",
+				"src\\BOBundle\\Entity\\Laboratoire.php"
+			],
+			[
+				"familely",
+				"src\\BOBundle\\Form\\FamilleType.php"
+			],
+			[
+				"labrtype",
+				"src\\BOBundle\\Form\\LaboratoireType.php"
+			],
+			[
+				"formadd",
+				"src\\BOBundle\\Resources\\views\\Campagne\\form_add.html.twig"
+			],
+			[
+				"facture",
+				"src\\BOBundle\\Entity\\Facture.php"
+			],
+			[
+				"souscriptioncontr",
+				"src\\BOBundle\\Controller\\SouscriptionController.php"
+			],
+			[
+				"pdfse",
+				"src\\BOBundle\\Service\\PdfService.php"
+			],
+			[
+				"pdfser",
+				"src\\BOBundle\\Service\\PdfService.php"
+			],
+			[
+				"laboratoicontr",
+				"src\\BOBundle\\Controller\\LaboratoireController.php"
+			],
+			[
+				"service",
+				"app\\config\\services.yml"
+			],
+			[
+				"laboratcontr",
+				"src\\BOBundle\\Controller\\LaboratoireController.php"
+			],
+			[
+				"laboacontr",
+				"src\\BOBundle\\Controller\\LaboratoireController.php"
+			],
+			[
+				"automatype",
+				"src\\BOBundle\\Form\\AutomateType.php"
+			],
+			[
+				"automa",
+				"src\\BOBundle\\Entity\\Automate.php"
+			],
+			[
+				"controle",
+				"src\\BOBundle\\Entity\\Controle.php"
+			],
+			[
+				"sousccontr",
+				"src\\BOBundle\\Controller\\SouscriptionController.php"
+			],
+			[
+				"laboracontr",
+				"src\\BOBundle\\Controller\\LaboratoireController.php"
+			],
+			[
+				"souscripre",
+				"src\\BOBundle\\Repository\\SouscriptionRepository.php"
+			],
+			[
+				"controltype",
+				"src\\BOBundle\\Form\\ControleType.php"
+			],
+			[
+				"control",
+				"src\\BOBundle\\Entity\\Controle.php"
+			],
+			[
+				"labocontr",
+				"src\\BOBundle\\Controller\\LaboratoireController.php"
+			],
+			[
+				"automatetype",
+				"src\\BOBundle\\Form\\AutomateType.php"
+			],
+			[
+				".giti",
+				".gitignore"
+			],
+			[
+				"inscrmana",
+				"src\\EEQBundle\\Resources\\views\\Inscription\\manage.html.twig"
+			],
+			[
+				"automacontr",
+				"src\\EEQBundle\\Controller\\AutomateController.php"
+			],
+			[
+				"inscr",
+				"src\\EEQBundle\\Entity\\Inscription.php"
+			],
+			[
+				"sousc",
+				"src\\BOBundle\\Entity\\Souscription.php"
+			],
+			[
+				"automate",
+				"src\\BOBundle\\Entity\\Automate.php"
+			],
+			[
+				"navbar",
+				"src\\BOBundle\\Resources\\views\\navbar.html.twig"
+			],
+			[
+				"inscription",
+				"src\\EEQBundle\\Entity\\Inscription.php"
+			],
+			[
+				"inscriptioncont",
+				"src\\EEQBundle\\Controller\\InscriptionController.php"
+			],
+			[
+				"controlcontr",
+				"src\\BOBundle\\Controller\\ControleController.php"
+			],
+			[
+				"controlercontr",
+				"vendor\\doctrine\\doctrine-bundle\\Controller\\ProfilerController.php"
+			],
+			[
+				"importcon",
+				"src\\BOBundle\\Controller\\ImportController.php"
+			],
+			[
+				"inscrrepo",
+				"src\\EEQBundle\\Repository\\InscriptionRepository.php"
+			],
+			[
+				"souscrire",
+				"src\\BOBundle\\Repository\\SouscriptionRepository.php"
+			],
+			[
+				"inscritre",
+				"src\\EEQBundle\\Repository\\InscriptionRepository.php"
+			],
+			[
+				"inscrirepos",
+				"src\\EEQBundle\\Repository\\InscriptionRepository.php"
+			],
+			[
+				"autotype",
+				"src\\EEQBundle\\Form\\AutomateType.php"
+			],
+			[
+				"autorepos",
+				"src\\EEQBundle\\Repository\\AutomateRepository.php"
+			],
+			[
+				"auto",
+				"src\\EEQBundle\\Entity\\Automate.php"
+			],
+			[
+				"automat",
+				"src\\EEQBundle\\Form\\AutomateType.php"
+			],
+			[
+				"automaterepos",
+				"src\\EEQBundle\\Repository\\AutomateRepository.php"
+			],
+			[
+				"inscriptioncontr",
+				"src\\EEQBundle\\Controller\\InscriptionController.php"
+			],
+			[
+				"labrcontr",
+				"src\\BOBundle\\Controller\\LaboratoireController.php"
+			],
+			[
+				"discit",
+				"src\\BOBundle\\Form\\DisciplineType.php"
+			],
+			[
+				"utilisa",
+				"src\\UserBundle\\Controller\\UtilisateurController.php"
+			],
+			[
+				"utilisacontr",
+				"src\\EEQBundle\\Controller\\UtilisateurController.php"
+			],
+			[
+				"inscrrepos",
+				"src\\EEQBundle\\Repository\\InscriptionRepository.php"
+			],
+			[
+				"utilisateucontr",
+				"src\\UserBundle\\Controller\\UtilisateurController.php"
+			],
+			[
+				"utilisatetype",
+				"src\\UserBundle\\Form\\UtilisateurType.php"
+			],
+			[
+				"usertype",
+				"src\\UserBundle\\Form\\UtilisateurType.php"
+			],
+			[
+				"utilisatype",
+				"src\\UserBundle\\Form\\UtilisateurType.php"
+			],
+			[
+				"utili",
+				"src\\UserBundle\\Entity\\Utilisateur.php"
+			],
+			[
+				"utilicontr",
+				"src\\UserBundle\\Controller\\UtilisateurController.php"
+			],
+			[
+				"navar",
+				"src\\EEQBundle\\Resources\\views\\navbar.html.twig"
+			],
+			[
+				"securit",
+				"app\\config\\security.yml"
+			],
+			[
+				"abonnre",
+				"src\\BOBundle\\Repository\\AbonnementRepository.php"
+			],
+			[
+				"userbcontr",
+				"src\\UserBundle\\Controller\\SecurityController.php"
+			],
+			[
+				"utilisateur",
+				"src\\UserBundle\\Entity\\Utilisateur.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"last_filter": "pha",
+		"selected_items":
+		[
+			[
+				"pha",
+				"~/Projects/phaser/SpaceShooter/phaser-meteor.sublime-project"
+			],
+			[
+				"ph",
+				"~/Projects/phaser/SpaceShooter/phaser-meteor.sublime-project"
+			],
+			[
+				"",
+				"~/Projects/phaser/SpaceShooter/phaser-meteor.sublime-project"
+			],
+			[
+				"abp",
+				"~/Projects/w-agora/abp/abp.sublime-project"
+			],
+			[
+				"rc",
+				"~/Projects/rolecraft/rc.sublime-project"
+			],
+			[
+				"t",
+				"~/Projects/w-agora/timagora/timagora.sublime-project"
+			],
+			[
+				"tima",
+				"~/Projects/w-agora/timagora/timagora.sublime-project"
+			],
+			[
+				"time",
+				"~/Projects/w-agora/timagora/timagora.sublime-project"
+			],
+			[
+				"role",
+				"~/Projects/rolecraft/rc.sublime-project"
+			],
+			[
+				"timea",
+				"~/Projects/w-agora/timagora/timagora.sublime-project"
+			],
+			[
+				"carm",
+				"~/Projects/carmine/carmine.sublime-project"
+			],
+			[
+				"car",
+				"~/Projects/carmine/carmine.sublime-project"
+			],
+			[
+				"vista",
+				"~/Projects/w-agora/vista-externa/vista.sublime-project"
+			],
+			[
+				"am",
+				"~/Projects/agamekMeteor/am.sublime-project"
+			],
+			[
+				"vis",
+				"~/Projects/w-agora/vista-externa/externa.sublime-project"
+			],
+			[
+				"pm",
+				"~/Projects/projectManager/pm.sublime-project"
+			],
+			[
+				"w-a",
+				"~/Projects/w-agora/agenda/fc.sublime-project"
+			],
+			[
+				"fc",
+				"~/Projects/w-agora/agenda/fc.sublime-project"
+			],
+			[
+				"iso",
+				"~/Projects/isotaxe/isotaxe.sublime-project"
+			],
+			[
+				"aga",
+				"C:\\Users\\djull\\Projects\\agamekMeteor\\am.sublime-project"
+			],
+			[
+				" carm",
+				"C:\\xampp\\htdocs\\carmine\\carmine.sublime-project"
+			],
+			[
+				"a",
+				"C:\\Users\\djull\\Projects\\agamekMeteor\\am.sublime-project"
+			],
+			[
+				"sc2",
+				"C:\\Users\\djull\\Projects\\sc2Builds\\sc2Builds.sublime-project"
+			],
+			[
+				"meteo",
+				"C:\\Users\\djull\\Projects\\meteorTest\\meteorTest.sublime-project"
+			],
+			[
+				"pi",
+				"C:\\Users\\djull\\Projects\\Pi\\pi.sublime-project"
+			]
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 369.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

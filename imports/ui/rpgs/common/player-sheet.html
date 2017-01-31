@@ -1,0 +1,81 @@
+<template name="playerSheet">
+	{{#if sheet._id}}
+		<div class="sheetContainer">
+			<header class="text-center sheetHeader">
+				<h4>{{sheet.username}}</h4>
+				<div class="myDraggable wInitial zIndex10 row" style="position:absolute; top: 10px;">
+					{{>dicesLauncher}}
+				</div>
+			</header>
+			<div class="row">
+				{{#each sheet.sections}}
+					<div class="col-sm-{{size}} sectionContainer">
+						{{#if name}}
+						<div class="sectionHeading">
+							<h4 class="sectionTitle">
+								{{name}}
+							</h4>
+						</div>
+						{{/if}}
+						<div class="sectionBody">
+							{{#each elements}}
+								{{#if equal type 'table'}}
+									<table class="tableSheet" style="table-layout: fixed; width: 100%;">
+										{{#if label}}
+											<caption>{{label}}</caption>
+										{{/if}}
+										<tbody>
+										{{#each rowIndex in loopCount table.rows}}
+											<tr class="sheetTr">
+												{{#each colIndex in loopCount table.cols}}
+													{{#if tableCaseField table.cases 'label' colIndex rowIndex}}
+														<th class="sheetTh">
+															{{tableCaseField table.cases 'label' colIndex rowIndex}}
+														</th>
+													{{else}}
+														<td class="td-with-input sheetTd">
+														{{#if disabled}}
+															<input disabled value="{{tableCaseField table.cases 'value' colIndex rowIndex}}" class="input-in-table input-lock" type="text">
+														{{else}}
+															<input value="{{tableCaseField table.cases 'value' colIndex rowIndex}}" class="input-in-table updatable" name="table.cases.{{colIndex}}.{{rowIndex}}.value" type="text">
+														{{/if}}
+														</td>
+													{{/if}}
+												{{/each}}
+											</tr>
+										{{/each}}
+										</tbody>
+									</table>
+								{{else}}
+									<div class="row">
+										{{#if equal type 'textarea'}}
+											<div class="col-sm-12">
+												<label>{{label}}:</label>
+												{{#if disabled}}
+													<textarea disabled placeholder="{{label}}" class="form-control input-in-table input-lock" name="value">{{value}}</textarea>
+												{{else}}
+													<textarea placeholder="{{label}}" class="form-control input-in-table updatable" name="value">{{value}}</textarea>
+												{{/if}}
+											</div>
+										{{else}}
+											<div class="col-sm-6">
+												<label>{{label}}:</label>
+											</div>
+											<div class="col-sm-6">
+												{{#if disabled}}
+													<input disabled value="{{value}}" class="input-in-table input-lock" name="value" placeholder="{{label}}" type="text">
+												{{else}}
+													<input value="{{value}}" class="input-in-table updatable" name="value" placeholder="{{label}}" type="text">
+												{{/if}}
+											</div>
+										{{/if}}
+									</div>
+								{{/if}}
+							{{/each}}
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	{{/if}}
+</template>

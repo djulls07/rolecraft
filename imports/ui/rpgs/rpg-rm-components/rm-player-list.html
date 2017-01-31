@@ -1,0 +1,113 @@
+<template name="rmPlayerList">
+	{{#if rpg.players.length}}
+		{{#if isVertical}}
+			<table class="playerListContainer text-center">
+				<td>
+					<i class="fa fa-bars set-vertical"></i>
+				</td>
+				{{#each rpg.players}}
+					
+					<tr>		
+						<td class="">
+							{{substr username 0 15}}
+							<tr>
+								{{#if playerConnected}}
+									<td class="avatarContainer playerConnected" style="background-image: url({{url avatar}}); background-size:cover;">
+									</td>
+								{{else}}
+									<td class="avatarContainer playerDisconnected" style="background-image: url({{url avatar}}); background-size:cover;">
+									</td>
+								{{/if}}
+							</tr>
+						</td>
+					</tr>
+					<tr style="height: 5px;">
+					</tr>
+					<tr>
+						<td>
+							<tr>
+								<td>
+									<a data-tooltip="{{translate 'open-sheet'}}">
+										<div class="rpgIcon rpgIconSheet open-sheet"></div>
+									</a>
+								</td>
+								<td>
+									{{#if sheetLock}}
+										<a data-tooltip="{{translate 'sheet-lock'}} - {{translate 'unlock-sheet'}}" >
+											<div class="text-success rpgIcon rpgIconLock set-lock-sheet"></div>
+										</a>
+									{{else}}
+										<a data-tooltip="{{translate 'sheet-unlock'}} - {{translate 'lock-sheet'}}">
+											<div class="text-success rpgIcon rpgIconUnlock set-lock-sheet"></div>
+										</a>
+									{{/if}}
+								</td>
+							</tr>
+						</td>
+					</tr>
+					<tr style="height: 15px;">
+					</tr>
+				{{/each}}
+			</table>
+		{{else}}
+
+			<table class="playerListContainer text-center">
+				<td style="vertical-align: middle;">
+					<i class="fa fa-bars set-vertical"></i>
+				</td>
+				<td>
+					<tr>
+						{{#each rpg.players}}
+							<td style="width: 5px;"></td>
+
+							<td>
+								<tr>		
+									<td class="">
+										{{substr username 0 15}}
+										<tr>
+											{{#if playerConnected}}
+												<td class="avatarContainer playerConnected" style="background-image: url({{url avatar}}); background-size:cover;">
+												</td>
+											{{else}}
+												<td class="avatarContainer playerDisconnected" style="background-image: url({{url avatar}}); background-size:cover;">
+												</td>
+											{{/if}}
+										</tr>
+									</td>
+								</tr>
+								<tr style="height: 5px;">
+								</tr>
+								<tr>
+									<td>
+										<tr>
+											<td>
+												<a data-tooltip="{{translate 'open-sheet'}}" data-tooltip-direction="e">
+													<div class="rpgIcon rpgIconSheet open-sheet"></div>
+												</a>
+											</td>
+											<td>
+												{{#if sheetLock}}
+													<a data-tooltip="{{translate 'sheet-lock'}} - {{translate 'unlock-sheet'}}" data-tooltip-direction="e">
+														<div class="text-success rpgIcon rpgIconLock set-lock-sheet"></div>
+													</a>
+												{{else}}
+													<a data-tooltip="{{translate 'sheet-unlock'}} - {{translate 'lock-sheet'}}" data-tooltip-direction="e">
+														<div class="text-success rpgIcon rpgIconUnlock set-lock-sheet"></div>
+													</a>
+												{{/if}}
+											</td>
+										</tr>
+									</td>
+								</tr>
+
+							</td>
+							<td style="width: 5px;"></td>
+						{{/each}}
+					</tr>
+				</td>
+			</table>
+		{{/if}}
+	{{else}}
+		<p class="playerListContainer" style="background-color: #333">{{translate 'player-list-empty'}}</p>
+	{{/if}}
+</template>

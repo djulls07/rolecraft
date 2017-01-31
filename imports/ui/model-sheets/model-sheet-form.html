@@ -1,0 +1,206 @@
+<template name="modelSheetForm">
+  <div class="container">
+    <header class="jumbotron">
+      <h1 class="page-header">{{translate 'edit-model-sheet'}}: {{sheet.name}}</h1>
+      <p class="text-info">{{translate 'save-on-change'}}</p>
+      <div class="btns-fixed-left">
+        <a class="btn btn-sm btn-info" href="/modelsheets/{{sheet._id}}/preview">
+          <span class="glyphicon glyphicon-eye-open"></span>
+          {{translate 'preview'}}
+        </a>
+        <br />
+        {{#if isOrganize}}
+          <a class="btn btn-sm btn-default set-organize">{{translate 'mode-normal'}}</a>
+        {{else}}
+          <a class="btn btn-sm btn-default set-organize">{{translate 'mode-organize'}}</a>
+        {{/if}}
+      </div>
+      <br />      
+      <form class="form">
+        <div class="form-group">
+          <label>{{translate 'name'}}</label>
+          <input class="input-sm form-control model-name-input" name="name" value="{{sheet.name}}">
+        </div>
+      </form>
+       <!-- add element & section -->
+      <form class="form-section-element form">
+        <div class="row">
+          <div class="form-group col-sm-5">
+            <select required name="element" class="input-sm form-control">
+              <option value="text" disabled selected>{{translate 'choose-element-type'}}</option>
+              {{#each element in elements}}
+                <option value="{{element.type}}">{{translate element.name}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group col-sm-5">
+            <select required class="input-sm form-control" name="section">
+              <optgroup label="Create new section">
+                <option value="" disabled selected>{{translate 'choose-section'}}</option>
+                <option value="new12">{{translate 'full-size-section'}}</option>
+                <option value="new8">{{translate '2-3-size-section'}}</option>
+                <option value="new6">{{translate '1-2-size-section'}}</option>
+                <option value="new4">{{translate '1-3-size-section'}}</option>
+                <option value="new3">{{translate '1-4-size-section'}}</option>
+              </optgroup>
+              <optgroup label="Select a section">
+                {{#each section in sheet.sections}}
+                  {{#if section.name}}
+                    <option value="{{section.id}}">{{section.name}}</option>
+                  {{else}}
+                    <option value="{{section.id}}">{{translate 'no-name-section'}}</option>
+                  {{/if}}
+                {{/each}}
+              </optgroup>
+            </select>
+          </div>
+          <div class="col-sm-2">
+            <button class="btn btn-primary" type="submit">
+              <span class="glyphicon glyphicon-plus"></span>
+              {{translate 'add'}}
+            </button>
+          </div>
+        </div>
+      </form>
+    </header>
+
+    <!-- Edit elements & sections -->
+    <div class="row" id="mySortablesSections" style="list-style-type: none;">
+      {{#each sheet.sections}}
+        <div class="col-sm-{{size}}" id="{{id}}">
+          <div class="">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                {{#if editSectionName id}}
+                  <form class="edit-section form">
+                    <div class="row">
+                      <div class="form-group col-sm-10 col-md-5">
+                        <input class="input-sm form-control" placeholder="{{translate 'section-name'}}" name="section_name" id="section_name_{{id}}" value="{{name}}">
+                      </div>
+                      <div class="form-group col-sm-10 col-md-5">
+                        <select class="input-sm form-control" name="section_size">
+                          <option value="" disabled selected>{{translate 'enter-size'}}</option>
+                          <option value="12" {{selected 12 size}}>Full size section</option>
+                          <option value="8" {{selected 8 size}}>2/3 size section</option>
+                          <option value="6" {{selected 6 size}}>1/2 size section</option>
+                          <option value="4" {{selected 4 size}}>1/3 size section</option>
+                          <option value="3" {{selected 3 size}}>1/4 size section</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-2">
+                        <button class="btn btn-primary" type="submit">
+                          <span class="glyphicon glyphicon-save"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                {{else}}
+                  <h4 class="panel-title">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        {{#if name}} {{name}} {{else}} {{translate 'section-name'}} {{/if}}
+                        <span class="pull-right">
+                          <a title="{{translate 'add-element'}}" href class="add-element text-success">
+                            <span class="glyphicon glyphicon-plus"></span>
+                          </a>
+                          &nbsp;
+                          <a class="editSectionName" href>
+                            <span class="glyphicon glyphicon-pencil"></span>
+                          </a>
+                          &nbsp;
+                          <a class="clone-section" href title="{{translate 'clone-section'}}">
+                            <span class="fa fa-clone"></span>
+                          </a>
+                          &nbsp;
+                          <a title="{{translate 'remove-section'}}" href class="remove-section text-danger">
+                            <span class="glyphicon glyphicon-trash"></span>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </h4>
+                {{/if}}
+              </div>
+              <div class="panel-body">
+                {{#each this.elements}}
+                  <div class="modelElementContainer">
+                    <div class="row">
+                      <div class="form-group col-sm-12">
+                        <select name="type" class="input-sm form-control element-input">
+                          {{#each element in elements}}
+                            <option {{selected element.type type}} value="{{element.type}}">{{translate element.name}}</option>
+                          {{/each}}
+                        </select>
+                      </div>
+                    </div>
+                    {{#if equal type 'text'}}
+                      <div class="row">
+                        <div class="form-group col-sm-12">
+                          <input class="input-sm form-control element-input form-group" value="{{label}}" type="text" placeholder="{{translate 'element-label'}}" name="label" id="element_label_{{id}}" />
+                        </div>
+            
+                      </div>
+                    {{else}}
+                      {{#if equal type 'table'}}
+                        
+                        <div class="row">
+                          <div class="col-sm-12 form-group">
+                            <input class="input-sm form-control element-input" value="{{label}}" type="text" placeholder="{{translate 'element-label'}}" name="label" id="element_label_{{id}}" />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-6 form-group">
+                            <input class="input-sm form-control element-input" value="{{table.rows}}" type="number" placeholder="{{translate 'row-number'}}" name="table.rows" id="element_rows_{{id}}" />
+                          </div>
+                          <div class="col-sm-6 form-group">
+                            <input class="input-sm form-control element-input" value="{{table.cols}}" type="number" placeholder="{{translate 'col-number'}}" name="table.cols" id="element_cols_{{id}}" />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <p>{{translate 'empty-if-user-fill-it'}}</p>
+                            <table class="">
+                              <tbody>
+                                {{#each rowIndex in loopCount table.rows}}
+                                  <tr>
+                                    {{#each colIndex in loopCount table.cols}}
+                                      <td>
+                                        <div class="row">
+                                          <div class="form-group col-sm-12">
+                                            <input placeholder="" value="{{tableCaseField table.cases 'label' colIndex rowIndex}}" type="text" class="input-sm form-control element-input input-sm" name="table.cases.{{colIndex}}.{{rowIndex}}.label">
+                                          </div>
+                                        </div>
+                                      </td>
+                                    {{/each}}
+                                  </tr>
+                                {{/each}}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      {{else}}
+                        {{#if equal type 'textarea'}}
+                        <div class="row">
+                          <div class="col-sm-12 form-group">
+                            <input class="input-sm form-control element-input" value="{{label}}" type="text" placeholder="{{translate 'element-label'}}" name="label" id="element_label_{{id}}" />
+                          </div>
+                          
+                        </div>
+                        {{/if}}
+                      {{/if}}
+                    {{/if}}
+                    <div class="">
+                      <a title="{{translate 'remove-element'}}" href class="text-danger remove-element">
+                        <span class="glyphicon glyphicon-trash"></span>
+                      </a>
+                    </div>
+                  </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</template>

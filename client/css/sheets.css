@@ -1,0 +1,71 @@
+.sheetContainer {
+  color: #2e3338;
+  padding: 50px;
+  box-shadow: 2px 2px 2px;
+  margin:auto;
+  background-color: #fafafa;
+  display: flex;
+  flex-flow: row wrap;
+}
+.sheetHeader {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.sheetName {
+  font-size: 50px;
+  letter-spacing: 20px;
+}
+.sectionContainer {
+}
+.sectionHeading {
+
+}
+.sectionTitle {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.sectionBody {
+  padding: 15px;
+}
+.sheetTr {
+  border-color: #2e3338 !important;
+}
+.sheetTh {
+  border-color: #2e3338 !important;
+}
+.sheetTd {
+  border-color: #2e3338 !important;
+}
+.input-lock {
+  cursor: not-allowed;
+}
+.tableSheet {
+  border: 2px solid #2e3338;
+  table-layout: fixed;
+  width: 100%;
+  background-color: transparent;
+}
+.tableSheet th {
+  text-align:center;
+  border: 1px solid #2e3338;
+}
+.tableSheet td {
+  text-align:center;
+  border: 1px solid #2e3338;
+}
+.tableSheet caption {
+  color: #2e3338;
+}
+.btn-fixed-left {
+  position: fixed;
+  top: calc(50% - 15px);
+  left: 5px;
+  height: 30px;
+}
+.btns-fixed-left {
+  position: fixed;
+  top: calc(50% - 15px);
+  left: 5px;
+  z-index:10;
+}

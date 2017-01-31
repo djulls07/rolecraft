@@ -1,0 +1,29 @@
+<template name="rpgNotes">
+	<div class="panel panel-default panelRpgContainer panelNotesContainer">
+
+		<div class="panel-heading">
+			<h4 class="panel-title">{{translate 'notes'}}
+				<span class="pull-right">
+					<i class="new-note text-success fa fa-plus"></i>
+					<i class="fa click-deploy fa-minus"></i>
+				</span>
+			</h4>
+		</div>
+		{{#if showBody}}
+			<div class="panel-body">
+				
+				<hr >
+				<div class="pre-scrollable">
+					{{#each notes}}
+						<div class="notesContainer">
+							<textarea class="edit-note form-control">{{content}}</textarea>
+							<div class="notesActions">
+								<i class="text-danger fa fa-trash remove-note"></i>
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</template>

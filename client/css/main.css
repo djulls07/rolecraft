@@ -1,0 +1,105 @@
+body {
+  font-family: 'Dekko', cursive !important;
+}
+.set-edit-model {
+  cursor: pointer;
+}
+.panel {
+  box-shadow: 1px 1px 1px #aeaeae;
+}
+.modelElementContainer {
+  border: 1px solid #cecece;
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom:5px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px #aeaeae;
+}
+.input-in-table {
+  border: none !important;
+  outline: none !important;
+  background-color: transparent;
+  padding-left:2px;
+  padding-right: 2px;
+}
+.input-in-table::-webkit-input-placeholder {
+    color: #565656;
+}
+.input-in-table:-moz-placeholder {
+    /* FF 4-18 */
+    color: #565656;
+}
+.input-in-table::-moz-placeholder {
+    /* FF 19+ */
+    color: #565656;
+}
+.input-in-table:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #565656;
+}
+.td-with-input {
+  padding:0px !important;
+  vertical-align: middle !important
+}
+
+
+/* Tooltip */
+.tooltip {
+  z-index: 1001;
+  pointer-events: none;
+  transition: opacity .1s ease-out;
+  opacity: 0;
+  background-color: #111;
+  color: white;
+  padding: 2px;
+}
+
+.tooltip.hide {
+  opacity: 0;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+.no-padding {
+  padding:0px !important;
+}
+
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #000000;
+}
+
+::-webkit-scrollbar
+{
+  width: 8px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: #F5F5F5;
+  border: 2px solid #555555;
+}
+.sep-xs {
+  width: 100%;
+  height: 5px;
+}
+table.transparent {
+  background-color: transparent;
+}
+
+.tableCenter th {
+  text-align: center;
+}
+.tableCenter td {
+  text-align: center;
+}
+a {
+  text-decoration: none !important;
+}
+
+.inputFile {
+  color: #c4c4c4;
+}

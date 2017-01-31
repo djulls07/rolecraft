@@ -1,0 +1,45 @@
+/* Generale things about icons */
+.rpgIcon {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 22px;
+  font-size: 22px;
+  cursor: pointer;
+  background-size: cover;
+}
+
+.rpgIcon:hover {
+}
+
+/* Each icons img */
+.rpgIconAvatar {
+  background-image: url('/images/icons/avatar.png');
+}
+.rpgIconSheet {
+  background-image: url('/images/icons/sheet.png');
+}
+.rpgIconLock {
+  background-image: url('/images/icons/lock.png');
+}
+.rpgIconUnlock {
+  background-image: url('/images/icons/unlock.png');
+}
+.rpgIconBrush {
+  background-image: url('/images/icons/brush.png');
+}
+
+
+.rpgIconOpenChest {
+  background-image: url('/images/icons/open-chest.png');
+}
+.rpgIconLockedChest {
+  background-image: url('/images/icons/locked-chest.png');
+}
+.rpgIconDices {
+  background-image: url('/images/icons/dices.png');
+}
+.rpgIconDataroom {
+  background-image: url('/images/icons/open-folder.png');
+}

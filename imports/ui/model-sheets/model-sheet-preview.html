@@ -1,0 +1,73 @@
+<template name="modelSheetPreview">
+	<div class="container">
+		<div class="sheetContainer">
+			<header class="text-center sheetHeader">
+				<h1 class="sheetName">{{sheet.name}}</h1>
+				<div class="btn-sm btns-fixed-left">
+					{{#if isOwner sheet}}
+						<a class="btn btn-sm btn-info" href="/modelsheets/{{sheet._id}}/form">Back to edition</a>
+					{{/if}}
+					<br />
+					<a class="btn btn-sm btn-info" href="/modelsheets">Back to model list</a>
+				</div>
+			</header>
+			<div class="row">
+				{{#each sheet.sections}}
+					<div class="col-sm-{{size}} sectionContainer">
+						{{#if name}}
+						<div class="sectionHeading">
+							<h4 class="sectionTitle">
+								{{name}}
+							</h4>
+						</div>
+						{{/if}}
+						<div class="sectionBody">
+							{{#each elements}}
+								{{#if equal type 'table'}}
+									<table class="tableSheet">
+										{{#if label}}
+											<caption>{{label}}</caption>
+										{{/if}}
+										<tbody>
+										{{#each rowIndex in loopCount table.rows}}
+											<tr class="sheetTr">
+												{{#each colIndex in loopCount table.cols}}
+													{{#if tableCaseField table.cases 'label' colIndex rowIndex}}
+														<th class="sheetTh">
+															{{tableCaseField table.cases 'label' colIndex rowIndex}}
+														</th>
+													{{else}}
+														<td class="td-with-input sheetTd">
+															<input class="input-in-table" type="text">
+														</td>
+													{{/if}}
+												{{/each}}
+											</tr>
+										{{/each}}
+										</tbody>
+									</table>
+								{{else}}
+									<div class="row">
+										{{#if equal type 'textarea'}}
+											<div class="col-sm-12">
+												<label>{{label}}:</label>
+												<textarea class="form-control input-in-table">{{label}}</textarea>
+											</div>
+										{{else}}
+											<div class="col-sm-6">
+												<label>{{label}}:</label>
+											</div>
+											<div class="col-sm-6">
+												<input class="input-in-table" placeholder="{{label}}" type="text">
+											</div>
+										{{/if}}
+									</div>
+								{{/if}}
+							{{/each}}
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>	
+</template>

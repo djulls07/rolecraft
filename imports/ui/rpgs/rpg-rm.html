@@ -1,0 +1,47 @@
+<template name="rpgRm">
+	<div class="rpgRmContainer">
+		<div class="container-fluid">
+
+			<!-- Interface related actions lock, reset etc -->
+			<div class="wInitial zIndex9 lockInterface">
+				{{#if interfaceLock}}
+					<i class="fa fa-lock set-lock" data-tooltip="{{translate 'unlock-interface'}}" data-tooltip-direction="w"></i>
+				{{else}}
+					<i class="fa fa-unlock set-lock" data-tooltip="{{translate 'lock-interface'}}" data-tooltip-direction="w"></i>
+				{{/if}}
+			</div>
+			<div class="wInitial zIndex9 resetInterface">
+				<i class="fa fa-refresh set-reset" data-tooltip="{{translate 'reset-interface'}}" data-tooltip-direction="w"></i>
+			</div>
+
+			<!-- components for RM -->
+			<div class="myDraggable wInitial zIndex9" id="dragRmMenu">
+				{{>rmMenu rpg=rpg}}
+			</div>
+			
+			<div class="myDraggable wInitial zIndex2" id="dragRmSheetsHistories">
+				{{>rmSheetsHistories rpg=rpg}}
+			</div>
+			<div class="myDraggable wInitial zIndex10" id="dragRmDicesLauncher">
+				{{>dicesLauncher rpg=rpg}}
+			</div>
+			<div class="myDraggable wInitial zIndex10" id="dragRmRollsHistory">
+				{{>rmRollsHistory rpg=rpg}}
+			</div>
+			<div class="myDraggable wInitial zIndex8" id="dragRmPnjs">
+				{{>rmPnjs rpg=rpg}}
+			</div>
+			<div class="myDraggable wInitial zIndex7" id="dragRmRpgNotesList">
+				{{>rpgNotes rpg=rpg}}
+			</div>
+			<div class="zIndex1">
+				{{>rpgChats rpg=rpg}}
+			</div>
+			<div class="myDraggable wInitial zIndex8" id="dragRmPlayerList">
+				{{>rmPlayerList rpg=rpg}}
+			</div>
+		</div>
+		
+		
+	</div>
+</template>

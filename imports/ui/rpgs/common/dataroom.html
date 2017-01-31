@@ -1,0 +1,116 @@
+<template name="rpgDataroom">
+	<div class="dataroom">
+		
+		<div class="">
+			
+
+			<ul class="nav nav-tabs">
+			  	<li class="set-tab-mine {{isActive 'mine'}}"><a href="#">{{translate 'my-files'}}</a></li>
+			  	<li class="set-tab-shared {{isActive 'shared'}}"><a href="#">{{translate 'shared-files'}}</a></li>
+			</ul>
+
+			<br />
+
+			<div class="pre-scrollable">
+				{{#if isActivate 'mine'}}
+					<table class="tableHistory">
+						<thead>
+							<tr>
+								<th>Owner</th>
+								<th>{{translate 'title'}}</th>
+								<th>{{translate 'shared'}}</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each file in myFiles}}
+								<tr>
+									<td>{{file.metadata.username}}</td>
+									<td>{{file.metadata.title}}</td>
+									<td>
+										{{#each rpg.players}}
+											{{#if notCurrentUser owner}}
+												<label class="checkbox-inline"><input {{checked file owner}} type="checkbox" fileId="{{file._id}}" name="sharedBox" username="{{username}}" value="{{owner}}" class="set-shared">{{username}}</label>
+											{{/if}}
+										{{/each}}
+										{{#if notCurrentUser rpg.roleMaster}}
+											<label class="checkbox-inline"><input {{checked file rpg.roleMaster}} fileId="{{file._id}}"  type="checkbox" class="set-shared" name="sharedBox" username="{{rpg.roleMasterUsername}}" value="{{rpg.roleMaster}}">{{rpg.roleMasterUsername}}</label>
+										{{/if}}
+									</td>
+									<td>
+										<a download="{{file.name}}" href="{{getUrl file}}">
+											<i class="fa fa-download"></i>
+										</a>
+										&nbsp;
+										<a href class="remove-file" fileId="{{file._id}}">
+											<i class="fa fa-trash" fileId="{{file._id}}"></i>
+										</a>
+									</td>
+								</tr>
+							{{/each}}
+						</tbody>
+					</table>
+				{{/if}}
+
+				{{#if isActivate 'shared'}}
+					<table class="tableHistory">
+						<thead>
+							<tr>
+								<th>Owner</th>
+								<th>Url</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each file in sharedFiles}}
+								<tr>
+									<td>{{file.metadata.username}}</td>
+									<td>
+										<a download="{{file.name}}" href="{{getUrl file}}">
+											<i class="fa fa-download"></i>
+										</a>
+									</td>
+								</tr>
+							{{/each}}
+						</tbody>
+					</table>
+				{{/if}}
+			</div>
+
+			<form class="form new-upload">
+				<p>{{translate 'upload-new-file'}}</p>
+				<div class="row">
+					<div class="col-sm-6">
+						<div clas="form-group">
+							<div class="input-group">
+								<input placeholder="{{translate 'title'}}" name="title" required class="form-control">
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="submit">{{translate 'upload'}}</button>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div clas="form-group">
+							<label class="inputFileLabel">
+								<input required type="file" name="dataroomFile" class="inputFile form-control" />
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label>{{translate 'share'}}:&nbsp;</label>
+							{{#each rpg.players}}
+								{{#if notCurrentUser owner}}
+									<label class="checkbox-inline"><input type="checkbox" class="" name="sharedBox" username="{{username}}" value="{{owner}}">{{username}}</label>
+								{{/if}}
+							{{/each}}
+							{{#if notCurrentUser rpg.roleMaster}}
+								<label class="checkbox-inline"><input type="checkbox" class="" name="sharedBox" username="{{rpg.roleMasterUsername}}" value="{{rpg.roleMaster}}">{{rpg.roleMasterUsername}}</label>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,36 @@
+<template name="dicesLauncher">
+	<div class="dicesLauncher panel panel-default panelRpgContainer">
+
+		<div class="panel-heading">
+			<h4 class="panel-title">{{translate 'roll-dices'}}</h4>
+		</div>
+		<div class="panel-body">
+			<form class="new-roll form-inline">
+				<div class="form-group">
+					<div class="input-group">
+						<input autocomplete="off" class="form-control" required name="entries" minlength="3" maxlength="50" placeholder="{{translate 'roll-example'}}">
+						<span class="input-group-addon click-submit">
+							<div class="rpgIcon rpgIconDices"></div>
+						</span>
+					</div>
+				</div>
+			</form>
+			<br />
+			<div class="pre-scrollable">
+				<table class="table">
+					<tr>
+						<th>{{translate 'result'}}</th>
+						<th>{{translate 'dice'}}</th>
+					</tr>
+					{{#each lastRoll.results}}
+						<tr>
+							<td>{{result}}</td>
+							<td>{{type}}</td>
+						</tr>
+					{{/each}}
+				</table>
+			</div>
+			Total: {{lastRoll.total}}
+		</div>
+	</div>
+</template>

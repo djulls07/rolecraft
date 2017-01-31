@@ -1,0 +1,82 @@
+<template name="playerPlayerList">
+	{{#if isVertical}}
+	<table class="playerListContainer text-center">
+		<td>
+			<i class="fa fa-bars set-vertical"></i>
+
+		</td>
+		{{#each rpg.players}}
+			
+			<tr>		
+				<td class="">
+					{{substr username 0 15}}
+					<tr>
+						{{#if playerConnected}}
+							<td class="avatarContainer playerConnected" style="background-image: url({{avatarUrl}}); background-size:cover;">
+								{{#if isCurrentUser}}
+									<label data-tooltip="{{translate 'click-to-change-avatar'}}" class="inputFileAvatarLabel">
+										<input id="uploadAvatar" type="file" name="avatar" class="inputFileAvatar" />
+									</label>
+								{{/if}}
+							</td>
+						{{else}}
+							<td class="avatarContainer playerDisconnected" style="background-image: url({{avatarUrl}}); background-size:cover;">
+								{{#if isCurrentUser}}
+									<label data-tooltip="{{translate 'click-to-change-avatar'}}" class="inputFileAvatarLabel">
+										<input id="uploadAvatar" type="file" name="avatar" class="inputFileAvatar" />
+									</label>
+								{{/if}}
+							</td>
+						{{/if}}
+					</tr>
+				</td>
+			</tr>
+			<tr style="height: 15px;">
+			</tr>
+		{{/each}}
+	</table>
+	{{else}}
+	<table class="playerListContainer text-center">
+			<td style="vertical-align: middle !important;">
+				<i class="fa fa-bars set-vertical"></i>
+			</td>
+			<td>
+				<tr>
+					{{#each rpg.players}}
+						<td style="width: 5px;"></td>
+						<td>
+							<tr>		
+								<td class="">
+									{{substr username 0 15}}
+									<tr>
+										{{#if playerConnected}}
+											<td class="avatarContainer playerConnected" style="background-image: url({{avatarUrl}}); background-size:cover;">
+												{{#if isCurrentUser}}
+													<label data-tooltip="{{translate 'click-to-change-avatar'}}" class="inputFileAvatarLabel">
+														<input id="uploadAvatar" type="file" name="avatar" class="inputFileAvatar" />
+													</label>
+												{{/if}}
+											</td>
+										{{else}}
+											<td class="avatarContainer playerDisconnected" style="background-image: url({{avatarUrl}}); background-size:cover;">
+												{{#if isCurrentUser}}
+													<label data-tooltip="{{translate 'click-to-change-avatar'}}" class="inputFileAvatarLabel">
+														<input id="uploadAvatar" type="file" name="avatar" class="inputFileAvatar" />
+													</label>
+												{{/if}}
+											</td>
+										{{/if}}
+										
+									</tr>
+								</td>
+							</tr>
+							
+						</td>
+						<td style="width: 5px;"></td>
+					{{/each}}
+				</tr>
+			</td>
+		</table>
+	{{/if}}
+
+</template>

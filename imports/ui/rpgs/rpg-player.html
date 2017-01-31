@@ -1,0 +1,37 @@
+<template name="rpgPlayer">
+	<div class="rpgPlayerContainer">
+		<div class="container-fluid">
+
+			<!-- Interface related actions lock, reset etc -->
+			<div class="wInitial zIndex9 lockInterface">
+				{{#if interfaceLock}}
+					<i class="fa fa-lock set-lock" data-tooltip="{{translate 'unlock-interface'}}" data-tooltip-direction="w"></i>
+				{{else}}
+					<i class="fa fa-unlock set-lock" data-tooltip="{{translate 'lock-interface'}}" data-tooltip-direction="w"></i>
+				{{/if}}
+			</div>
+			<div class="wInitial zIndex9 resetInterface">
+				<i class="fa fa-refresh set-reset" data-tooltip="{{translate 'reset-interface'}}" data-tooltip-direction="w"></i>
+			</div>
+
+			<!-- Player related components -->
+			<div class="myDraggable wInitial zIndex9" id="dragPlayerMenu">
+				{{>playerMenu rpg=rpg}}
+			</div>
+			
+			<div class="myDraggable wInitial zIndex10" id="dragDicesLauncher">
+				{{>dicesLauncher rpg=rpg}}
+			</div>
+			<div class="myDraggable wInitial zIndex7" id="dragPlayerNotesList">
+				{{>rpgNotes rpg=rpg}}
+			</div>
+			<div class="myDraggable wInitial zIndex8" id="dragPlayerPlayerList">
+				{{>playerPlayerList rpg=rpg}}
+			</div>
+			<div class="zIndex1">
+				{{>rpgChats rpg=rpg}}
+			</div>
+		</div>
+	</div>
+		
+</template>
