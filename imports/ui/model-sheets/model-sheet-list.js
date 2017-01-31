@@ -13,6 +13,9 @@ Template.modelSheetList.onCreated(function onCreatedModelSheetList() {
   this.state.set('tab', 'mine');
 });
 
+Template.modelSheetList.onRendered(function () {
+});
+
 Template.modelSheetList.helpers({
   'sheets'() {
     if (Template.instance().state.get('tab') === 'mine') {

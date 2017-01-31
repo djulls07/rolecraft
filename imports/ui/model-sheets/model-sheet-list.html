@@ -1,25 +1,24 @@
 <template name="modelSheetList">
   <div class="container">
-    <header class="jumbotron">
+    <header class="">
       <h1>{{translate 'model-sheets'}}</h1>
+    </header>
+
+    <div class="row">
       {{#if currentUser}}
-        <form class="new-model-sheet page-header">
+        <form class="new-model-sheet col s12">
           <div class="row">
-            <div class="form-group col-sm-4">
-              <label for="model_sheet_name">{{translate 'add-model-sheet'}}</label>
-              <input maxlength="40" required placeholder="{{translate 'add-model-sheet'}}" name="name" id="model_sheet_name" type="text" class="form-control">
+            <div class="input-field col s4">
+              <input maxlength="40" required name="name" id="model_sheet_name" class="validate">
+              <label for="name">{{translate 'add-model-sheet'}}</label>
             </div>
-            <div class="form-group col-sm-4">
-              <label>{{translate 'language'}}</label>
-              <input autocomplete="off" required class="form-control" name="language">
+            <div class="input-field col s4">
+              <input id="language" required class="validate" name="language">
+              <label for="language">{{translate 'language'}}</label>
             </div>
-            <div class="form-group col-sm-4">
-              <label>{{translate 'import'}} ( {{translate 'optional'}} )</label>
-              <input type="file" class="form-control" name="import">
+            <div class="col s4">
+              <button type="submit" class="btn btn-primary">{{translate 'create'}}</button>
             </div>
-          </div>
-          <div class="">
-            <button type="submit" class="btn btn-primary">{{translate 'create'}}</button>
           </div>
         </form>
       {{else}}
@@ -27,7 +26,8 @@
           {{translate 'please-login'}} {{translate 'to-add-model' false}}
         </p>
       {{/if}}
-    </header>
+    </div>
+
     <ul class="nav nav-pills">
       <li class="{{isActiveTab 'mine'}} set-state-mine"><a href="">{{translate 'my-modelsheets'}}</a></li>
       <li class="{{isActiveTab 'public'}} set-state-public"><a href="">{{translate 'public-modelsheets'}}</a></li>

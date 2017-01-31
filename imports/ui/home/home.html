@@ -1,20 +1,25 @@
 <template name="home">
 	<div class="container">
-		<div class="jumbotron">
+		<div class="">
 			<form class="form-new-post form">
-				<div class="form-group">
-					<label>Post title</label>
-					<input type="text" required name="title" class="form-control">
-				</div>
-				<div class="form-group">
-					<label>Post content</label>
-					<textarea required minlength="50" type="text" name="content" class="form-control"></textarea>
-				</div>
-				<button class="btn btn-primary" type="submit">Save</button>
+				<div class="row">
+	        <div class="input-field col s12">
+	         	<input type="text" required name="title" class="validate">
+	          <label for="title">Post title</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+						<textarea name="content" id="textarea1" class="materialize-textarea"></textarea>
+	          <label for="content">Post content</label>
+	        </div>
+	      </div>
+				<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+			  </button>
 			</form>
 		</div>
 		{{#each posts}}
-			<div class="well">
+			<div>
 				<h4>{{title}}</h4>
 				<p>{{nl2br content}}</p>
 				<blockquote>
