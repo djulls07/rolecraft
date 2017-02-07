@@ -5,7 +5,8 @@ namespace app\models;
 use Yii;
 use app\models\Element;
 use yii\behaviors\TimestampBehavior;
-use \yii\db\ActiveRecord;
+use yii\db\ActiveRecord;
+use app\components\SectionBehavior;
 
 /**
  * This is the model class for table "rc_section".

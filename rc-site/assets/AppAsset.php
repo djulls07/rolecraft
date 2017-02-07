@@ -19,6 +19,7 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'https://fonts.googleapis.com/css?family=Dekko'
     ];
     public $js = [
     ];

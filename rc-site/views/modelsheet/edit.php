@@ -24,7 +24,15 @@ $this->params['tab_items'] = [
         'url' => Url::toRoute(['modelsheet/edit', 'id' => Yii::$app->session->get('modelsheet_edit')->id]),
         'active' => true
     ]
-]
+];
+
+if (Yii::$app->session->get('section_edit')) {
+    $this->params['tab_items'][] = [
+        'label' => 'Edit section ' . Yii::$app->session->get('section_edit')->id . ' - ' . Yii::$app->session->get('section_edit')->name,
+        'url' => Url::toRoute(['section/edit', 'id' => Yii::$app->session->get('section_edit')->id]),
+        'active' => false
+    ];
+}
 ?>
 <fieldset>
     <legend>General</legend>
@@ -57,7 +65,12 @@ $this->params['tab_items'] = [
         'dataProvider' => $sectionsProvider,
         'columns' => [
             'id',
-            'name',
+            [
+                'attribute' => 'name',
+                'value' => function($model) {
+                    return $model->name ? $model->name : '--';
+                }
+            ],
             'position',
             [
                 'attribute' => 'size',
@@ -69,9 +82,18 @@ $this->params['tab_items'] = [
                 'attribute' => 'Actions',
                 'format' => 'html',
                 'value' => function($model) {
-                    return '--';
+                    return Html::a(
+                        '<i class="fa fa-pencil"></i> Edit',
+                        ['section/edit', 'id' => $model->id],
+                        ['class' => 'btn btn-xs btn-warning']
+                    ) 
+                    .Html::a(
+                        '<i class="fa fa-trash"></i> Remove',
+                        ['section/remove', 'id' => $model->id],
+                        ['class' => 'btn btn-xs btn-danger']
+                    );
                 }
-            ],
-        ],
+            ]
+        ]
     ]) ?>
 </fieldset>

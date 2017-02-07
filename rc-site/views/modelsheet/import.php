@@ -27,6 +27,13 @@ if (Yii::$app->session->get('modelsheet_edit')) {
         'active' => false
     ];
 }
+if (Yii::$app->session->get('section_edit')) {
+    $this->params['tab_items'][] = [
+        'label' => 'Edit section ' . Yii::$app->session->get('section_edit')->id . ' - ' . Yii::$app->session->get('section_edit')->name,
+        'url' => Url::toRoute(['section/edit', 'id' => Yii::$app->session->get('section_edit')->id]),
+        'active' => false
+    ];
+}
 ?>
 
 <?php $form = ActiveForm::begin([

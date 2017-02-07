@@ -84,6 +84,10 @@ class ModelsheetController extends Controller
     {
         $model = Modelsheet::findOne($id);
 
+        if ($model->getUser()->one()->id != Yii::$app->user->identity->id) {
+            throw new \yii\web\HttpException(401, 'Forbidden');
+        }
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->save();
             Yii::$app->session->addFlash('success', 'Modelsheet saved');
@@ -97,7 +101,7 @@ class ModelsheetController extends Controller
         $sectionsProvider = new ActiveDataProvider([
             'query' => $model->getSections(),
             'pagination' => [
-                'pageSize' => 5,
+                'pageSize' => 4,
             ]
         ]);
 

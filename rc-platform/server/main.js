@@ -98,7 +98,6 @@ if (Meteor.isServer) {
         },    // function(obj, requestMetadata, returnObject) {return true/false;},
         GET: undefined,     // function(objs, requestMetadata, returnObject) {return true/false;},
         PUT: function(obj, requestMetadata, returnObject) {
-          console.log('PUT', obj.private);
           return true;
         },     // function(obj, newValues, requestMetadata, returnObject) {return true/false;},
         DELETE: undefined   // function(obj, requestMetadata, returnObject) {return true/false;}

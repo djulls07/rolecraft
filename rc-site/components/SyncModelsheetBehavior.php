@@ -32,6 +32,7 @@ class SyncModelsheetBehavior extends Behavior
         $data['name'] = $model->name;
         $data['language'] = $model->language;
         $data['private'] = $model->private ? true : false;
+        $data['sections'] = [];
         //$data['updatedAt'] = date("r", $model->updated_at);
         $sections = $model->getSections()->orderBy('position')->all();
         foreach($sections as $k1 => $section) {
@@ -92,7 +93,14 @@ class SyncModelsheetBehavior extends Behavior
      * @return string
      */
     public function sync($event)
-    {
+    {   
+        // re order positions
+        $sections = $this->owner->getSections()->orderBy('position')->all();
+        foreach($sections as $index => $s) {
+            $s->position = $index;
+            $s->save();
+        }
+
         $data = $this->constructDataArray();
         
         $headers = array();
