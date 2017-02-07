@@ -653,5 +653,5 @@ export const translations = [
     "key":"drawings-saved-info",
     "fr":"votre dessin à été sauvé, retrouvez le dans l'onglet \"mes dessins\"",
     "en":"your drawing has been saved, you can see and share it from \"my drawings\" tab"
-  },
+  }
 ];

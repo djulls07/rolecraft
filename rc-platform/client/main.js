@@ -10,6 +10,12 @@ import { Translations } from '../imports/api/translations.js';
 /* Subscribe to translations */
 Meteor.startup(() => {
   Meteor.subscribe('translations');
+  // let meteor uses 'custom_users' collection as 'users' collection
+  Accounts.users = new Mongo.Collection("rc_users", {
+    _preventAutopublish: true
+  });
+
+  Meteor.users = Accounts.users;
 });
 
 /* Global helper for translations */
@@ -50,6 +56,20 @@ Template.registerHelper('loopCount', (count) => {
 });
 
 Template.registerHelper('formatDate', (d) => {
+  let day = d.getDate();
+  let month = d.getMonth();
+  if (day < 10) {
+    day = '0' + day;
+  }
+  if (month < 10) {
+    month = '0' + month;
+  }
+  return d.getDate() + '/' + d.getMonth() + '/' +d.getFullYear();
+});
+
+Template.registerHelper('formatDateInt', (n) => {
+  n = parseInt(n);
+  let d = new Date(1000*n);
   let day = d.getDate();
   let month = d.getMonth();
   if (day < 10) {

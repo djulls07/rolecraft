@@ -4,8 +4,52 @@
 		"selected_items":
 		[
 			[
+				"data",
+				"data_string"
+			],
+			[
+				"req",
+				"requestMetadata"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"impo",
+				"importForm"
+			],
+			[
+				"import",
+				"importErrors"
+			],
+			[
+				"imp",
+				"importErrors"
+			],
+			[
+				"im",
+				"importErrors"
+			],
+			[
+				"sort",
+				"sortedBoxes"
+			],
+			[
 				"model",
-				"modelSheetList"
+				"modelsheet"
+			],
+			[
+				"Model",
+				"Modelsheet"
+			],
+			[
+				"he",
+				"helpers"
+			],
+			[
+				"collec",
+				"collectionName"
 			],
 			[
 				"ini",
@@ -62,10 +106,6 @@
 			[
 				"question",
 				"questionnaire"
-			],
-			[
-				"import",
-				"importMyeloHemato"
 			],
 			[
 				"array_m",
@@ -284,10 +324,6 @@
 				"tableBody\tproperty"
 			],
 			[
-				"data",
-				"date_add"
-			],
-			[
 				"getMen",
 				"getMenuItemsByQuestion"
 			],
@@ -444,10 +480,6 @@
 				"conclusionsCorresp"
 			],
 			[
-				"req",
-				"request"
-			],
-			[
 				"w",
 				"word-wrap"
 			],
@@ -482,43 +514,172 @@
 			[
 				"nbRe",
 				"nbReponsesTechniquesStruct"
-			],
-			[
-				"tec",
-				"techniquesTmp"
-			],
-			[
-				"repons",
-				"reponsesIdentTmp"
-			],
-			[
-				"rep",
-				"reponsesIdentTmp"
-			],
-			[
-				"by",
-				"byEchantillonsAndQuestions"
-			],
-			[
-				"getMenu",
-				"getMenuItemByQuestion"
-			],
-			[
-				"click",
-				"clickToEdit"
-			],
-			[
-				"addE",
-				"addEchantillon"
-			],
-			[
-				"bo",
-				"bo_confrontation_list"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "rc-site/controllers/ModelsheetController.php",
+			"settings":
+			{
+				"buffer_size": 2457,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/views/modelsheet/edit.php",
+			"settings":
+			{
+				"buffer_size": 1256,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/components/SyncModelsheetBehavior.php",
+			"settings":
+			{
+				"buffer_size": 5367,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/views/modelsheet/import.php",
+			"settings":
+			{
+				"buffer_size": 1253,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/views/modelsheet/index.php",
+			"settings":
+			{
+				"buffer_size": 1148,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/models/Modelsheet.php",
+			"settings":
+			{
+				"buffer_size": 4062,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-platform/imports/api/model-sheets.js",
+			"settings":
+			{
+				"buffer_size": 9843,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-platform/server/main.js",
+			"settings":
+			{
+				"buffer_size": 6209,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/views/layouts/main.php",
+			"settings":
+			{
+				"buffer_size": 2788,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/config/web.php",
+			"settings":
+			{
+				"buffer_size": 2169,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/config/mongodb.php",
+			"settings":
+			{
+				"buffer_size": 112,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/models/ModelsheetImportForm.php",
+			"settings":
+			{
+				"buffer_size": 1191,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/models/Section.php",
+			"settings":
+			{
+				"buffer_size": 3529,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/models/Table.php",
+			"settings":
+			{
+				"buffer_size": 3456,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/models/TableBox.php",
+			"settings":
+			{
+				"buffer_size": 2439,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/models/Element.php",
+			"settings":
+			{
+				"buffer_size": 3190,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/models/User.php",
+			"settings":
+			{
+				"buffer_size": 2744,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/components/SyncBehavior.php",
+			"settings":
+			{
+				"buffer_size": 1877,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -527,13 +688,17 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "",
+		"height": 92.0,
+		"last_filter": "install",
 		"selected_items":
 		[
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
 			],
 			[
 				"inst",
@@ -544,9 +709,10 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 126.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -562,22 +728,94 @@
 	[
 		"/home/djulls07/Projects/RC",
 		"/home/djulls07/Projects/RC/rc-platform",
-		"/home/djulls07/Projects/RC/rc-platform/.meteor",
 		"/home/djulls07/Projects/RC/rc-platform/client",
-		"/home/djulls07/Projects/RC/rc-platform/client/css",
-		"/home/djulls07/Projects/RC/rc-platform/imports",
-		"/home/djulls07/Projects/RC/rc-platform/imports/ui",
-		"/home/djulls07/Projects/RC/rc-platform/imports/ui/home",
-		"/home/djulls07/Projects/RC/rc-platform/imports/ui/model-sheets",
-		"/home/djulls07/Projects/RC/rc-platform/node_modules"
+		"/home/djulls07/Projects/RC/rc-platform/server",
+		"/home/djulls07/Projects/RC/rc-site",
+		"/home/djulls07/Projects/RC/rc-site/commands",
+		"/home/djulls07/Projects/RC/rc-site/components",
+		"/home/djulls07/Projects/RC/rc-site/controllers",
+		"/home/djulls07/Projects/RC/rc-site/models",
+		"/home/djulls07/Projects/RC/rc-site/views",
+		"/home/djulls07/Projects/RC/rc-site/views/layouts",
+		"/home/djulls07/Projects/RC/rc-site/views/modelsheet",
+		"/home/djulls07/Projects/RC/rc-site/views/site"
 	],
 	"file_history":
 	[
-		"/home/djulls07/Projects/RC/rc-platform/imports/ui/home/home.html",
+		"/home/djulls07/Projects/RC/rc-site/vendor/bower/bootstrap/dist/css/bootstrap.css",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/model-sheets/model-sheet-list.js",
-		"/home/djulls07/Projects/RC/rc-platform/client/main.js",
-		"/home/djulls07/Projects/RC/rc-platform/imports/ui/header/header.html",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/model-sheets/model-sheet-list.html",
+		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/edit.php",
+		"/home/djulls07/Projects/w-agora/abp/setup/updates/170206.php",
+		"/home/djulls07/Projects/RC/rc-site/components/SyncModelsheetBehavior.php",
+		"/home/djulls07/Projects/RC/rc-platform/local_run.sh",
+		"/home/djulls07/Projects/RC/rc-platform/.meteor/local/dev_bundle/lib/node_modules/babel-core/node_modules/lodash/core.js",
+		"/home/djulls07/Projects/RC/rc-platform/client/main.js",
+		"/home/djulls07/Projects/RC/rc-platform/imports/api/model-sheets.js",
+		"/home/djulls07/Projects/RC/rc-platform/imports/api/db-init/translations.js",
+		"/home/djulls07/Projects/RC/sheets/export_Bloodlust .json",
+		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/import.php",
+		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/index.php",
+		"/home/djulls07/Projects/RC/rc-platform/server/main.js",
+		"/home/djulls07/Projects/RC/rc-site/components/SyncModelsheetsBehavior.php",
+		"/home/djulls07/Projects/RC/rc-site/config/mongodb.php",
+		"/home/djulls07/Projects/RC/rc-site/config/db.php",
+		"/home/djulls07/Projects/RC/rc-site/config/web.php",
+		"/home/djulls07/Projects/RC/rc-platform/imports/ui/header/header.html",
+		"/home/djulls07/Projects/RC/rc-site/models/ModelsheetImport.php",
+		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/modelsheet_preview.php",
+		"/home/djulls07/Projects/RC/rc-site/models/TableBox.php",
+		"/home/djulls07/Projects/RC/rc-site/models/Table.php",
+		"/home/djulls07/Projects/RC/rc-site/models/Section.php",
+		"/home/djulls07/Projects/RC/rc-site/models/Element.php",
+		"/etc/apache2/sites-available/yii.timagora.conf",
+		"/etc/hosts",
+		"/home/djulls07/Projects/RC/rc-site/components/SyncBehavior.php",
+		"/home/djulls07/Projects/RC/rc-site/models/LoginForm.php",
+		"/home/djulls07/Projects/RC/rc-site/views/site/login.php",
+		"/home/djulls07/Projects/RC/rc-site/models/User.php",
+		"/home/djulls07/Projects/RC/rc-site/web/index.php",
+		"/home/djulls07/Projects/RC/rc-site/views/site/register.php",
+		"/home/djulls07/Projects/RC/rc-site/views/site/index.php",
+		"/home/djulls07/Projects/RC/rc-site/controllers/SiteController.php",
+		"/home/djulls07/Projects/RC/rc-site/models/RegisterForm.php",
+		"/home/djulls07/Projects/RC/rc-site/views/layouts/main.php",
+		"/home/djulls07/.bashrc",
+		"/home/djulls07/Projects/RC/between_app_key",
+		"/home/djulls07/Projects/RC/rc-site/models/Modelsheet.php",
+		"/home/djulls07/Projects/RC/rc-site/controllers/ModelSheetController.php",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/Security/login.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/composer.json",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/layout.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/sidebar-elements.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/app/config/routing.yml",
+		"/home/djulls07/Projects/RC/rc-site/app/AppKernel.php",
+		"/home/djulls07/Projects/RC/rc-site/app/config/config.yml",
+		"/home/djulls07/Projects/RC/rc-site/app/config/security.yml",
+		"/home/djulls07/Projects/RC/rc-site/src/AppBundle/Entity/User.php",
+		"/home/djulls07/Projects/RC/rc-site/src/AppBundle/Controller/SecurityController.php",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/security/login.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/src/AppBundle/Controller/SecurityController.ph",
+		"/home/djulls07/Projects/RC/rc-site/src/AppBundle/Security/SecurityController.php",
+		"/home/djulls07/Projects/RC/rc-site/app/config/parameters.yml",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/FOSUserBundle/views/Registration/register.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/Translations/rolecraft.en.yml",
+		"/home/djulls07/Projects/RC/rc-site/src/AppBundle/Controller/ModelSheetController.php",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/model-sheet/list.html.twig",
+		"/home/djulls07/Téléchargements/export_Bloodlust .json",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/FOSUserBundle/views/layout.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/vendor/friendsofsymfony/user-bundle/Resources/config/routing/security.xml",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/FOSUserBundle/views/Security/login_content.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/base.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/model-sheet/layout.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/modelsheet/layout.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/modelsheet/list.html.twig",
+		"/home/djulls07/Projects/RC/rc-site/app/Resources/views/start-screen/list.html.twig",
+		"/home/djulls07/Projects/RC/rc-platform/package.json",
+		"/home/djulls07/Projects/RC/rc-site/src/AppBundle/Security/User.php",
+		"/home/djulls07/Projects/RC/rc-site/web/config.php",
+		"/etc/apache2/sites-available/rolecraft.conf",
+		"/home/djulls07/Projects/RC/rc-platform/imports/ui/home/home.html",
 		"/home/djulls07/Projects/RC/rc-platform/.gitignore",
 		"/home/djulls07/Projects/RC/rc-platform/.meteor/packages",
 		"/home/djulls07/Projects/RC/rc-platform/client/css/main.css",
@@ -592,13 +830,9 @@
 		"/home/djulls07/Projects/RC/rc-game-platform/.meteor/packages",
 		"/home/djulls07/Projects/RC/rc-game-platform/package.json",
 		"/home/djulls07/Projects/RC/rc-game-platform/client/css/rpgs.css",
-		"/home/djulls07/Projects/RC/rc-site/app/config/parameters.yml",
-		"/home/djulls07/Projects/RC/rc-site/app/AppKernel.php",
 		"/home/djulls07/Projects/RC/rc-site/app/autoload.php",
 		"/home/djulls07/Projects/RC/rc-site/src/AppBundle/Document/User.php",
 		"/home/djulls07/Projects/RC/rc-site/src/AppBundle/Document/ModelSheet.php",
-		"/home/djulls07/Projects/RC/rc-site/app/config/config.yml",
-		"/home/djulls07/Projects/RC/rc-site/composer.json",
 		"/etc/php/7.0/cli/php.ini",
 		"/etc/php/7.0/apache2/php.ini",
 		"/etc/php/7.0/cli/conf.d/20-mongodb.ini",
@@ -606,7 +840,6 @@
 		"/home/djulls07/.config/sublime-text-3/Local/Session.sublime_session",
 		"/home/djulls07/Projects/factureAppLara/config/app.php",
 		"/home/djulls07/Projects/factureAppLara/composer.json",
-		"/etc/hosts",
 		"/etc/apache2/sites-available/laravel.factureapp.conf",
 		"/home/djulls07/Projects/w-agora/abp/setup/csv/historique/hematocell_user.csv",
 		"/home/djulls07/Projects/w-agora/abp/src/UserBundle/Entity/Utilisateur.php",
@@ -636,71 +869,7 @@
 		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Laboratoire/utilisateurs_list.html.twig",
 		"/home/djulls07/Projects/w-agora/abp/src/UserBundle/Resources/views/Utilisateur/forgot_password_change.html.twig",
 		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Laboratoire/mailing.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Envoi/list.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Controller/EnvoiController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Courrier/infos_connections.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Controller/SaisieController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Controller/UtilisateurController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Resources/views/Questionnaire/generique.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Resources/views/Saisie/generique.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Resources/views/Confrontation/list.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Resources/views/Confrontation/archives.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Controller/LaboratoireController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Service/QuestionnaireService.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Email/infos_connection.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/config/routing.yml",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Email/certificat.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Service/SaisieService.php",
-		"/home/djulls07/Projects/w-agora/abp/src/SetupBundle/Controller/DefaultController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Confrontation/list.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/SetupBundle/Service/ImportService.php",
-		"/home/djulls07/Projects/w-agora/abp/app/config/services.yml",
-		"/home/djulls07/Projects/w-agora/abp/app/config/questionnaires/tox.json",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Twig/Md5.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Twig/Base64.php",
-		"/home/djulls07/Projects/w-agora/abp/setup/updates/170124.php",
-		"/home/djulls07/Projects/w-agora/abp/setup/updates/170126.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Twig/base64.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/courrier_header.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/layout.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Controller/DefaultController.php",
-		"/home/djulls07/Projects/w-agora/abp/setup/csv/historique/myelo_user.csv",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Courrier/lettre_de_mission_envoi.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Controller/ImportController.php",
-		"/home/djulls07/Projects/w-agora/abp/app/config/questionnaires/ebv.json",
-		"/home/djulls07/Projects/w-agora/abp/setup/updates/170109.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Controller/FactureController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Resources/views/navbar.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/Wagora/VersionBundle/Service/GitTagService.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Resources/views/Rapport/header.html.twig",
-		"/home/djulls07/Téléchargements/ABP courrier.html",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Resources/config/routing.yml",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Repository/SouscriptionRepository.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Repository/QuestionRepository.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQAdminBundle/Repository/ConfrontationRepository.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Resources/views/nav_espace_perso.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Controller/UtilisateurController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Repository/ParticipationRepository.php",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Resources/views/Utilisateur/confrontations_archive.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Resources/views/Utilisateur/confrontations.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/app/config/config.yml",
-		"/home/djulls07/Projects/w-agora/abp/app/config/config_dev.yml",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Controller/CampagneController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Controller/SouscriptionController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Controller/ConfrontationController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Laboratoire/list.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/UserBundle/Resources/config/routing.yml",
-		"/home/djulls07/Projects/w-agora/abp/app/Resources/views/TwigBundle/views/Exception/error.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/web/app_staging.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Controller/AbonnementController.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Entity/Souscription.php",
-		"/home/djulls07/Projects/w-agora/abp/src/SetupBundle/Resources/views/Default/updates.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Entity/Laboratoire.php",
-		"/home/djulls07/Projects/w-agora/abp/web/app.php",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Envoi/confrontations.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/courrier_footer.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/web/htaccess.dist",
-		"/home/djulls07/Projects/w-agora/abp/web/.htaccess"
+		"/home/djulls07/Projects/w-agora/abp/src/BOBundle/Resources/views/Envoi/list.html.twig"
 	],
 	"find":
 	{
@@ -719,6 +888,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"        \n",
+			"collection",
+			"collectionName",
+			"id",
+			"function(obj, requestMetadata, returnObject) {\n            // insert obj to your collection!\n            returnObject.success = true;\n            returnObject.statusCode = 201;\n            returnObject.body = {\n              method: 'POST',\n              obj: obj\n            };\n\n            Accounts.createUser({\n              username: obj.username,\n              password: obj.plainPassword\n            });\n          return true;\n        },    // function(obj, requestMetadata, returnObject) {return true/false;},\n        GET: undefined,     // function(objs, requestMetadata, returnObject) {return true/false;},\n        PUT: undefined,     // function(obj, newValues, requestMetadata, returnObject) {return true/false;},\n        DELETE: undefined   // function(obj, requestMetadata, returnObject) {return true/false;}\n      },",
+			"'options' => ['enctype' => 'multipart/form-data']]",
+			"Rc",
+			"Modelsheet",
+			"plainPassword",
+			"user",
+			"password",
+			"login",
+			"fos",
+			"passwo",
+			"icu",
 			"2000",
 			"white",
 			"true",
@@ -831,22 +1015,7 @@
 			"\t\t$",
 			"imagettfbbox",
 			"chart",
-			"getCon",
-			"rep",
-			"souscription",
-			"souscr",
-			"date",
-			"labora",
-			"add",
-			"valeursPos",
-			"conclusion",
-			"typeReponse\": \"concl",
-			"getNbConclusionsIndependantes",
-			"import",
-			"found",
-			"\t\t\t",
-			"Réactif",
-			"calculZScores"
+			"getCon"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -931,8 +1100,551 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "rc-site/controllers/ModelsheetController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								881,
+								881
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 584.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "rc-site/views/modelsheet/edit.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1032,
+								1032
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "rc-site/components/SyncModelsheetBehavior.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4626,
+								4626
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1414.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "rc-site/views/modelsheet/import.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1253,
+								1253
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "rc-site/views/modelsheet/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1097,
+								1097
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "rc-site/models/Modelsheet.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4062,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3003,
+								3003
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 11.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "rc-platform/imports/api/model-sheets.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1070,
+								1070
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "rc-platform/server/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5901,
+								5901
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 894.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "rc-site/views/layouts/main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2788,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								774,
+								774
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "rc-site/config/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2169,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1064,
+								1064
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "rc-site/config/mongodb.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "rc-site/models/ModelsheetImportForm.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1188,
+								1188
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "rc-site/models/Section.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3529,
+								3529
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1349.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "rc-site/models/Table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3447,
+								3447
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 236.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "rc-site/models/TableBox.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2439,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								657,
+								657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "rc-site/models/Element.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2719,
+								2719
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "rc-site/models/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1017,
+								1017
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "rc-site/components/SyncBehavior.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1877,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								808,
+								808
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 165.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -979,7 +1691,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 62.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -988,6 +1700,162 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"boot.css",
+				"rc-site/vendor/bower/bootstrap/dist/css/bootstrap.css"
+			],
+			[
+				"modelshlis",
+				"rc-platform/imports/ui/model-sheets/model-sheet-list.js"
+			],
+			[
+				"modellis",
+				"rc-platform/imports/ui/model-sheets/model-sheet-list.html"
+			],
+			[
+				"main.js",
+				"rc-platform/server/main.js"
+			],
+			[
+				"local",
+				"rc-platform/local_run.sh"
+			],
+			[
+				"model-sheet",
+				"rc-platform/imports/api/model-sheets.js"
+			],
+			[
+				"modelsheetl",
+				"rc-platform/imports/ui/model-sheets/model-sheet-list.js"
+			],
+			[
+				"model-shee",
+				"rc-platform/imports/api/model-sheets.js"
+			],
+			[
+				"modelss",
+				"rc-platform/imports/ui/model-sheets/model-sheet-list.html"
+			],
+			[
+				"main.",
+				"rc-platform/server/main.js"
+			],
+			[
+				"transj",
+				"rc-platform/imports/api/db-init/translations.js"
+			],
+			[
+				"expbloolus",
+				"sheets/export_Bloodlust .json"
+			],
+			[
+				"mainjs",
+				"rc-platform/server/main.js"
+			],
+			[
+				"mongodb",
+				"rc-site/config/mongodb.php"
+			],
+			[
+				"web.",
+				"rc-site/config/web.php"
+			],
+			[
+				"mongodb.php",
+				"rc-site/config/mongodb.php"
+			],
+			[
+				"db.php",
+				"rc-site/config/db.php"
+			],
+			[
+				"modelsheejs",
+				"rc-platform/imports/api/model-sheets.js"
+			],
+			[
+				"rcplheader",
+				"rc-platform/imports/ui/header/header.html"
+			],
+			[
+				"web",
+				"rc-site/config/web.php"
+			],
+			[
+				"modelse",
+				"rc-platform/imports/api/model-sheets.js"
+			],
+			[
+				"mong",
+				"rc-site/config/mongodb.php"
+			],
+			[
+				"mongo",
+				"rc-site/config/mongodb.php"
+			],
+			[
+				"db.p",
+				"rc-site/config/db.php"
+			],
+			[
+				"main",
+				"rc-platform/server/main.js"
+			],
+			[
+				"routing",
+				"rc-site/app/config/routing.yml"
+			],
+			[
+				"confy",
+				"rc-site/app/config/config.yml"
+			],
+			[
+				"appker",
+				"rc-site/app/AppKernel.php"
+			],
+			[
+				"composer",
+				"rc-site/composer.json"
+			],
+			[
+				"para",
+				"rc-site/app/config/parameters.yml"
+			],
+			[
+				"config",
+				"rc-site/app/config/config.yml"
+			],
+			[
+				"base",
+				"rc-site/app/Resources/views/base.html.twig"
+			],
+			[
+				"packa",
+				"rc-platform/package.json"
+			],
+			[
+				"param",
+				"rc-site/app/config/parameters.yml"
+			],
+			[
+				"secru",
+				"rc-site/app/config/security.yml"
+			],
+			[
+				"appk",
+				"rc-site/app/AppKernel.php"
+			],
+			[
+				"conf",
+				"rc-site/web/config.php"
+			],
+			[
+				"secury",
+				"rc-site/app/config/security.yml"
+			],
+			[
+				"appkernel",
+				"rc-site/app/AppKernel.php"
+			],
 			[
 				"header",
 				"rc-platform/imports/ui/header/header.html"
@@ -1015,14 +1883,6 @@
 			[
 				".pac",
 				"rc-platform/.meteor/packages"
-			],
-			[
-				"packa",
-				"rc-game-platform/.meteor/packages"
-			],
-			[
-				"composer",
-				"rc-site/composer.json"
 			],
 			[
 				"appkerne",
@@ -1133,10 +1993,6 @@
 				"src/BOBundle/Resources/views/Email/regenerate_passwd.html.twig"
 			],
 			[
-				"base",
-				"app/Resources/views/base.html.twig"
-			],
-			[
 				"inscrimanag",
 				"src/EEQBundle/Resources/views/Inscription/manage.html.twig"
 			],
@@ -1183,10 +2039,6 @@
 			[
 				"passwdc",
 				"web/assets/js/passwd_check.js"
-			],
-			[
-				"para",
-				"app/config/parameters.yml"
 			],
 			[
 				"first",
@@ -1359,146 +2211,6 @@
 			[
 				"170124",
 				"setup/updates/170124.php"
-			],
-			[
-				"170126",
-				"setup/updates/170126.php"
-			],
-			[
-				"confrontlist",
-				"src/BOBundle/Resources/views/Confrontation/list.html.twig"
-			],
-			[
-				"laboratoco",
-				"src/BOBundle/Controller/LaboratoireController.php"
-			],
-			[
-				"emailserv",
-				"src/BOBundle/Service/EmailService.php"
-			],
-			[
-				"serv",
-				"app/config/services.yml"
-			],
-			[
-				"base64",
-				"src/BOBundle/Twig/base64.php"
-			],
-			[
-				"md5",
-				"src/EEQAdminBundle/Twig/Md5.php"
-			],
-			[
-				"courrhea",
-				"src/BOBundle/Resources/views/courrier_header.html.twig"
-			],
-			[
-				"layou",
-				"src/BOBundle/Resources/views/layout.html.twig"
-			],
-			[
-				"infoconnec",
-				"src/BOBundle/Resources/views/Email/infos_connection.html.twig"
-			],
-			[
-				"quesgeneri",
-				"src/EEQAdminBundle/Resources/views/Questionnaire/generique.html.twig"
-			],
-			[
-				"sedefau",
-				"src/EEQAdminBundle/Controller/DefaultController.php"
-			],
-			[
-				"172",
-				"setup/updates/170124.php"
-			],
-			[
-				"myelo",
-				"setup/csv/historique/myelo_user.csv"
-			],
-			[
-				"importserv",
-				"src/SetupBundle/Service/ImportService.php"
-			],
-			[
-				"questionserv",
-				"src/EEQAdminBundle/Service/QuestionnaireService.php"
-			],
-			[
-				"generique",
-				"src/EEQAdminBundle/Resources/views/Questionnaire/generique.html.twig"
-			],
-			[
-				"saisiegn",
-				"src/EEQBundle/Resources/views/Saisie/generique.html.twig"
-			],
-			[
-				"saisieser",
-				"src/EEQBundle/Service/SaisieService.php"
-			],
-			[
-				"routing",
-				"src/BOBundle/Resources/config/routing.yml"
-			],
-			[
-				"borouting",
-				"src/BOBundle/Resources/config/routing.yml"
-			],
-			[
-				"facture",
-				"src/BOBundle/Controller/FactureController.php"
-			],
-			[
-				"navar",
-				"src/BOBundle/Resources/views/navbar.html.twig"
-			],
-			[
-				"gitta",
-				"src/Wagora/VersionBundle/Service/GitTagService.php"
-			],
-			[
-				"setudef",
-				"src/SetupBundle/Controller/DefaultController.php"
-			],
-			[
-				"17",
-				"setup/updates/170109.php"
-			],
-			[
-				"hemato",
-				"setup/csv/historique/hematocell_user.csv"
-			],
-			[
-				"importcontro",
-				"src/BOBundle/Controller/ImportController.php"
-			],
-			[
-				"lettre",
-				"src/BOBundle/Resources/views/Courrier/lettre_de_mission_envoi.html.twig"
-			],
-			[
-				"envoilist",
-				"src/BOBundle/Resources/views/Envoi/list.html.twig"
-			],
-			[
-				"labora",
-				"src/BOBundle/Controller/LaboratoireController.php"
-			],
-			[
-				"courrlen",
-				"src/BOBundle/Resources/views/Courrier/lettre_de_mission_envoi.html.twig"
-			],
-			[
-				"info",
-				"src/BOBundle/Resources/views/Email/infos_connection.html.twig"
-			],
-			[
-				"eeqrout",
-				"src/EEQBundle/Resources/config/routing.yml"
-			],
-			[
-				"eeqbuncontrolcon",
-				"src/EEQBundle/Controller/ConfrontationController.php"
 			]
 		],
 		"width": 0.0
@@ -1506,12 +2218,20 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "abp",
 		"selected_items":
 		[
 			[
-				"",
+				"abp",
 				"~/Projects/w-agora/abp/abp.sublime-project"
+			],
+			[
+				"ab",
+				"~/Projects/w-agora/abp/abp.sublime-project"
+			],
+			[
+				"",
+				"~/Projects/managementApp/managementApp.sublime-project"
 			],
 			[
 				"her",
@@ -1540,10 +2260,6 @@
 			[
 				"t",
 				"~/Projects/w-agora/timagora/timagora.sublime-project"
-			],
-			[
-				"abp",
-				"~/Projects/w-agora/abp/abp.sublime-project"
 			],
 			[
 				"ro",
@@ -1597,7 +2313,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 311.0,
+	"side_bar_width": 345.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
