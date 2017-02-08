@@ -131,4 +131,14 @@ class Table extends \yii\db\ActiveRecord
             return 0;
         } 
     }
+
+    public function getFormatedTableBoxes()
+    {
+        $boxes = $this->getTableBoxes()->all();
+        $ret = [];
+        foreach($boxes as $box) {
+            $ret[$box->y][$box->x] = $box;
+        }
+        return $ret;
+    }
 }

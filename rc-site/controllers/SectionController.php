@@ -49,10 +49,11 @@ class SectionController extends Controller
     public function actionEdit($id)
     {
         $section = Section::findOne($id);
-        $modelsheet = $section->getModelsheet()->one();
+        
         if (!$section) {
             throw new \yii\web\HttpException(404, 'Section Not found');
         }
+        $modelsheet = $section->getModelsheet()->one();
 
         // set session
         Yii::$app->session->set('section_edit', $section);
@@ -65,6 +66,25 @@ class SectionController extends Controller
             return $this->refresh();
         }
 
-        return $this->render('edit', ['section' => $section, 'modelsheet' => $modelsheet]);
+        $positions = [];
+        for($i = 0; $i < $modelsheet->getSections()->count(); $i++) {
+            $positions[] = $i;
+        }
+
+        // List elements
+        $elementProvider = new ActiveDataProvider([
+            'query' => $section->getElements(),
+            'pagination' => [
+                'pageSize' => 10,
+            ]
+        ]);
+
+        return $this->render('edit', [
+            'section' => $section,
+            'modelsheet' => $modelsheet,
+            'positions' => $positions,
+            'elementProvider' => $elementProvider
+            ]
+        );
     }
 }

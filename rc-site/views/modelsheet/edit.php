@@ -96,4 +96,34 @@ if (Yii::$app->session->get('section_edit')) {
             ]
         ]
     ]) ?>
+
+    <div class="row">
+        <?php foreach($model->getSections()->orderBy('position')->all() as $section): ?>
+            <div class="section col-sm-<?= $section->size; ?>">
+                <?= $section->id . ' - ' . $section->name; ?>
+                <?= round($section->size / 12 * 100) . '%';?>
+                <?php foreach($section->getElements()->all() as $element): ?>
+                    <div class="element">
+                        <?= $element->label; ?>
+                        <?php foreach($element->getTables()->all() as $table): ?>
+                            <?php $cases = $table->getFormatedTableBoxes(); ?>
+                            <table class="element-table">
+                                <?php for($i = 0; $i < $table->rows; $i++): ?>
+                                    <tr>
+                                        <?php for($j = 0; $j < $table->cols; $j++): ?>
+                                            <td>
+                                                <?php if (isset($cases[$i][$j]) && $cases[$i][$j]->label) {
+                                                    echo '<strong>' . $cases[$i][$j]->label . '</strong>';
+                                                }?>
+                                            </td>
+                                        <?php endfor; ?>
+                                    </tr>
+                                <?php endfor; ?>
+                            </table>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endforeach; ?> 
+    </div>
 </fieldset>

@@ -40,7 +40,7 @@ class Section extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['modelsheet_id'], 'required'],
+            [['modelsheet_id', 'position'], 'required'],
             [['modelsheet_id', 'created_at', 'updated_at', 'size', 'is_separator'], 'integer'],
             [['name', 'search_id'], 'string', 'max' => 45],
             [['modelsheet_id'], 'exist', 'skipOnError' => true, 'targetClass' => Modelsheet::className(), 'targetAttribute' => ['modelsheet_id' => 'id']],

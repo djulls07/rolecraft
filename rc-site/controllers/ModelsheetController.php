@@ -100,6 +100,7 @@ class ModelsheetController extends Controller
         // List sections
         $sectionsProvider = new ActiveDataProvider([
             'query' => $model->getSections(),
+            'sort'=> ['defaultOrder' => ['position' => SORT_ASC]],
             'pagination' => [
                 'pageSize' => 4,
             ]

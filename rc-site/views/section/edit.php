@@ -39,22 +39,48 @@ if (Yii::$app->session->get('section_edit')) {
 	];
 }
 ?>
+<div class="edit-section">
+	<?php $form = ActiveForm::begin([
+	        'id' => 'edit-section-form',
+	        'layout' => 'horizontal',
+	        'fieldConfig' => [
+	            'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
+	            'labelOptions' => ['class' => 'col-lg-1 control-label'],
+	        ]
+	    ]); ?>
 
-<?php $form = ActiveForm::begin([
-        'id' => 'edit-section-form',
-        'layout' => 'horizontal',
-        'fieldConfig' => [
-            'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-            'labelOptions' => ['class' => 'col-lg-1 control-label'],
+		<?= $form->field($section, 'name')->textInput(); ?>
+
+		<?= $form->field($section, 'position')->dropdownList($positions,
+		    ['prompt'=>'Select Position']
+		); ?>
+
+		<?= $form->field($section, 'size')->textInput(); ?>
+
+		<div class="form-group">
+		    <div class="col-lg-offset-1 col-lg-11">
+		        <?= Html::submitButton('Save', ['class' => 'btn btn-primary', 'name' => 'import-button']) ?>
+		    </div>
+		</div>
+	<?php ActiveForm::end(); ?>
+
+	<?= GridView::widget([
+        'dataProvider' => $elementProvider,
+        'columns' => [
+            'id',
+            [
+                'attribute' => 'label',
+                'value' => function($model) {
+                    return $model->label ? $model->label : '--';
+                }
+            ],
+            [
+                'attribute' => 'Actions',
+                'format' => 'html',
+                'value' => function($model) {
+                    return '';
+                }
+            ]
         ]
-    ]); ?>
-
-<?= $form->field($section, 'name')->textInput(); ?>
-<?= $form->field($section, 'position')->textInput(); ?>
-<?= $form->field($section, 'size')->textInput(); ?>
-<div class="form-group">
-    <div class="col-lg-offset-1 col-lg-11">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-primary', 'name' => 'import-button']) ?>
-    </div>
+    ]) ?>
 </div>
-<?php ActiveForm::end(); ?>

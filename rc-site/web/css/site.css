@@ -125,3 +125,19 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.section {
+    border: 1px solid #333;
+    padding: 15px;
+}
+.element {
+    padding: 15px;
+}
+.element-table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+}
+.element-table td {
+    padding: 2px;
+}
