@@ -97,15 +97,6 @@ class ModelsheetController extends Controller
         // Set session edit
         Yii::$app->session->set('modelsheet_edit', $model);
 
-        // List sections
-        $sectionsProvider = new ActiveDataProvider([
-            'query' => $model->getSections(),
-            'sort'=> ['defaultOrder' => ['position' => SORT_ASC]],
-            'pagination' => [
-                'pageSize' => 4,
-            ]
-        ]);
-
-        return $this->render('edit', ['model' => $model, 'sectionsProvider' => $sectionsProvider]);
+        return $this->render('edit', ['model' => $model]);
     }
 }

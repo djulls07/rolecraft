@@ -17,10 +17,10 @@ class SectionController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['remove'],
+                'only' => ['remove', 'edit'],
                 'rules' => [
                     [
-                        'actions' => ['remove'],
+                        'actions' => ['remove', 'edit'],
                         'allow' => true,
                         'roles' => ['@'],
                     ]
@@ -71,19 +71,13 @@ class SectionController extends Controller
             $positions[] = $i;
         }
 
-        // List elements
-        $elementProvider = new ActiveDataProvider([
-            'query' => $section->getElements(),
-            'pagination' => [
-                'pageSize' => 10,
-            ]
-        ]);
+        $elements = $section->getElements()->all();
 
         return $this->render('edit', [
             'section' => $section,
             'modelsheet' => $modelsheet,
             'positions' => $positions,
-            'elementProvider' => $elementProvider
+            'elements' => $elements
             ]
         );
     }

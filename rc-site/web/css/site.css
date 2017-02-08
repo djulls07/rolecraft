@@ -128,10 +128,13 @@ a.desc:after {
 
 .section {
     border: 1px solid #333;
-    padding: 15px;
+}
+.section-header {
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
 }
 .element {
-    padding: 15px;
 }
 .element-table {
     table-layout: fixed;
