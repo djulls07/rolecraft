@@ -1,0 +1,15 @@
+<template name="myLogin">
+	<form class="form form-login">
+		<div class="form-group">
+			<label>{{ translate 'username' }}</label>
+			<input class="form-control" name="username" placeholder="{{ translate 'username' }}">
+		</div>
+		<div class="form-group">
+			<label>{{ translate 'password' }}</label>
+			<input class="form-control" name="password" type="password" placeholder="{{ translate 'password' }}">
+		</div>
+		<div class="form-group">
+			<button class="btn btn-submit" type="submit">{{ translate 'save' }}</button>
+		</div> 
+	</form>
+</template>

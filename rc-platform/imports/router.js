@@ -10,10 +10,10 @@ import './ui/rpgs/rpg-player.js';
 
 /* CLIENT ROUTING */
 FlowRouter.route('/', {
-  name: 'home',
+  name: 'rpgList',
   action(params, queryParams) {
     BlazeLayout.render('simpleLayout', {
-      main: 'home',
+      main: 'rpgList',
       header: 'header',
       footer: 'footer'
     });

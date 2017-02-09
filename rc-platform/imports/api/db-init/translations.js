@@ -1,5 +1,15 @@
 export const translations = [
   {
+    "key":"username",
+    "fr":"nom d'utilisateur",
+    "en":"username"
+  },
+  {
+    "key":"password",
+    "fr":"mot de passe",
+    "en":"password"
+  },
+  {
     "key":"sheets",
     "fr":"feuilles",
     "en":"sheets"

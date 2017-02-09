@@ -32,3 +32,5 @@ tests/_support/_generated
 config/db.php
 
 uploads/*
+
+web/index.php

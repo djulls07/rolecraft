@@ -41,6 +41,7 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Model sheets', 'url' => ['/modelsheet']],
+            ['label' => 'Play', 'url' => 'http://game.rolecraft.net'],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
@@ -91,7 +92,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; Rolecraft <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right"></p>
     </div>
 </footer>
 
