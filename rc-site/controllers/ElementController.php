@@ -73,14 +73,22 @@ class ElementController extends Controller
 					if (isset(Yii::$app->request->post()['cases'])) {
 						// handle cases ( tableboxes )
 						$casesPost = Yii::$app->request->post()['cases'];
-						for ($i = 0; $i < $table->rows; $i++) {
+						foreach($casesPost as $i => $casesP) {
+							foreach($casesP as $j => $c) {
+								if ($cases[$i][$j]->load($c) && $cases[$i][$j]->validate()) {
+									$cases[$i][$j]->save();
+								}
+							}
+						}
+						/*for ($i = 0; $i < $table->rows; $i++) {
 				            for ($j = 0; $j < $table->cols; $j++) {
 				            	if (!isset($cases[$i][$j]) || !isset($casesPost[$i][$j])) break; // case change rows or cols of table
+								
 								if ($cases[$i][$j]->load($casesPost[$i][$j]) && $cases[$i][$j]->validate()) {
 									$cases[$i][$j]->save();
 								}
 				            }
-						}
+						}*/
 					}
 				} else {
 					// create table empty & refresh will create the tableBoxes..

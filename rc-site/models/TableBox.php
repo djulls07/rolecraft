@@ -89,8 +89,8 @@ class TableBox extends \yii\db\ActiveRecord
     {
         $this->table_id = $table->id;
         $this->label = $data['label'] ? $data['label'] : null;
-        $this->x = (int) $data['x'];
-        $this->y = (int) $data['y'];
+        $this->x = (int) $data['y'];
+        $this->y = (int) $data['x'];
         if (!$this->validate()) {
             return $this->errors;
         }

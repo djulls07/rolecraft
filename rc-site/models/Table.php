@@ -133,7 +133,7 @@ class Table extends \yii\db\ActiveRecord
         } 
     }
 
-    public function getFormatedTableBoxes($reverse = true)
+    public function getFormatedTableBoxes($reverse = false)
     {
         $boxes = $this->getTableBoxes()->all();
         $ret = [];
