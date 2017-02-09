@@ -42,8 +42,13 @@ if (Yii::$app->session->get('element_edit')) {
 	<?= GridView::widget([
 	    'dataProvider' => $dataProvider,
 	    'columns' => [
-	    	'id',
 	        'name',
+	        [
+	        	'attribute' => 'private',
+	        	'value' => function($model) {
+	        		return $model->private ? 'Yes' : 'No';
+	        	}
+	        ],
 	        [
 	            'attribute' => 'Actions',
 	            'format' => 'html',
