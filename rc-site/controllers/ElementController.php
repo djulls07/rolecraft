@@ -59,10 +59,9 @@ class ElementController extends Controller
 		if ($element->load(Yii::$app->request->post()) && $element->validate()) {
 			$element->save();
 
-			// handle cases ( tableboxes )
-			$casesPost = Yii::$app->request->post()['cases'];
-
 			if ($table) {
+				// handle cases ( tableboxes )
+				$casesPost = Yii::$app->request->post()['cases'];
 				for ($i = 0; $i < $table->rows; $i++) {
 		            for ($j = 0; $j < $table->cols; $j++) {
 		            	//$cases[$i][$j]->label = $casesPost[$i][$j]['label'];
