@@ -9,6 +9,7 @@ use app\models\Modelsheet;
 use app\models\Element;
 use yii\data\ActiveDataProvider;
 use app\models\TableBox;
+use app\models\Table;
 
 class ElementController extends Controller
 {	
@@ -41,35 +42,58 @@ class ElementController extends Controller
 		$cases = [];
 		if ($table) {
 			$cases = $table->getFormatedTableBoxes();
-			for ($i = 0; $i < $table->rows; $i++) {
+			// create all tableBoxes that does not exists ( for form )
+	        for ($i = 0; $i < $table->rows; $i++) {
 	            for ($j = 0; $j < $table->cols; $j++) {
-	            	if (!isset($cases[$i][$j])) {
-	            		$cases[$i][$j] = new TableBox();
-	            		$cases[$i][$j]->table_id = $table->id;
-	            		$cases[$i][$j]->x = $i;
-	            		$cases[$i][$j]->y = $j;
-	            		$cases[$i][$j]->save();
-	            	}
+	                if (!isset($cases[$i][$j])) {
+	                    $cases[$i][$j] = new TableBox();
+	                    $cases[$i][$j]->table_id = $table->id;
+	                    $cases[$i][$j]->x = $i;
+	                    $cases[$i][$j]->y = $j;
+	                    $cases[$i][$j]->save();
+	                }
 	            }
-			}
+	        }
 		}
 		
 		Yii::$app->session->set('element_edit', $element);
+		Yii::$app->session->set('section_edit', $section);
+        Yii::$app->session->set('modelsheet_edit', $modelsheet);
 
+        // handle post
 		if ($element->load(Yii::$app->request->post()) && $element->validate()) {
 			$element->save();
 
-			if ($table) {
-				// handle cases ( tableboxes )
-				$casesPost = Yii::$app->request->post()['cases'];
-				for ($i = 0; $i < $table->rows; $i++) {
-		            for ($j = 0; $j < $table->cols; $j++) {
-		            	//$cases[$i][$j]->label = $casesPost[$i][$j]['label'];
-						if ($cases[$i][$j]->load($casesPost[$i][$j]) && $cases[$i][$j]->validate()) {
-							$cases[$i][$j]->save();
+			if ($element->type == 'table') {
+				if ($table) {
+					$table->load(Yii::$app->request->post());
+					if ($table->validate()) {
+						$table->save();
+					}
+					if (isset(Yii::$app->request->post()['cases'])) {
+						// handle cases ( tableboxes )
+						$casesPost = Yii::$app->request->post()['cases'];
+						for ($i = 0; $i < $table->rows; $i++) {
+				            for ($j = 0; $j < $table->cols; $j++) {
+				            	if (!isset($cases[$i][$j]) || !isset($casesPost[$i][$j])) break; // case change rows or cols of table
+								if ($cases[$i][$j]->load($casesPost[$i][$j]) && $cases[$i][$j]->validate()) {
+									$cases[$i][$j]->save();
+								}
+				            }
 						}
-						
-		            }
+					}
+				} else {
+					// create table empty & refresh will create the tableBoxes..
+					$table = new Table();
+					$table->rows = 1;
+					$table->cols = 3;
+					$table->element_id = $element->id;
+					$table->save();
+				}
+			} else {
+				// remove table
+				if ($table) {
+					$table->delete();
 				}
 			}
 

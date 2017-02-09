@@ -57,6 +57,7 @@ class SectionController extends Controller
 
         // set session
         Yii::$app->session->set('section_edit', $section);
+        Yii::$app->session->set('modelsheet_edit', $modelsheet);
 
         if ($section->load(Yii::$app->request->post()) && $section->validate()) {
             $section->save();

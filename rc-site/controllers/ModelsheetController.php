@@ -19,7 +19,7 @@ class ModelsheetController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index', 'import', 'edit'],
+                'only' => ['index', 'import', 'edit', 'remove'],
                 'rules' => [
                     [
                         'actions' => ['index'],
@@ -27,7 +27,7 @@ class ModelsheetController extends Controller
                         'roles' => ['@', '?'],
                     ],
                     [
-                        'actions' => ['import', 'edit'],
+                        'actions' => ['import', 'edit', 'remove'],
                         'allow' => true,
                         'roles' => ['@'],
                     ]
@@ -36,6 +36,10 @@ class ModelsheetController extends Controller
         ];
     }  
 
+    /**
+     * Liste les model sheets
+     * @return string
+     */
     public function actionIndex()
     {
     	if (Yii::$app->user->identity) {
@@ -56,6 +60,10 @@ class ModelsheetController extends Controller
         ]);
     }
 
+    /**
+     * Import un model sheet à partir de sa representation JSON
+     * @return string
+     */
     public function actionImport()
     {
         $importForm = new ModelsheetImportForm();
@@ -85,7 +93,7 @@ class ModelsheetController extends Controller
         $model = Modelsheet::findOne($id);
 
         if ($model->getUser()->one()->id != Yii::$app->user->identity->id) {
-            throw new \yii\web\HttpException(401, 'Forbidden');
+            throw new \yii\web\HttpException(401, 'Not  authorized');
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
@@ -98,5 +106,24 @@ class ModelsheetController extends Controller
         Yii::$app->session->set('modelsheet_edit', $model);
 
         return $this->render('edit', ['model' => $model]);
+    }
+
+    /**
+     * Supprime un model sheet
+     * @param $id int identifiant le model
+     * @return string (html)
+     */
+    public function actionRemove($id)
+    {
+        $model = Modelsheet::findOne($id);
+        if (!$model) {
+            throw new \yii\web\HttpException(404, 'Model not found');
+        }
+        if ($model->user_id != Yii::$app->user->identity->id) {
+            throw new \yii\web\HttpException(401, 'Not authorized');
+        }
+        $model->delete();
+        Yii::$app->session->set('success', 'Model sheet removed successfuly');
+        return $this->redirect(Yii::$app->request->referrer);
     }
 }

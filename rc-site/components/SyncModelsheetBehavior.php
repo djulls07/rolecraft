@@ -15,6 +15,7 @@ class SyncModelsheetBehavior extends Behavior
         return [
             ActiveRecord::EVENT_BEFORE_UPDATE => 'sync',
             ActiveRecord::EVENT_BEFORE_INSERT => 'sync',
+            ActiveRecord::EVENT_BEFORE_DELETE => 'syncRemove'
         ];
     }
 
@@ -68,29 +69,11 @@ class SyncModelsheetBehavior extends Behavior
         return $data;
     }
 
-    
-    public function syncOld($event)
-    {
-        $model = $this->owner;
-        $data = $this->constructDataArray();
-
-        // mongo collection
-        $collection = Yii::$app->mongodb->getCollection('modelsheets');
-        
-        if (isset($model->mongo_id)) {
-            $data['_id'] = $model->mongo_id;
-            $collection->save($data);
-        } else {
-            $mongoId = $collection->insert($data);
-            $model->mongo_id = (string) $mongoId;
-        }
-    }
-
     /**
      * Synchronize the 2 databases by calling meteor collection api
      * And keep the mongo_id reference in current db
      *
-     * @return string
+     * @return string json returned by meteor app
      */
     public function sync($event)
     {   
@@ -142,5 +125,28 @@ class SyncModelsheetBehavior extends Behavior
             $state_result = json_decode($state_result, true);
             return $state_result;
         }
+    }
+
+    /**
+     * Sync data with meteor application
+     * @return string json returned by meteor app
+     */
+    public function syncRemove($event)
+    {
+        $headers = array();
+        $headers[] = "x-auth-token: mysuperkeyquikillquiosekickkill";
+        $headers[] = 'Content-Type: application/json';
+        $state_ch = curl_init();
+        
+        // $headers[] = 'Content-Length: ' . strlen($data_string);
+        curl_setopt($state_ch, CURLOPT_URL,"localhost:3000/collectionapi/modelsheets/" . $this->owner->mongo_id);
+        curl_setopt($state_ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+        curl_setopt($state_ch, CURLOPT_HEADER, false);
+        // curl_setopt($state_ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($state_ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($state_ch, CURLOPT_HTTPHEADER, $headers);
+        $state_result = curl_exec ($state_ch);
+        $state_result = json_decode($state_result, true);
+        return $state_result;
     }
 }

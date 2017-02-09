@@ -58,6 +58,11 @@ if (Yii::$app->session->get('element_edit')) {
 				           	'<i class="fa fa-pencil"></i> Edit',
 				           	['modelsheet/edit', 'id' => $model->id],
 				           	['class' => 'btn btn-xs btn-warning']
+			           	)
+			           	.Html::a(
+				           	'<i class="fa fa-trash"></i> Remove',
+				           	['modelsheet/remove', 'id' => $model->id],
+				           	['class' => 'btn btn-xs btn-danger']
 			           	);
 	            	}
 	            	return '--';

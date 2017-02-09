@@ -126,8 +126,15 @@ a.desc:after {
     outline: none;
 }
 
+/* Modelsheet representation ( section / element /table ) */
+.modelsheet {
+}
 .section {
     border: 1px solid #333;
+    padding: 5px;
+}
+.section:hover {
+    border: 1px solid #fff;
 }
 .section-header {
     letter-spacing: 1px;
@@ -135,12 +142,32 @@ a.desc:after {
     margin-bottom: 5px;
 }
 .element {
+    padding: 2px;
+    border: 1px solid #333;
+}
+.element:hover {
+    border: 1px solid #aaa;
 }
 .element-table {
     table-layout: fixed;
     width: 100%;
     text-align: center;
+    background: none;
+    border: 2px solid #333;
+    font-size: 0.8em;
 }
 .element-table td {
+    padding: 1px;
+    border: 1px solid #333;
+}
+.input-element-table {
     padding: 2px;
+    margin: 0px;
+    width: 100%;
+    height: 22px;
+}
+.element-textarea {
+    opacity: 0.1;
+    width: 100%;
+    height: 50px;
 }

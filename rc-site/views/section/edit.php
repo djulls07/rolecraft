@@ -71,7 +71,13 @@ if (Yii::$app->session->get('element_edit')) {
 
 			<div class="form-group">
 			    <div class="col-lg-offset-1 col-lg-11">
-			        <?= Html::submitButton('Save', ['class' => 'btn btn-primary', 'name' => 'import-button']) ?>
+			        <?= Html::submitButton('<i class="fa fa-floppy-o"></i> Save', ['class' => 'btn btn-primary', 'name' => 'import-button']); ?>
+
+			        <?= Html::a(
+				        '<i class="fa fa-hand-o-left"></i> Back',
+				        ['modelsheet/edit', 'id' => $modelsheet->id],
+				        ['class' => 'btn btn-danger']
+			        ); ?>
 			    </div>
 			</div>
 		<?php ActiveForm::end(); ?>
@@ -87,29 +93,36 @@ if (Yii::$app->session->get('element_edit')) {
 			    <?php foreach($section->getElements()->all() as $element): ?>
 			        <div class="element">
 			        	<div class="element-header">
-			            	<?= $element->label; ?>
-			            	<?= Html::a(
-			            		'<i class="fa fa-pencil"></i>',
-			            		['element/edit', 'id' => $element->id],
-			            		['class' => 'pull-right']
-			            	); ?>
+			            	<span class="text-success">
+                            	<?= $element->label; ?>:
+	                        </span>
+	                        <span class="text-info pull-right">
+	                            (<?= $element->type; ?>)
+	                            &nbsp;<?= Html::a(
+				            		'<i class="fa fa-pencil"></i>',
+				            		['element/edit', 'id' => $element->id],
+				            		['title' => 'Edit element']
+				            	); ?>
+	                        </span>
 			            </div>
-			            <?php foreach($element->getTables()->all() as $table): ?>
-			                <?php $cases = $table->getFormatedTableBoxes(); ?>
-			                <table class="element-table">
-			                    <?php for($i = 0; $i < $table->rows; $i++): ?>
-			                        <tr>
-			                            <?php for($j = 0; $j < $table->cols; $j++): ?>
-			                                <td>
-			                                    <?php if (isset($cases[$i][$j]) && $cases[$i][$j]->label) {
-			                                        echo '<strong>' . $cases[$i][$j]->label . '</strong>';
-			                                    }?>
-			                                </td>
-			                            <?php endfor; ?>
-			                        </tr>
-			                    <?php endfor; ?>
-			                </table>
-			            <?php endforeach; ?>
+			            <?php if ($element->type == 'table'):?>
+			                <?php foreach($element->getTables()->all() as $table): ?>
+			                	<?php $cases = $table->getFormatedTableBoxes(); ?>
+				                <table class="element-table">
+				                    <?php for ($i = 0; $i < $table->rows; $i++): ?>
+				                        <tr>
+				                            <?php for ($j = 0; $j < $table->cols; $j++): ?>
+				                                <td>
+				                                    <?php if (isset($cases[$i][$j]) && $cases[$i][$j]->label) {
+				                                        echo '<strong>' . $cases[$i][$j]->label . '</strong>';
+				                                    }?>
+				                                </td>
+				                            <?php endfor; ?>
+				                        </tr>
+				                    <?php endfor; ?>
+				                </table>
+				            <?php endforeach; ?>
+				        <?php endif;?>
 			        </div>
 			    <?php endforeach; ?>
 			</div>

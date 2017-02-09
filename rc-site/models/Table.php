@@ -6,6 +6,7 @@ use Yii;
 use yii\behaviors\TimestampBehavior;
 use app\models\TableBox;
 use \yii\db\ActiveRecord;
+use app\components\TableBehavior;
 
 /**
  * This is the model class for table "rc_table".
@@ -132,13 +133,20 @@ class Table extends \yii\db\ActiveRecord
         } 
     }
 
-    public function getFormatedTableBoxes()
+    public function getFormatedTableBoxes($reverse = true)
     {
         $boxes = $this->getTableBoxes()->all();
         $ret = [];
-        foreach($boxes as $box) {
-            $ret[$box->y][$box->x] = $box;
+        if ($reverse) {
+            foreach($boxes as $box) {
+                $ret[$box->y][$box->x] = $box;
+            }
+        } else {
+            foreach($boxes as $box) {
+                $ret[$box->x][$box->y] = $box;
+            }
         }
+        
         return $ret;
     }
 }
