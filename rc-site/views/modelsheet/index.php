@@ -13,11 +13,6 @@ $this->params['tab_items'] = [
         'label' => 'List',
         'url' => Url::toRoute(['modelsheet/index']),
         'active' => true
-    ],
-    [
-        'label' => 'Import',
-        'url' => Url::toRoute(['modelsheet/import']),
-        'active' => false
     ]
 ];
 if (Yii::$app->session->get('modelsheet_edit')) {

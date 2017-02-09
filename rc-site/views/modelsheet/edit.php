@@ -15,11 +15,6 @@ $this->params['tab_items'] = [
         'active' => false
     ],
     [
-        'label' => 'Import',
-        'url' => Url::toRoute(['modelsheet/import']),
-        'active' => false
-    ],
-    [
         'label' => 'Edit ' . Yii::$app->session->get('modelsheet_edit')->name,
         'url' => Url::toRoute(['modelsheet/edit', 'id' => Yii::$app->session->get('modelsheet_edit')->id]),
         'active' => true
