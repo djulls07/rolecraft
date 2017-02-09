@@ -41,7 +41,7 @@ class Modelsheet extends ActiveRecord
         return [
             [['user_id', 'name', 'language'], 'required'],
             [['user_id', 'private', 'created_at', 'updated_at'], 'integer'],
-            [['name'], 'string', 'max' => 255, 'min' => '4'],
+            [['name'], 'string', 'max' => 255, 'min' => '3'],
             [['language'], 'string', 'max' => 45],
             [['name'], 'unique'],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
