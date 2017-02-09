@@ -28,6 +28,9 @@ class ModelsheetImportForm extends Model
 
     public function uploadCreateUpdateModelsheet()
     {
+        if (!is_dir('../uploads/')) {
+            mkdir('../uploads/', 0777);
+        }
         $pathFile = '../uploads/' . $this->file->baseName . '.' . $this->file->extension;
         if ($this->validate()) {
             $this->file->saveAs($pathFile);
