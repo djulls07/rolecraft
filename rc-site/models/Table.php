@@ -133,7 +133,7 @@ class Table extends \yii\db\ActiveRecord
         } 
     }
 
-    public function getFormatedTableBoxes($reverse = false)
+    public function getExistingOrderedBoxes($reverse = false)
     {
         $boxes = $this->getTableBoxes()->all();
         $ret = [];
@@ -148,5 +148,26 @@ class Table extends \yii\db\ActiveRecord
         }
         
         return $ret;
+    }
+
+    public function getOrderedBoxes()
+    {
+        if (!$this->id) {
+            return null;
+        }
+        $boxes = $this->getExistingOrderedBoxes();
+        // Create all tableBoxes that does not exists ( for form )
+        for ($i = 0; $i < $this->rows; $i++) {
+            for ($j = 0; $j < $this->cols; $j++) {
+                if (!isset($boxes[$i]) || !isset($boxes[$i][$j])) {
+                    $boxes[$i][$j] = new TableBox();
+                    $boxes[$i][$j]->table_id = $this->id;
+                    $boxes[$i][$j]->x = $i;
+                    $boxes[$i][$j]->y = $j;
+                    $boxes[$i][$j]->save();
+                }
+            }
+        }
+        return $boxes;
     }
 }

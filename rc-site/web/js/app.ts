@@ -22,6 +22,31 @@ class SubmitOnChange {
 }
 
 /**
+ * Manage the forms to make ajax call 
+ * in order to update one input
+ * on the model using url-update attribute
+ */
+class UpdateFieldForm {
+	
+	private inputs;
+
+	constructor() {
+		this.inputs = $('[update-url]');
+	}
+
+	run() {
+		this.inputs.change(function(ev) {
+			let url = $(this).attr('update-url');
+			let name = $(this).attr('update-name');
+			let value = $(this).val();
+			let body = {};
+			body[name] = value;
+			$.post(url, body);
+		});
+	}
+}
+
+/**
  * Main app classe
  */
 class App {
@@ -43,5 +68,6 @@ class App {
  * RUN JS APP
  */
 let app = new App([
-	new SubmitOnChange()
+	new SubmitOnChange(),
+	new UpdateFieldForm()
 ]);

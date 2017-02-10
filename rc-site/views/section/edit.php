@@ -102,15 +102,19 @@ if (Yii::$app->session->get('element_edit')) {
 			            </div>
 			            <?php if ($element->type == 'table'):?>
 			                <?php foreach($element->getTables()->all() as $table): ?>
-			                	<?php $cases = $table->getFormatedTableBoxes(); ?>
+			                	<?php $cases = $table->getOrderedBoxes(); ?>
 				                <table class="element-table">
 				                    <?php for ($i = 0; $i < $table->rows; $i++): ?>
 				                        <tr>
 				                            <?php for ($j = 0; $j < $table->cols; $j++): ?>
 				                                <td>
-				                                    <?php if (isset($cases[$i][$j]) && $cases[$i][$j]->label) {
-				                                        echo '<strong>' . $cases[$i][$j]->label . '</strong>';
-				                                    }?>
+				                                	<input
+                                                        value="<?= $cases[$i][$j]->label; ?>"
+                                                        type="text"
+                                                        class="input-minimalist"
+                                                        update-name="label"
+                                                        update-url="<?= Url::toRoute(['tablebox/updatefield', 'id' => $cases[$i][$j]->id, 'field' => 'label']); ?>"
+                                                    >
 				                                </td>
 				                            <?php endfor; ?>
 				                        </tr>

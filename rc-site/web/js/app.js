@@ -19,6 +19,27 @@ var SubmitOnChange = (function () {
     return SubmitOnChange;
 })();
 /**
+ * Manage the forms to make ajax call
+ * in order to update one input
+ * on the model using url-update attribute
+ */
+var UpdateFieldForm = (function () {
+    function UpdateFieldForm() {
+        this.inputs = $('[update-url]');
+    }
+    UpdateFieldForm.prototype.run = function () {
+        this.inputs.change(function (ev) {
+            var url = $(this).attr('update-url');
+            var name = $(this).attr('update-name');
+            var value = $(this).val();
+            var body = {};
+            body[name] = value;
+            $.post(url, body);
+        });
+    };
+    return UpdateFieldForm;
+})();
+/**
  * Main app classe
  */
 var App = (function () {
@@ -38,5 +59,6 @@ var App = (function () {
  * RUN JS APP
  */
 var app = new App([
-    new SubmitOnChange()
+    new SubmitOnChange(),
+    new UpdateFieldForm()
 ]);

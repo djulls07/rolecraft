@@ -82,4 +82,24 @@ class SectionController extends Controller
             ]
         );
     }
+
+    /**
+     * Handle ajax request to update one field of one Section
+     */
+    public function actionUpdatefield($id, $field)
+    {
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $request = Yii::$app->request;
+        if ($request->isAjax) {
+            $value = $request->getBodyParam($field);
+            $section = Section::findOne($id);
+            $section->$field = $value;
+            if ($section->validate()) {
+                $section->save();
+                return ['status' => 0, 'message' => 'success'];
+            }
+            return ['status' => -1, 'message' => 'Error'];
+        }
+        return ['status' => -2];
+    }
 }

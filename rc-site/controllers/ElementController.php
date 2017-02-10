@@ -41,19 +41,7 @@ class ElementController extends Controller
 		$table = $element->getTables()->one(); // only one for now
 		$cases = [];
 		if ($table) {
-			$cases = $table->getFormatedTableBoxes();
-			// create all tableBoxes that does not exists ( for form )
-	        for ($i = 0; $i < $table->rows; $i++) {
-	            for ($j = 0; $j < $table->cols; $j++) {
-	                if (!isset($cases[$i][$j])) {
-	                    $cases[$i][$j] = new TableBox();
-	                    $cases[$i][$j]->table_id = $table->id;
-	                    $cases[$i][$j]->x = $i;
-	                    $cases[$i][$j]->y = $j;
-	                    $cases[$i][$j]->save();
-	                }
-	            }
-	        }
+			$cases = $table->getOrderedBoxes();
 		}
 		
 		Yii::$app->session->set('element_edit', $element);
@@ -118,4 +106,24 @@ class ElementController extends Controller
 			'cases' => $cases
 		]);
 	}
+
+	/**
+     * Handle ajax request to update one field of one Element
+     */
+    public function actionUpdatefield($id, $field)
+    {
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $request = Yii::$app->request;
+        if ($request->isAjax) {
+            $value = $request->getBodyParam($field);
+            $element = Element::findOne($id);
+            $element->$field = $value;
+            if ($element->validate()) {
+                $element->save();
+                return ['status' => 0, 'message' => 'success'];
+            }
+            return ['status' => -1, 'message' => 'Error'];
+        }
+        return ['status' => -2];
+    }
 }

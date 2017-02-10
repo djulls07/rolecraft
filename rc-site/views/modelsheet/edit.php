@@ -67,7 +67,14 @@ if (Yii::$app->session->get('element_edit')) {
         <?php foreach($model->getSections()->orderBy('position')->all() as $section): ?>
             <div class="section col-sm-<?= $section->size; ?>">
                 <div class="section-header">
-                    <?= $section->position . ' - ' . $section->name; ?>
+                    
+                    <input
+                        value="<?= $section->name ? $section->name : 'Unamed section' ; ?>"
+                        type="text"
+                        class="input-minimalist"
+                        update-name="name"
+                        update-url="<?= Url::toRoute(['section/updatefield', 'id' => $section->id, 'field' => 'name']); ?>"
+                    >
                     <?= Html::a(
                         '<i class="fa fa-pencil"></i>',
                         ['section/edit', 'id' => $section->id],
@@ -79,22 +86,34 @@ if (Yii::$app->session->get('element_edit')) {
                     <div class="element">
                         <div class="element-header">
                             <span class="text-success">
-                                <?= $element->label; ?>:
+                                <input
+                                    value="<?= $element->label; ?>"
+                                    type="text"
+                                    class="input-minimalist"
+                                    update-name="label"
+                                    update-url="<?= Url::toRoute(['element/updatefield', 'id' => $element->id, 'field' => 'label']); ?>"
+                                >
                             </span>
                             <span class="text-info pull-right">
                                 (<?= $element->type; ?>)
                             </span>
                         </div>
                         <?php foreach($element->getTables()->all() as $table): ?>
-                            <?php $cases = $table->getFormatedTableBoxes(); ?>
+                            <?php $cases = $table->getOrderedBoxes(); ?>
                             <table class="element-table">
                                 <?php for($i = 0; $i < $table->rows; $i++): ?>
                                     <tr>
                                         <?php for($j = 0; $j < $table->cols; $j++): ?>
                                             <td>
-                                                <?php if (isset($cases[$i][$j]) && $cases[$i][$j]->label) {
-                                                    echo '<strong>' . $cases[$i][$j]->label . '</strong>';
-                                                }?>
+                                                <?php if (isset($cases[$i][$j])): ?>
+                                                    <input
+                                                        value="<?= $cases[$i][$j]->label; ?>"
+                                                        type="text"
+                                                        class="input-minimalist"
+                                                        update-name="label"
+                                                        update-url="<?= Url::toRoute(['tablebox/updatefield', 'id' => $cases[$i][$j]->id, 'field' => 'label']); ?>"
+                                                    >
+                                                <?php endif; ?>
                                             </td>
                                         <?php endfor; ?>
                                     </tr>
