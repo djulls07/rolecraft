@@ -62,8 +62,9 @@ if (Yii::$app->session->get('element_edit')) {
 			           	.Html::a(
 				           	'<i class="fa fa-trash"></i> Remove',
 				           	['modelsheet/remove', 'id' => $model->id],
-				           	['class' => 'btn btn-xs btn-danger', 'my-confirm' => 'Are you sure ? This will delete all sections with all their elements.']
+				           	['class' => 'btn btn-xs btn-danger my-confirm']
 			           	);
+
 	            	}
 	            	return '--';
 	            }

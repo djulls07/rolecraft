@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"pre",
+				"previousSection"
+			],
+			[
+				"model",
+				"modelsheetId"
+			],
+			[
+				"modelsh",
+				"modelsheet_id"
+			],
+			[
+				"models",
+				"modelsheet"
+			],
+			[
 				"Tabl",
 				"TableBox"
 			],
@@ -18,10 +34,6 @@
 			[
 				"text-",
 				"text-transform"
-			],
-			[
-				"models",
-				"modelsheet"
 			],
 			[
 				"table",
@@ -74,10 +86,6 @@
 			[
 				"sort",
 				"sortedBoxes"
-			],
-			[
-				"model",
-				"modelsheet"
 			],
 			[
 				"Model",
@@ -230,10 +238,6 @@
 			[
 				"ajax",
 				"ajaxLoaders"
-			],
-			[
-				"pre",
-				"perLine"
 			],
 			[
 				"labor",
@@ -510,90 +514,11 @@
 			[
 				"handleO",
 				"handleImportResults"
-			],
-			[
-				"qual",
-				"qualitatifCorresp"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "rc-site/web/css/site.css",
-			"settings":
-			{
-				"buffer_size": 2910,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<?php\n\nnamespace app\\controllers;\n\nuse Yii;\nuse yii\\filters\\AccessControl;\nuse yii\\web\\Controller;\nuse yii\\filters\\VerbFilter;\nuse app\\models\\LoginForm;\nuse app\\models\\ContactForm;\nuse app\\models\\RegisterForm;\n\nclass SiteController extends Controller\n{\n    /**\n     * @inheritdoc\n     */\n    public function behaviors()\n    {\n        return [\n            'access' => [\n                'class' => AccessControl::className(),\n                'only' => ['logout'],\n                'rules' => [\n                    [\n                        'actions' => ['logout'],\n                        'allow' => true,\n                        'roles' => ['@'],\n                    ],\n                ],\n            ],\n            'verbs' => [\n                'class' => VerbFilter::className(),\n                'actions' => [\n                    'logout' => ['post'],\n                ],\n            ],\n        ];\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function actions()\n    {\n        return [\n            'error' => [\n                'class' => 'yii\\web\\ErrorAction',\n            ],\n            'captcha' => [\n                'class' => 'yii\\captcha\\CaptchaAction',\n                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,\n            ],\n        ];\n    }\n\n    /**\n     * Displays homepage.\n     *\n     * @return string\n     */\n    public function actionIndex()\n    {\n        return $this->render('index');\n    }\n\n    /**\n     * Register action.\n     *\n     * @return string\n     */\n    public function actionRegister()\n    {\n        if (!Yii::$app->user->isGuest) {\n            return $this->goHome();\n        }\n        $model = new RegisterForm();\n\n        if ($model->load(Yii::$app->request->post()) && $model->register()) {\n            return $this->goBack();\n        }\n\n        return $this->render('register', [\n            'model' => $model,\n        ]);\n    }\n\n    /**\n     * Login action.\n     *\n     * @return string\n     */\n    public function actionLogin()\n    {\n        if (!Yii::$app->user->isGuest) {\n            return $this->goHome();\n        }\n\n        $model = new LoginForm();\n        if ($model->load(Yii::$app->request->post()) && $model->login()) {\n            // Set cross domain cookie to auto login in meteor app\n            //setcookie(\"meteor_log\", $value, time()+3600000, \"/\", \".rolecraft\", 1);\n            \n            return $this->goBack();\n        }\n        return $this->render('login', [\n            'model' => $model,\n        ]);\n    }\n\n    /**\n     * Logout action.\n     *\n     * @return string\n     */\n    public function actionLogout()\n    {\n        Yii::$app->user->logout();\n\n        return $this->goHome();\n    }\n\n    /**\n     * Displays contact page.\n     *\n     * @return string\n     */\n    public function actionContact()\n    {\n        $model = new ContactForm();\n        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {\n            Yii::$app->session->setFlash('contactFormSubmitted');\n\n            return $this->refresh();\n        }\n        return $this->render('contact', [\n            'model' => $model,\n        ]);\n    }\n\n    /**\n     * Displays about page.\n     *\n     * @return string\n     */\n    public function actionAbout()\n    {\n        return $this->render('about');\n    }\n}\n",
-			"file": "rc-site/controllers/SiteController.php",
-			"file_size": 3278,
-			"file_write_time": 131312705742259948,
-			"settings":
-			{
-				"buffer_size": 3293,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rc-site/config/params.php",
-			"settings":
-			{
-				"buffer_size": 90,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rc-platform/imports/ui/header/header.js",
-			"settings":
-			{
-				"buffer_size": 624,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rc-site/controllers/TableboxController.php",
-			"settings":
-			{
-				"buffer_size": 1308,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rc-site/controllers/SectionController.php",
-			"settings":
-			{
-				"buffer_size": 3187,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rc-site/controllers/ElementController.php",
-			"settings":
-			{
-				"buffer_size": 3584,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rc-site/models/Table.php",
-			"settings":
-			{
-				"buffer_size": 4615,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -641,9 +566,6 @@
 	"expanded_folders":
 	[
 		"/home/djulls07/Projects/RC",
-		"/home/djulls07/Projects/RC/rc-platform/imports",
-		"/home/djulls07/Projects/RC/rc-platform/imports/ui",
-		"/home/djulls07/Projects/RC/rc-platform/imports/ui/header",
 		"/home/djulls07/Projects/RC/rc-site",
 		"/home/djulls07/Projects/RC/rc-site/assets",
 		"/home/djulls07/Projects/RC/rc-site/commands",
@@ -661,42 +583,48 @@
 	],
 	"file_history":
 	[
-		"/home/djulls07/Projects/RC/rc-site/.gitignore",
+		"/home/djulls07/Projects/RC/rc-site/models/Table.php",
+		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/edit.php",
+		"/home/djulls07/Projects/RC/rc-site/models/TableBox.php",
+		"/home/djulls07/Projects/RC/rc-site/controllers/ModelsheetController.php",
+		"/home/djulls07/Projects/RC/rc-site/web/css/site.css",
+		"/home/djulls07/Projects/RC/rc-site/controllers/SiteController.php",
+		"/home/djulls07/Projects/RC/rc-platform/client/main.js",
+		"/home/djulls07/Projects/RC/rc-site/views/layouts/main.php",
+		"/home/djulls07/Projects/RC/rc-site/controllers/TableboxController.php",
+		"/home/djulls07/Projects/RC/rc-site/controllers/SectionController.php",
+		"/home/djulls07/Projects/RC/rc-site/web/js/app.ts",
+		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/index.php",
+		"/home/djulls07/Projects/RC/rc-site/assets/AppAsset.php",
+		"/home/djulls07/Projects/RC/rc-site/models/Section.php",
+		"/home/djulls07/Projects/RC/rc-site/controllers/ElementController.php",
+		"/home/djulls07/Projects/RC/rc-site/config/params.php",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/header/header.html",
+		"/home/djulls07/Projects/RC/rc-platform/imports/ui/header/header.js",
+		"/etc/apache2/sites-available/game.rolecraft.conf",
+		"/etc/hosts",
+		"/etc/apache2/sites-available/rolecraft.conf",
 		"/home/djulls07/Projects/RC/rc-site/views/element/edit.php",
 		"/home/djulls07/Projects/RC/rc-site/views/section/edit.php",
-		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/edit.php",
-		"/home/djulls07/Projects/RC/rc-site/web/js/app.ts",
 		"/home/djulls07/Projects/RC/rc-site/controllers/TableBoxController.php",
 		"/home/djulls07/Projects/RC/rc-site/web/js/app.js",
 		"/home/djulls07/Projects/RC/rc-site/models/Modelsheet.php",
 		"/home/djulls07/Projects/RC/rc-site/models/ModelsheetImportForm.php",
-		"/home/djulls07/Projects/RC/rc-site/controllers/ElementController.php",
-		"/home/djulls07/Projects/RC/rc-site/models/Table.php",
-		"/home/djulls07/Projects/RC/rc-site/models/TableBox.php",
-		"/home/djulls07/Projects/RC/rc-site/web/css/site.css",
-		"/home/djulls07/Projects/RC/rc-site/views/layouts/main.php",
 		"/home/djulls07/Projects/RC/rc-site/config/web.php",
 		"/home/djulls07/Projects/RC/rc-site/web/index.php",
-		"/home/djulls07/Projects/RC/rc-site/config/params.php",
 		"/home/djulls07/Projects/RC/rc-site/views/site/index.php",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/login/login.html",
 		"/home/djulls07/Projects/RC/rc-platform/imports/api/db-init/translations.js",
 		"/home/djulls07/Projects/RC/rc-platform/imports/router.js",
 		"/home/djulls07/Projects/RC/rc-platform/client/css/main.css",
-		"/home/djulls07/Projects/RC/rc-site/controllers/SectionController.php",
-		"/home/djulls07/Projects/RC/rc-site/controllers/ModelsheetController.php",
 		"/home/djulls07/Projects/RC/rc-site/components/SyncModelsheetBehavior.php",
-		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/index.php",
-		"/home/djulls07/Projects/RC/rc-platform/imports/ui/header/header.js",
+		"/home/djulls07/Projects/RC/rc-site/.gitignore",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/login/login.js",
 		"/home/djulls07/Projects/RC/.gitignore",
 		"/home/djulls07/Projects/RC/rc-site/components/TableBehavior.php",
 		"/home/djulls07/Projects/RC/rc-site/controllers/TableController.php",
-		"/home/djulls07/Projects/RC/rc-site/assets/AppAsset.php",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/model-sheets/model-sheet-form.html",
 		"/home/djulls07/Projects/RC/rc-site/components/SyncBehavior.php",
-		"/home/djulls07/Projects/RC/rc-site/models/Section.php",
 		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/import.php",
 		"/home/djulls07/Projects/RC/rc-site/config/mongodb.php",
 		"/home/djulls07/Projects/RC/rc-site/components/SectionBehavior.php",
@@ -712,18 +640,15 @@
 		"/home/djulls07/Projects/w-agora/abp/setup/updates/170206.php",
 		"/home/djulls07/Projects/RC/rc-platform/local_run.sh",
 		"/home/djulls07/Projects/RC/rc-platform/.meteor/local/dev_bundle/lib/node_modules/babel-core/node_modules/lodash/core.js",
-		"/home/djulls07/Projects/RC/rc-platform/client/main.js",
 		"/home/djulls07/Projects/RC/sheets/export_Bloodlust .json",
 		"/home/djulls07/Projects/RC/rc-site/components/SyncModelsheetsBehavior.php",
 		"/home/djulls07/Projects/RC/rc-site/config/db.php",
 		"/home/djulls07/Projects/RC/rc-site/models/ModelsheetImport.php",
 		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/modelsheet_preview.php",
 		"/etc/apache2/sites-available/yii.timagora.conf",
-		"/etc/hosts",
 		"/home/djulls07/Projects/RC/rc-site/models/LoginForm.php",
 		"/home/djulls07/Projects/RC/rc-site/views/site/login.php",
 		"/home/djulls07/Projects/RC/rc-site/views/site/register.php",
-		"/home/djulls07/Projects/RC/rc-site/controllers/SiteController.php",
 		"/home/djulls07/Projects/RC/rc-site/models/RegisterForm.php",
 		"/home/djulls07/.bashrc",
 		"/home/djulls07/Projects/RC/between_app_key",
@@ -758,7 +683,6 @@
 		"/home/djulls07/Projects/RC/rc-platform/package.json",
 		"/home/djulls07/Projects/RC/rc-site/src/AppBundle/Security/User.php",
 		"/home/djulls07/Projects/RC/rc-site/web/config.php",
-		"/etc/apache2/sites-available/rolecraft.conf",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/home/home.html",
 		"/home/djulls07/Projects/RC/rc-platform/.gitignore",
 		"/home/djulls07/Projects/RC/rc-platform/.meteor/packages",
@@ -786,9 +710,7 @@
 		"/home/djulls07/Projects/w-agora/abp/setup/csv/historique/hematocell_user.csv",
 		"/home/djulls07/Projects/w-agora/abp/src/UserBundle/Entity/Utilisateur.php",
 		"/home/djulls07/Projects/w-agora/abp/app/Resources/TwigBundle/views/Exception/error.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/UserBundle/Resources/views/Email/recover_passwd.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/app/Resources/views/base.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/EEQBundle/Controller/InscriptionController.php"
+		"/home/djulls07/Projects/w-agora/abp/src/UserBundle/Resources/views/Email/recover_passwd.html.twig"
 	],
 	"find":
 	{
@@ -807,6 +729,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"');",
 			"Url",
 			"hr",
 			"font-fam",
@@ -933,8 +856,7 @@
 			"ckedit",
 			"controleId",
 			"setDateP",
-			"btnFactAcq",
-			"\" "
+			"btnFactAcq"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1019,245 +941,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "rc-site/web/css/site.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2910,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2910,
-								2910
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2016.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "rc-site/controllers/SiteController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3293,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2346,
-								2346
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1192.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "rc-site/config/params.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 90,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								90,
-								90
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "rc-platform/imports/ui/header/header.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 624,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								237,
-								237
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "rc-site/controllers/TableboxController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1308,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								651,
-								651
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "rc-site/controllers/SectionController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3187,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3187,
-								3187
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 345.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "rc-site/controllers/ElementController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3584,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3219,
-								3219
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1356.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "rc-site/models/Table.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4615,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4005,
-								4005
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1819.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1318,20 +1003,48 @@
 		"selected_items":
 		[
 			[
-				".giti",
-				"rc-site/.gitignore"
+				"app.ts",
+				"rc-site/web/js/app.ts"
+			],
+			[
+				"sitcss",
+				"rc-site/web/css/site.css"
+			],
+			[
+				"sit",
+				"rc-site/web/css/site.css"
+			],
+			[
+				"section",
+				"rc-site/models/Section.php"
+			],
+			[
+				"header.js",
+				"rc-platform/imports/ui/header/header.js"
+			],
+			[
+				"header.",
+				"rc-platform/imports/ui/header/header.html"
+			],
+			[
+				"main.js",
+				"rc-platform/client/main.js"
+			],
+			[
+				"params",
+				"rc-site/config/params.php"
 			],
 			[
 				"site",
 				"rc-site/web/css/site.css"
 			],
 			[
-				"app.ts",
-				"rc-site/web/js/app.ts"
-			],
-			[
 				"app.js",
 				"rc-site/web/js/app.js"
+			],
+			[
+				".giti",
+				"rc-site/.gitignore"
 			],
 			[
 				"index.ph",
@@ -1392,10 +1105,6 @@
 			[
 				"modellis",
 				"rc-platform/imports/ui/model-sheets/model-sheet-list.html"
-			],
-			[
-				"main.js",
-				"rc-platform/server/main.js"
 			],
 			[
 				"local",
@@ -1804,30 +1513,6 @@
 			[
 				"eeqbunrouting",
 				"src/EEQBundle/Resources/config/routing.yml"
-			],
-			[
-				"siasicontr",
-				"src/EEQBundle/Controller/SaisieController.php"
-			],
-			[
-				"questionser",
-				"src/EEQAdminBundle/Service/QuestionnaireService.php"
-			],
-			[
-				"email/re",
-				"src/UserBundle/Resources/views/Email/recover_passwd.html.twig"
-			],
-			[
-				"inscriptioncontr",
-				"src/EEQBundle/Controller/InscriptionController.php"
-			],
-			[
-				"inscriptionmana",
-				"src/EEQBundle/Resources/views/Inscription/manage.html.twig"
-			],
-			[
-				"regenpass",
-				"src/BOBundle/Resources/views/Email/regenerate_passwd.html.twig"
 			]
 		],
 		"width": 0.0

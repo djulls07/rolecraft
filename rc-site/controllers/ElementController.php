@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use app\models\Modelsheet;
 use app\models\Element;
+use app\models\Section;
 use yii\data\ActiveDataProvider;
 use app\models\TableBox;
 use app\models\Table;
@@ -18,10 +19,10 @@ class ElementController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['edit', 'updatefield'],
+                'only' => ['edit', 'updatefield', 'remove', 'append'],
                 'rules' => [
                     [
-                        'actions' => ['edit', 'updatefield'],
+                        'actions' => ['edit', 'updatefield', 'remove', 'append'],
                         'allow' => true,
                         'roles' => ['@'],
                     ]
@@ -117,5 +118,41 @@ class ElementController extends Controller
             return ['status' => -1, 'message' => 'Error'];
         }
         return ['status' => -2];
+    }
+
+    /**
+     * Remove an element
+     * @return string
+     */
+    public function actionRemove($id)
+    {
+    	$element = Element::findOne($id);
+    	if (!$element) {
+    		throw \yii\web\HttpException(404, 'Element not found');
+    	}
+    	$element->delete();
+    	return $this->redirect(Yii::$app->request->referrer);
+    }
+
+    /**
+     * Append an element to section of id sectionId
+     * @param sectionId -> id of section
+     * @return string
+     */
+    public function actionAppend($sectionId)
+    {
+    	$section = Section::findOne($sectionId);
+    	if (!$section) {
+    		throw \yii\web\HttpException(404, 'Section not found');
+    	}
+
+    	$element = new Element();
+    	$element->label = 'My new element';
+    	$element->section_id = $sectionId;
+    	$element->type = 'text';
+    	if ($element->validate()) {
+    		$element->save();
+    	}
+    	return $this->redirect(Yii::$app->request->referrer);
     }
 }

@@ -41,14 +41,14 @@ var UpdateFieldForm = (function () {
 })();
 var Confirmation = (function () {
     function Confirmation() {
-        this.confirmationElements = $('[my-confirm]');
+        this.confirmationElements = $('.my-confirm');
     }
     Confirmation.prototype.run = function () {
         this.confirmationElements.click(function (ev) {
             ev.preventDefault();
             var url = $(this).attr('href');
             var message = $(this).attr('my-confirm');
-            bootbox.confirm(message, function (res) {
+            bootbox.confirm('This action need confirmation, do you want to continue ?', function (res) {
                 if (res) {
                     window.location.href = url;
                 }

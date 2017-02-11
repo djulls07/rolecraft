@@ -51,7 +51,7 @@ class Confirmation {
 	private confirmationElements;
 
 	constructor() {
-		this.confirmationElements = $('[my-confirm]');
+		this.confirmationElements = $('.my-confirm');
 	}
 
 	run() {
@@ -59,7 +59,7 @@ class Confirmation {
 			ev.preventDefault();
 			let url = $(this).attr('href');
 			let message = $(this).attr('my-confirm');
-			bootbox.confirm(message, function(res) {
+			bootbox.confirm('This action need confirmation, do you want to continue ?', function(res) {
 				if (res) {
 					window.location.href = url;
 				}

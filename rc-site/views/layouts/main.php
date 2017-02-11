@@ -9,6 +9,7 @@ use yii\bootstrap\Tabs;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\components\PillsWidget;
 use Yii;
 
 AppAsset::register($this);
@@ -79,10 +80,11 @@ AppAsset::register($this);
         ]) ?>
 
 
-        <?=  Tabs::widget([
+        <?=  PillsWidget::widget([
                 'items' => isset($this->params['tab_items']) ? $this->params['tab_items'] : []
             ]);
         ?>
+        
         <br />
         <?= $content ?>
     </div>

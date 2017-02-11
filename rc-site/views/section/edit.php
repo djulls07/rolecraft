@@ -68,6 +68,8 @@ if (Yii::$app->session->get('element_edit')) {
 			    <div class="col-lg-offset-1 col-lg-11">
 			        <?= Html::submitButton('<i class="fa fa-floppy-o"></i> Save', ['class' => 'btn btn-primary', 'name' => 'import-button']); ?>
 
+			        <?= Html::a('<i class="fa fa-plus"></i> Add element', ['element/append', 'sectionId' => $section->id], ['class' => 'btn btn-success', 'name' => 'add-element-button']) ?>
+
 			        <?= Html::a(
 				        '<i class="fa fa-hand-o-left"></i> Back',
 				        ['modelsheet/edit', 'id' => $modelsheet->id],
@@ -89,14 +91,25 @@ if (Yii::$app->session->get('element_edit')) {
 			        <div class="element">
 			        	<div class="element-header">
 			            	<span class="text-success">
-                            	<?= $element->label; ?>:
-	                        </span>
-	                        <span class="text-info pull-right">
+                                <input
+                                    value="<?= $element->label; ?>"
+                                    type="text"
+                                    class="input-minimalist"
+                                    update-name="label"
+                                    update-url="<?= Url::toRoute(['element/updatefield', 'id' => $element->id, 'field' => 'label']); ?>"
+                                >
+                            </span>
+	                        <span class="text-info pull-right element-actions">
 	                            (<?= $element->type; ?>)
-	                            &nbsp;<?= Html::a(
+	                            <?= Html::a(
 				            		'<i class="fa fa-pencil"></i>',
 				            		['element/edit', 'id' => $element->id],
 				            		['title' => 'Edit element']
+				            	); ?>
+				            	<?= Html::a(
+				            		'<i class="fa fa-trash"></i>',
+				            		['element/remove', 'id' => $element->id],
+				            		['title' => 'Remove element']
 				            	); ?>
 	                        </span>
 			            </div>

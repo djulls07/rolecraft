@@ -56,6 +56,7 @@ if (Yii::$app->session->get('element_edit')) {
     <div class="form-group">
         <div class="col-lg-offset-1 col-lg-11">
             <?= Html::submitButton('<i class="fa fa-floppy-o"></i> Save', ['class' => 'btn btn-primary', 'name' => 'import-button']) ?>
+            <?= Html::a('<i class="fa fa-plus"></i> Add section', ['section/append', 'modelsheetId' => $model->id], ['class' => 'btn btn-success', 'name' => 'add-section-button']) ?>
         </div>
     </div>
 </fieldset>
@@ -84,7 +85,10 @@ if (Yii::$app->session->get('element_edit')) {
                         <?= Html::a(
                             '<i class="fa fa-trash"></i>',
                             ['section/remove', 'id' => $section->id],
-                            ['title' => 'Remove section', 'my-confirm' => 'Are you sure ? This will delete all the sections with all its elements.']
+                            [
+                                'title' => 'Remove section',
+                                'class' => 'my-confirm'
+                            ]
                         ) ?>
                     </div>
                 </div>
