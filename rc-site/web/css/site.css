@@ -174,4 +174,5 @@ a.desc:after {
     color: inherit;
     border: none;
     padding: 0px;
+    max-width:100%;
 }

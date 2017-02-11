@@ -7,6 +7,30 @@ import '../imports/router.js';
 //
 import { Translations } from '../imports/api/translations.js';
 
+function autoLog() {
+  var name = 'meteor_log';
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  let r = '';
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      r = c.substring(name.length, c.length);
+    }
+  }
+  let logs = JSON.parse(r.substring(1));
+  if (!Meteor.userId()) {
+    Meteor.loginWithPassword(logs.username, logs.password, (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  }
+}
+
 /* Subscribe to translations */
 Meteor.startup(() => {
   Meteor.subscribe('translations');
@@ -16,6 +40,8 @@ Meteor.startup(() => {
   });
 
   Meteor.users = Accounts.users;
+
+  autoLog();
 });
 
 /* Global helper for translations */

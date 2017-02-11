@@ -109,7 +109,7 @@ if (Yii::$app->session->get('element_edit')) {
                                                     <input
                                                         value="<?= $cases[$i][$j]->label; ?>"
                                                         type="text"
-                                                        class="input-minimalist"
+                                                        class="input-minimalist input-element-table"
                                                         update-name="label"
                                                         update-url="<?= Url::toRoute(['tablebox/updatefield', 'id' => $cases[$i][$j]->id, 'field' => 'label']); ?>"
                                                     >

@@ -34,3 +34,5 @@ config/db.php
 uploads/*
 
 web/index.php
+
+config/params.php

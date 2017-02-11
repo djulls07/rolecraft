@@ -6,6 +6,9 @@ import './header.html';
 Template.header.helpers({
 	isLog() {
 		return Meteor.userId();
+	},
+	user() {
+		return Meteor.user();
 	}
 });
 

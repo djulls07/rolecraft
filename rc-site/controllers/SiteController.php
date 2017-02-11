@@ -95,9 +95,15 @@ class SiteController extends Controller
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            // Set cross domain cookie to auto login in meteor app
+            $domain = Yii::$app->params['domain'];
+            $value = json_encode([
+                'username' => $model->username,
+                'password' => $model->password
+            ]);
+            setcookie("meteor_log", $value, time()+3600, "/", '.' . $domain);
             return $this->goBack();
         }
         return $this->render('login', [
