@@ -41,7 +41,7 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Model sheets', 'url' => ['/modelsheet']],
-            ['label' => 'Play', 'url' => 'http://game.rolecraft.net'],
+            ['label' => 'Play', 'url' => 'http://game.' . Yii::$app->params['domain']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (

@@ -88,7 +88,7 @@ class TableBox extends \yii\db\ActiveRecord
     public function loadFromData($data, $table)
     {
         $this->table_id = $table->id;
-        $this->label = $data['label'] ? $data['label'] : null;
+        $this->label = isset($data['label']) ? $data['label'] : null;
         $this->x = (int) $data['y'];
         $this->y = (int) $data['x'];
         if (!$this->validate()) {

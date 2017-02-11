@@ -39,6 +39,24 @@ var UpdateFieldForm = (function () {
     };
     return UpdateFieldForm;
 })();
+var Confirmation = (function () {
+    function Confirmation() {
+        this.confirmationElements = $('[my-confirm]');
+    }
+    Confirmation.prototype.run = function () {
+        this.confirmationElements.click(function (ev) {
+            ev.preventDefault();
+            var url = $(this).attr('href');
+            var message = $(this).attr('my-confirm');
+            bootbox.confirm(message, function (res) {
+                if (res) {
+                    window.location.href = url;
+                }
+            });
+        });
+    };
+    return Confirmation;
+})();
 /**
  * Main app classe
  */
@@ -60,5 +78,6 @@ var App = (function () {
  */
 var app = new App([
     new SubmitOnChange(),
-    new UpdateFieldForm()
+    new UpdateFieldForm(),
+    new Confirmation()
 ]);

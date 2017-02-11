@@ -22,7 +22,8 @@ class AppAsset extends AssetBundle
         'https://fonts.googleapis.com/css?family=Dekko'
     ];
     public $js = [
-        'js/app.js'
+        'js/app.js',
+        'js/bootbox.min.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

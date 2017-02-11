@@ -26,11 +26,11 @@
             </li>
             {{#if isLog }}
               <li><a>Welcome {{ user.username }}</a></li>
-              <li class="logout"><a href>Logout</a></li>
+              <!--<li class="logout"><a href>Logout</a></li>-->
             {{ else }}
               <li class="open-login"><a href>Log In</a></li>
             {{/if}}
-            <li><a href="http://rolecraft.net">Quit game platform</a></li>
+            <li><a href="{{host}}">Quit game platform</a></li>
           </ul>
           <!--<ul class="nav navbar-nav navbar-left">
             <li><a>{{>loginButtons}}</a></li>

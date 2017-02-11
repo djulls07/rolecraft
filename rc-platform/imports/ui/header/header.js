@@ -9,6 +9,9 @@ Template.header.helpers({
 	},
 	user() {
 		return Meteor.user();
+	},
+	host() {
+		return 'http://' + document.domain.substring(5);
 	}
 });
 

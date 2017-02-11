@@ -18,10 +18,10 @@ class ElementController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['edit'],
+                'only' => ['edit', 'updatefield'],
                 'rules' => [
                     [
-                        'actions' => ['edit'],
+                        'actions' => ['edit', 'updatefield'],
                         'allow' => true,
                         'roles' => ['@'],
                     ]
@@ -68,15 +68,7 @@ class ElementController extends Controller
 								}
 							}
 						}
-						/*for ($i = 0; $i < $table->rows; $i++) {
-				            for ($j = 0; $j < $table->cols; $j++) {
-				            	if (!isset($cases[$i][$j]) || !isset($casesPost[$i][$j])) break; // case change rows or cols of table
-								
-								if ($cases[$i][$j]->load($casesPost[$i][$j]) && $cases[$i][$j]->validate()) {
-									$cases[$i][$j]->save();
-								}
-				            }
-						}*/
+						
 					}
 				} else {
 					// create table empty & refresh will create the tableBoxes..

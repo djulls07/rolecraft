@@ -17,10 +17,10 @@ class SectionController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['remove', 'edit'],
+                'only' => ['remove', 'edit', 'append'],
                 'rules' => [
                     [
-                        'actions' => ['remove', 'edit'],
+                        'actions' => ['remove', 'edit', 'append'],
                         'allow' => true,
                         'roles' => ['@'],
                     ]
@@ -39,11 +39,21 @@ class SectionController extends Controller
         if ($modelsheet->getUser()->one()->id != Yii::$app->user->identity->id) {
             throw new \yii\web\HttpException(401, 'Forbidden');
         }
+
+        // get previous section to redirect on the previous one
+        $previousSection = Section::findOne(['modelsheet_id' => $modelsheet->id, 'position' => $section->position-1]);
+
+
         $section->delete();
         
         // No need to re order sections.position because it is done by saving modelsheet ( before sync with meteor/mongo )
         $modelsheet->save(); // trigger sync with meteor app
-        return $this->redirect(Yii::$app->request->referrer);
+
+        if ($previousSection) {
+            return $this->redirect(Yii::$app->request->referrer . '#section_' . $previousSection->id);
+        } else {
+            return $this->redirect(Yii::$app->request->referrer);
+        }
     }
 
     public function actionEdit($id)
@@ -84,7 +94,32 @@ class SectionController extends Controller
     }
 
     /**
+     * Append a section to modelsheet
+     *
+     * @return string
+     */
+    public function actionAppend($modelsheetId)
+    {
+        $modelsheet = Modelsheet::findOne($modelsheetId);
+        if (!$modelsheet) {
+            throw new \yii\web\HttpException(404, 'Section Not found');
+        }
+        $nbSections = $modelsheet->getSections()->count();
+        $section = new Section();
+        $section->modelsheet_id = $modelsheetId;
+        $section->name = "My new section";
+        $section->position = $nbSections;
+        $section->size = 6;
+        if ($section->validate()) {
+            Yii::$app->session->addFlash('success', 'Section created');
+            $section->save();
+            return $this->redirect(Yii::$app->request->referrer . '#section_' . $section->id);
+        }
+    }
+
+    /**
      * Handle ajax request to update one field of one Section
+     * @return string (json)
      */
     public function actionUpdatefield($id, $field)
     {

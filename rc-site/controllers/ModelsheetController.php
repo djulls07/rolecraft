@@ -6,6 +6,7 @@ use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use app\models\Modelsheet;
+use app\models\Element;
 use yii\data\Pagination;
 use app\models\ModelsheetImportForm;
 use yii\web\UploadedFile;
@@ -74,7 +75,7 @@ class ModelsheetController extends Controller
             $importForm->file = UploadedFile::getInstance($importForm, 'file');
             $importErrors = $importForm->uploadCreateUpdateModelsheet();
             if ($importErrors == 0) {
-                Yii::$app->session->addFlash('success', 'Model sheet has been saved');
+                Yii::$app->session->addFlash('success', 'Modelsheet has been saved');
                 return $this->redirect(['modelsheet/index']);
             }
         }
@@ -92,8 +93,12 @@ class ModelsheetController extends Controller
     {
         $model = Modelsheet::findOne($id);
 
+        if (!$model) {
+            throw new \yii\web\HttpException(404, 'Not found');
+        }
+
         if ($model->getUser()->one()->id != Yii::$app->user->identity->id) {
-            throw new \yii\web\HttpException(401, 'Not  authorized');
+            throw new \yii\web\HttpException(401, 'Not authorized');
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
@@ -105,7 +110,9 @@ class ModelsheetController extends Controller
         // Set session edit
         Yii::$app->session->set('modelsheet_edit', $model);
 
-        return $this->render('edit', ['model' => $model]);
+        return $this->render('edit', [
+            'model' => $model
+        ]);
     }
 
     /**

@@ -65,7 +65,7 @@ if (Yii::$app->session->get('element_edit')) {
     <legend>Resume ( Sections )</legend>
     <div class="modelsheet">
         <?php foreach($model->getSections()->orderBy('position')->all() as $section): ?>
-            <div class="section col-sm-<?= $section->size; ?>">
+            <div id="section_<?= $section->id; ?>" class="section col-sm-<?= $section->size; ?>">
                 <div class="section-header">
                     
                     <input
@@ -75,11 +75,18 @@ if (Yii::$app->session->get('element_edit')) {
                         update-name="name"
                         update-url="<?= Url::toRoute(['section/updatefield', 'id' => $section->id, 'field' => 'name']); ?>"
                     >
-                    <?= Html::a(
-                        '<i class="fa fa-pencil"></i>',
-                        ['section/edit', 'id' => $section->id],
-                        ['class' => 'pull-right', 'title' => 'Edit section']
-                    ) ?>
+                    <div class="pull-right">
+                        <?= Html::a(
+                            '<i class="fa fa-pencil"></i>',
+                            ['section/edit', 'id' => $section->id],
+                            ['title' => 'Edit section']
+                        ) ?>
+                        <?= Html::a(
+                            '<i class="fa fa-trash"></i>',
+                            ['section/remove', 'id' => $section->id],
+                            ['title' => 'Remove section', 'my-confirm' => 'Are you sure ? This will delete all the sections with all its elements.']
+                        ) ?>
+                    </div>
                 </div>
                 
                 <?php foreach($section->getElements()->all() as $element): ?>
@@ -126,9 +133,11 @@ if (Yii::$app->session->get('element_edit')) {
         <?php endforeach; ?>
     </div>
 </fieldset>
+<hr >
 <div class="form-group">
-    <div>
+    <div class="col-lg-offset-1 col-lg-11">
         <?= Html::submitButton('<i class="fa fa-floppy-o"></i> Save', ['class' => 'btn btn-primary', 'name' => 'import-button']) ?>
+        <?= Html::a('<i class="fa fa-plus"></i> Add section', ['section/append', 'modelsheetId' => $model->id], ['class' => 'btn btn-success', 'name' => 'add-section-button']) ?>
     </div>
 </div>
 <?php ActiveForm::end(); ?>

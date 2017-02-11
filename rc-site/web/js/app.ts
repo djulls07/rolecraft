@@ -46,6 +46,28 @@ class UpdateFieldForm {
 	}
 }
 
+class Confirmation {
+
+	private confirmationElements;
+
+	constructor() {
+		this.confirmationElements = $('[my-confirm]');
+	}
+
+	run() {
+		this.confirmationElements.click(function(ev) {
+			ev.preventDefault();
+			let url = $(this).attr('href');
+			let message = $(this).attr('my-confirm');
+			bootbox.confirm(message, function(res) {
+				if (res) {
+					window.location.href = url;
+				}
+			});
+		});
+	}
+}
+
 /**
  * Main app classe
  */
@@ -69,5 +91,6 @@ class App {
  */
 let app = new App([
 	new SubmitOnChange(),
-	new UpdateFieldForm()
+	new UpdateFieldForm(),
+	new Confirmation()
 ]);

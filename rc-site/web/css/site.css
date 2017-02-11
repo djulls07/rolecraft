@@ -130,14 +130,14 @@ a.desc:after {
 }
 .section {
     border: 1px solid #333;
-    padding: 5px;
+    padding: 4px;
 }
 .section:hover {
     border: 1px solid #fff;
 }
 .section-header {
     letter-spacing: 1px;
-    font-size: 1.2em;
+    font-size: 1.05em;
     margin-bottom: 5px;
 }
 .element {
