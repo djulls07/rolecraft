@@ -20,10 +20,10 @@ class ModelsheetController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index', 'import', 'edit', 'remove'],
+                'only' => ['index', 'import', 'edit', 'remove', 'view'],
                 'rules' => [
                     [
-                        'actions' => ['index'],
+                        'actions' => ['index', 'view'],
                         'allow' => true,
                         'roles' => ['@', '?'],
                     ],
@@ -82,6 +82,17 @@ class ModelsheetController extends Controller
         return  $this->render('import', [
             'importForm' => $importForm,
             'importErrors' => $importErrors
+        ]);
+    }
+
+    /**
+     * View du modelsheet et liste des sections avec actions associés
+     * @return string
+     */
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => Modelsheet::findOne($id)
         ]);
     }
 

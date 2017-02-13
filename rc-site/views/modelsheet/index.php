@@ -53,8 +53,14 @@ if (Yii::$app->session->get('element_edit')) {
 	            'attribute' => 'Actions',
 	            'format' => 'html',
 	            'value' => function($model) {
-	            	if (Yii::$app->user->identity && $model->user_id == Yii::$app->user->identity->id) {
-	            		return Html::a(
+	            	$r = '';
+	            	$r .= Html::a(
+			           	'<i class="fa fa-eye"></i> view',
+			           	['modelsheet/view', 'id' => $model->id],
+			           	['class' => 'btn btn-xs btn-info']
+		           	);
+		           	if (Yii::$app->user->identity && $model->user_id == Yii::$app->user->identity->id) {
+	            		$r = Html::a(
 				           	'<i class="fa fa-pencil"></i> Edit',
 				           	['modelsheet/edit', 'id' => $model->id],
 				           	['class' => 'btn btn-xs btn-warning']
@@ -64,9 +70,8 @@ if (Yii::$app->session->get('element_edit')) {
 				           	['modelsheet/remove', 'id' => $model->id],
 				           	['class' => 'btn btn-xs btn-danger my-confirm']
 			           	);
-
 	            	}
-	            	return '--';
+	            	return $r;
 	            }
 	        ],
 	        

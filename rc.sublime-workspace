@@ -519,6 +519,34 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "rc-site/views/modelsheet/index.php",
+			"settings":
+			{
+				"buffer_size": 2570,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/controllers/ModelsheetController.php",
+			"settings":
+			{
+				"buffer_size": 4045,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rc-site/views/modelsheet/view.php",
+			"settings":
+			{
+				"buffer_size": 2915,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "view.php"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -570,6 +598,7 @@
 		"/home/djulls07/Projects/RC/rc-site/assets",
 		"/home/djulls07/Projects/RC/rc-site/commands",
 		"/home/djulls07/Projects/RC/rc-site/components",
+		"/home/djulls07/Projects/RC/rc-site/components/views",
 		"/home/djulls07/Projects/RC/rc-site/config",
 		"/home/djulls07/Projects/RC/rc-site/controllers",
 		"/home/djulls07/Projects/RC/rc-site/models",
@@ -578,26 +607,31 @@
 		"/home/djulls07/Projects/RC/rc-site/views/layouts",
 		"/home/djulls07/Projects/RC/rc-site/views/modelsheet",
 		"/home/djulls07/Projects/RC/rc-site/views/section",
-		"/home/djulls07/Projects/RC/rc-site/views/site",
-		"/home/djulls07/Projects/RC/rc-site/web"
+		"/home/djulls07/Projects/RC/rc-site/views/site"
 	],
 	"file_history":
 	[
-		"/home/djulls07/Projects/RC/rc-site/models/Table.php",
+		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/index.php",
+		"/home/djulls07/Projects/RC/rc-site/controllers/ElementController.php",
+		"/home/djulls07/Projects/RC/rc-site/components/PillsWidget.php",
 		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/edit.php",
+		"/home/djulls07/Projects/RC/rc-site/views/section/edit.php",
+		"/home/djulls07/Projects/RC/rc-site/web/css/site.css",
+		"/home/djulls07/Projects/RC/rc-site/views/layouts/main.php",
+		"/home/djulls07/Projects/RC/rc-site/components/views/pills.php",
+		"/home/djulls07/Projects/RC/rc-site/components/views",
+		"/home/djulls07/Projects/RC/rc-site/widgets/PillsWidget.php",
+		"/home/djulls07/Projects/RC/rc-site/web/index.php",
+		"/home/djulls07/Projects/RC/rc-site/web/js/app.ts",
+		"/home/djulls07/Projects/RC/rc-site/models/Table.php",
 		"/home/djulls07/Projects/RC/rc-site/models/TableBox.php",
 		"/home/djulls07/Projects/RC/rc-site/controllers/ModelsheetController.php",
-		"/home/djulls07/Projects/RC/rc-site/web/css/site.css",
 		"/home/djulls07/Projects/RC/rc-site/controllers/SiteController.php",
 		"/home/djulls07/Projects/RC/rc-platform/client/main.js",
-		"/home/djulls07/Projects/RC/rc-site/views/layouts/main.php",
 		"/home/djulls07/Projects/RC/rc-site/controllers/TableboxController.php",
 		"/home/djulls07/Projects/RC/rc-site/controllers/SectionController.php",
-		"/home/djulls07/Projects/RC/rc-site/web/js/app.ts",
-		"/home/djulls07/Projects/RC/rc-site/views/modelsheet/index.php",
 		"/home/djulls07/Projects/RC/rc-site/assets/AppAsset.php",
 		"/home/djulls07/Projects/RC/rc-site/models/Section.php",
-		"/home/djulls07/Projects/RC/rc-site/controllers/ElementController.php",
 		"/home/djulls07/Projects/RC/rc-site/config/params.php",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/header/header.html",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/header/header.js",
@@ -605,13 +639,11 @@
 		"/etc/hosts",
 		"/etc/apache2/sites-available/rolecraft.conf",
 		"/home/djulls07/Projects/RC/rc-site/views/element/edit.php",
-		"/home/djulls07/Projects/RC/rc-site/views/section/edit.php",
 		"/home/djulls07/Projects/RC/rc-site/controllers/TableBoxController.php",
 		"/home/djulls07/Projects/RC/rc-site/web/js/app.js",
 		"/home/djulls07/Projects/RC/rc-site/models/Modelsheet.php",
 		"/home/djulls07/Projects/RC/rc-site/models/ModelsheetImportForm.php",
 		"/home/djulls07/Projects/RC/rc-site/config/web.php",
-		"/home/djulls07/Projects/RC/rc-site/web/index.php",
 		"/home/djulls07/Projects/RC/rc-site/views/site/index.php",
 		"/home/djulls07/Projects/RC/rc-platform/imports/ui/login/login.html",
 		"/home/djulls07/Projects/RC/rc-platform/imports/api/db-init/translations.js",
@@ -706,11 +738,7 @@
 		"/home/djulls07/.config/sublime-text-3/Local/Session.sublime_session",
 		"/home/djulls07/Projects/factureAppLara/config/app.php",
 		"/home/djulls07/Projects/factureAppLara/composer.json",
-		"/etc/apache2/sites-available/laravel.factureapp.conf",
-		"/home/djulls07/Projects/w-agora/abp/setup/csv/historique/hematocell_user.csv",
-		"/home/djulls07/Projects/w-agora/abp/src/UserBundle/Entity/Utilisateur.php",
-		"/home/djulls07/Projects/w-agora/abp/app/Resources/TwigBundle/views/Exception/error.html.twig",
-		"/home/djulls07/Projects/w-agora/abp/src/UserBundle/Resources/views/Email/recover_passwd.html.twig"
+		"/etc/apache2/sites-available/laravel.factureapp.conf"
 	],
 	"find":
 	{
@@ -941,8 +969,98 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "rc-site/views/modelsheet/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "rc-site/controllers/ModelsheetController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1407,
+								1407
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 577.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "rc-site/views/modelsheet/view.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								647,
+								647
+							]
+						],
+						"settings":
+						{
+							"auto_name": "view.php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1003,15 +1121,19 @@
 		"selected_items":
 		[
 			[
+				"sit",
+				"rc-site/web/css/site.css"
+			],
+			[
+				"index",
+				"rc-site/web/index.php"
+			],
+			[
 				"app.ts",
 				"rc-site/web/js/app.ts"
 			],
 			[
 				"sitcss",
-				"rc-site/web/css/site.css"
-			],
-			[
-				"sit",
 				"rc-site/web/css/site.css"
 			],
 			[
@@ -1509,10 +1631,6 @@
 			[
 				"inscript",
 				"src/EEQBundle/Resources/views/Inscription/manage.html.twig"
-			],
-			[
-				"eeqbunrouting",
-				"src/EEQBundle/Resources/config/routing.yml"
 			]
 		],
 		"width": 0.0
@@ -1520,15 +1638,15 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "a",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"a",
-				"~/Projects/w-agora/abp/abp.sublime-project"
+				"",
+				"~/Projects/KoomlEmbedded/kooml.sublime-project"
 			],
 			[
-				"",
+				"a",
 				"~/Projects/w-agora/abp/abp.sublime-project"
 			],
 			[
